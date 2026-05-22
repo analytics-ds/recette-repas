@@ -349,7 +349,7 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .step-text p { margin: 0; }
 
 /* Carte nutrition (sidebar) */
-.recipe-aside { position: sticky; top: 24px; }
+.recipe-aside { position: sticky; top: 140px; }
 .nutrition-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 26px 24px; box-shadow: var(--shadow); }
 .nutrition-title { font-size: 1.4rem; margin: 0 0 18px; line-height: 1.15; }
 .nutrition-toggle { display: inline-flex; background: var(--mint); border-radius: 100px; padding: 4px; gap: 2px; margin-bottom: 20px; }

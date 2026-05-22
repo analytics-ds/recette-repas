@@ -339,7 +339,11 @@ body.rr-reveal-on .rr-home [data-reveal].is-visible { opacity: 1; transform: non
         box-shadow: 0 16px 30px rgba(39,72,62,0.12);
     }
     .rr-burger { display: block; }
-    .rr-header-bar { grid-template-columns: auto 1fr auto; }
+    .rr-header-bar { grid-template-columns: auto 1fr auto; gap: 10px; }
+    .rr-logo span { display: none; }
+    .rr-logo img { height: 40px; }
+    .rr-header-actions { gap: 8px; }
+    .rr-header-actions .rr-btn { font-size: 0.78rem; padding: 0.5rem 0.9rem; white-space: nowrap; }
     .rr-hero-overlay { position: static; }
     .rr-hero-overlay .rr-wrap { height: auto; }
     .rr-hero-card { margin: -56px 4px 0; }
