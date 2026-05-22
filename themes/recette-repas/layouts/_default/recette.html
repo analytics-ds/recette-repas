@@ -7,7 +7,7 @@
   <div class="container">
 
     <nav class="recipe-breadcrumb" aria-label="Fil d'Ariane">
-      <a href="{{ "/" | relURL }}">Accueil</a>
+      <a href="{{ .Site.Home.RelPermalink }}">Accueil</a>
       {{ if $cat }}<span>/</span><a href="{{ $catPage | relURL }}">{{ $cat }}</a>{{ end }}
       <span>/</span><span>{{ .Title }}</span>
     </nav>

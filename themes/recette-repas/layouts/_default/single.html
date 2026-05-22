@@ -7,7 +7,7 @@
                 {{ with .Params.categories }}
                 <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}/" class="article-category">{{ index . 0 }}</a>
                 {{ end }}
-                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+                {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
                 {{ if .Params.readingTime }}
                 <span class="reading-time">{{ .ReadingTime }} min de lecture</span>
                 {{ end }}
@@ -36,6 +36,7 @@
         </div>
     </div>
 
+    {{ if eq .Section "blog" }}
     <footer class="article-footer">
         <div class="container container-narrow">
             <nav class="article-nav">
@@ -54,6 +55,7 @@
             </nav>
         </div>
     </footer>
+    {{ end }}
 </article>
 
 {{ end }}
