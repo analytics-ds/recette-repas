@@ -1,6 +1,11 @@
 {{ define "main" }}
 {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
-{{ $catPage := "" }}{{ if $cat }}{{ $catPage = (printf "/categories/%s/" (urlize $cat)) }}{{ end }}
+{{ $catURL := "" }}{{ $catURLAbs := "" }}
+{{ if $cat }}
+  {{ $catTerm := site.GetPage (printf "/categories/%s" (urlize $cat)) }}
+  {{ if $catTerm }}{{ $catURL = $catTerm.RelPermalink }}{{ $catURLAbs = $catTerm.Permalink }}
+  {{ else }}{{ $catURL = relURL (printf "categories/%s/" (urlize $cat)) }}{{ $catURLAbs = absURL (printf "categories/%s/" (urlize $cat)) }}{{ end }}
+{{ end }}
 {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
 
 <article class="recipe">
@@ -8,7 +13,7 @@
 
     <nav class="recipe-breadcrumb" aria-label="Fil d'Ariane">
       <a href="{{ .Site.Home.RelPermalink }}">Accueil</a>
-      {{ if $cat }}<span>/</span><a href="{{ $catPage | relURL }}">{{ $cat }}</a>{{ end }}
+      {{ if $cat }}<span>/</span><a href="{{ $catURL }}">{{ $cat }}</a>{{ end }}
       <span>/</span><span>{{ .Title }}</span>
     </nav>
 
@@ -196,7 +201,7 @@
 <script type="application/ld+json">{{ $recipe | jsonify }}</script>
 
 {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" (.Site.BaseURL)) }}
-{{ if $cat }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $cat "item" ($catPage | absURL)) }}{{ end }}
+{{ if $cat }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $cat "item" $catURLAbs) }}{{ end }}
 {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
 <script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify }}</script>
 
