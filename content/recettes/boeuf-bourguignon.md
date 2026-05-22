@@ -17,14 +17,14 @@ servings_options: [4, 6, 8]
 rating: 4.9
 rating_count: 214
 ingredients:
-  - { name: "Bœuf à braiser (paleron, joue)", qty: 1.2, unit: "kg" }
-  - { name: "Vin rouge corsé", qty: 75, unit: "cl" }
+  - { name: "Bœuf à braiser (paleron, joue)", qty: 1.2, unit: "kg" , image: "images/ingredients/boeuf.png" }
+  - { name: "Vin rouge corsé", qty: 75, unit: "cl" , image: "images/ingredients/vin-rouge.png" }
   - { name: "Lardons fumés", qty: 200, unit: "g", image: "images/ingredients/lardons.jpg" }
-  - { name: "Carottes", qty: 4, unit: "" }
-  - { name: "Champignons de Paris", qty: 250, unit: "g" }
+  - { name: "Carottes", qty: 4, unit: "" , image: "images/ingredients/carotte.png" }
+  - { name: "Champignons de Paris", qty: 250, unit: "g" , image: "images/ingredients/champignons.png" }
   - { name: "Oignon", qty: 2, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Ail", qty: 2, unit: "gousses" }
-  - { name: "Bouquet garni", qty: 1, unit: "" }
+  - { name: "Ail", qty: 2, unit: "gousses" , image: "images/ingredients/ail.png" }
+  - { name: "Bouquet garni", qty: 1, unit: "" , image: "images/ingredients/bouquet-garni.png" }
 pantry:
   - { name: "Farine", qty: 2, unit: "cs", image: "images/ingredients/farine.png" }
   - { name: "Huile d'olive", qty: 2, unit: "cs", image: "images/ingredients/huile-olive.png" }

@@ -17,12 +17,12 @@ servings_options: [4, 6, 8]
 rating: 4.7
 rating_count: 143
 ingredients:
-  - { name: "Pommes de terre", qty: 1, unit: "kg" }
-  - { name: "Bœuf haché", qty: 500, unit: "g" }
+  - { name: "Pommes de terre", qty: 1, unit: "kg" , image: "images/ingredients/pomme-terre.png" }
+  - { name: "Bœuf haché", qty: 500, unit: "g" , image: "images/ingredients/boeuf-hache.png" }
   - { name: "Oignon", qty: 1, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Lait", qty: 20, unit: "cl" }
-  - { name: "Gruyère râpé", qty: 80, unit: "g" }
-  - { name: "Ail", qty: 1, unit: "gousse" }
+  - { name: "Lait", qty: 20, unit: "cl" , image: "images/ingredients/lait.png" }
+  - { name: "Gruyère râpé", qty: 80, unit: "g" , image: "images/ingredients/gruyere.png" }
+  - { name: "Ail", qty: 1, unit: "gousse" , image: "images/ingredients/ail.png" }
 pantry:
   - { name: "Beurre", qty: 40, unit: "g", image: "images/ingredients/beurre.png" }
   - { name: "Huile d'olive", qty: 1, unit: "cs", image: "images/ingredients/huile-olive.png" }

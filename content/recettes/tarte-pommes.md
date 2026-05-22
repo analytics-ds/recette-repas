@@ -17,8 +17,8 @@ servings_options: [6, 8]
 rating: 4.8
 rating_count: 156
 ingredients:
-  - { name: "Pommes", qty: 5, unit: "" }
-  - { name: "Pâte brisée", qty: 1, unit: "" }
+  - { name: "Pommes", qty: 5, unit: "" , image: "images/ingredients/pomme.png" }
+  - { name: "Pâte brisée", qty: 1, unit: "" , image: "images/ingredients/pate-brisee.png" }
   - { name: "Œuf", qty: 1, unit: "", image: "images/ingredients/oeufs.jpg" }
   - { name: "Crème fraîche", qty: 10, unit: "cl", image: "images/ingredients/creme.jpg" }
 pantry:

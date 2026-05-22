@@ -17,12 +17,12 @@ servings_options: [2, 4, 6]
 rating: 4.8
 rating_count: 162
 ingredients:
-  - { name: "Oignons jaunes", qty: 800, unit: "g" }
-  - { name: "Bouillon de bœuf", qty: 1, unit: "l" }
-  - { name: "Pain (baguette rassise)", qty: 8, unit: "tranches" }
-  - { name: "Gruyère râpé", qty: 150, unit: "g" }
-  - { name: "Vin blanc sec", qty: 10, unit: "cl" }
-  - { name: "Farine", qty: 1, unit: "cs" }
+  - { name: "Oignons jaunes", qty: 800, unit: "g" , image: "images/ingredients/oignon.jpg" }
+  - { name: "Bouillon de bœuf", qty: 1, unit: "l" , image: "images/ingredients/bouillon.png" }
+  - { name: "Pain (baguette rassise)", qty: 8, unit: "tranches" , image: "images/ingredients/pain.png" }
+  - { name: "Gruyère râpé", qty: 150, unit: "g" , image: "images/ingredients/gruyere.png" }
+  - { name: "Vin blanc sec", qty: 10, unit: "cl" , image: "images/ingredients/vin-blanc.png" }
+  - { name: "Farine", qty: 1, unit: "cs" , image: "images/ingredients/farine.png" }
 pantry:
   - { name: "Beurre", qty: 40, unit: "g", image: "images/ingredients/beurre.png" }
   - { name: "Sel", note: "selon le goût", image: "images/ingredients/sel.png" }

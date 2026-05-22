@@ -17,13 +17,13 @@ servings_options: [4, 6, 8]
 rating: 4.6
 rating_count: 89
 ingredients:
-  - { name: "Haricots blancs", qty: 400, unit: "g" }
-  - { name: "Carottes", qty: 2, unit: "" }
-  - { name: "Courgette", qty: 1, unit: "" }
-  - { name: "Céleri", qty: 2, unit: "branches" }
-  - { name: "Tomates concassées", qty: 400, unit: "g" }
+  - { name: "Haricots blancs", qty: 400, unit: "g" , image: "images/ingredients/haricots-blancs.png" }
+  - { name: "Carottes", qty: 2, unit: "" , image: "images/ingredients/carotte.png" }
+  - { name: "Courgette", qty: 1, unit: "" , image: "images/ingredients/courgette.png" }
+  - { name: "Céleri", qty: 2, unit: "branches" , image: "images/ingredients/celeri.png" }
+  - { name: "Tomates concassées", qty: 400, unit: "g" , image: "images/ingredients/tomates.png" }
   - { name: "Petites pâtes", qty: 100, unit: "g", image: "images/ingredients/pates.jpg" }
-  - { name: "Bouillon de légumes", qty: 1.5, unit: "l" }
+  - { name: "Bouillon de légumes", qty: 1.5, unit: "l" , image: "images/ingredients/bouillon.png" }
   - { name: "Oignon", qty: 1, unit: "", image: "images/ingredients/oignon.jpg" }
 pantry:
   - { name: "Huile d'olive", qty: 3, unit: "cs", image: "images/ingredients/huile-olive.png" }

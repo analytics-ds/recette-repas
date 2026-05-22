@@ -17,12 +17,12 @@ servings_options: [2, 4, 6]
 rating: 4.7
 rating_count: 124
 ingredients:
-  - { name: "Blancs de poulet", qty: 600, unit: "g" }
-  - { name: "Lait de coco", qty: 40, unit: "cl" }
+  - { name: "Blancs de poulet", qty: 600, unit: "g" , image: "images/ingredients/poulet.png" }
+  - { name: "Lait de coco", qty: 40, unit: "cl" , image: "images/ingredients/lait-coco.png" }
   - { name: "Oignon", qty: 1, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Pâte de curry (ou curry en poudre)", qty: 2, unit: "cs" }
-  - { name: "Ail", qty: 2, unit: "gousses" }
-  - { name: "Gingembre frais", qty: 1, unit: "morceau" }
+  - { name: "Pâte de curry (ou curry en poudre)", qty: 2, unit: "cs" , image: "images/ingredients/curry.png" }
+  - { name: "Ail", qty: 2, unit: "gousses" , image: "images/ingredients/ail.png" }
+  - { name: "Gingembre frais", qty: 1, unit: "morceau" , image: "images/ingredients/gingembre.png" }
 pantry:
   - { name: "Huile d'olive", qty: 2, unit: "cs", image: "images/ingredients/huile-olive.png" }
   - { name: "Sel", note: "selon le goût", image: "images/ingredients/sel.png" }

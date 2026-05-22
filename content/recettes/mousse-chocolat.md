@@ -17,9 +17,9 @@ servings_options: [4, 6, 8]
 rating: 4.9
 rating_count: 187
 ingredients:
-  - { name: "Chocolat noir", qty: 200, unit: "g" }
+  - { name: "Chocolat noir", qty: 200, unit: "g" , image: "images/ingredients/chocolat.png" }
   - { name: "Œufs", qty: 6, unit: "", image: "images/ingredients/oeufs.jpg" }
-  - { name: "Sel", qty: 1, unit: "pincée" }
+  - { name: "Sel", qty: 1, unit: "pincée" , image: "images/ingredients/sel.png" }
 pantry:
   - { name: "Sucre", qty: 30, unit: "g", image: "images/ingredients/sucre.png" }
 ustensiles:

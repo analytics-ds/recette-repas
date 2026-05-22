@@ -17,12 +17,12 @@ servings_options: [4, 6, 8]
 rating: 4.8
 rating_count: 201
 ingredients:
-  - { name: "Plaques de lasagnes", qty: 250, unit: "g" }
-  - { name: "Bœuf haché", qty: 500, unit: "g" }
-  - { name: "Tomates concassées", qty: 800, unit: "g" }
+  - { name: "Plaques de lasagnes", qty: 250, unit: "g" , image: "images/ingredients/lasagnes-plaques.png" }
+  - { name: "Bœuf haché", qty: 500, unit: "g" , image: "images/ingredients/boeuf-hache.png" }
+  - { name: "Tomates concassées", qty: 800, unit: "g" , image: "images/ingredients/tomates.png" }
   - { name: "Oignon", qty: 1, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Carotte", qty: 1, unit: "" }
-  - { name: "Lait", qty: 50, unit: "cl" }
+  - { name: "Carotte", qty: 1, unit: "" , image: "images/ingredients/carotte.png" }
+  - { name: "Lait", qty: 50, unit: "cl" , image: "images/ingredients/lait.png" }
   - { name: "Parmesan râpé", qty: 80, unit: "g", image: "images/ingredients/parmesan.jpg" }
 pantry:
   - { name: "Beurre", qty: 50, unit: "g", image: "images/ingredients/beurre.png" }

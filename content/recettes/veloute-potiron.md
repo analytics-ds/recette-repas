@@ -17,12 +17,12 @@ servings_options: [2, 4, 6]
 rating: 4.7
 rating_count: 98
 ingredients:
-  - { name: "Potiron", qty: 800, unit: "g" }
-  - { name: "Pomme de terre", qty: 1, unit: "" }
+  - { name: "Potiron", qty: 800, unit: "g" , image: "images/ingredients/potiron.png" }
+  - { name: "Pomme de terre", qty: 1, unit: "" , image: "images/ingredients/pomme-terre.png" }
   - { name: "Oignon", qty: 1, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Bouillon de légumes", qty: 75, unit: "cl" }
+  - { name: "Bouillon de légumes", qty: 75, unit: "cl" , image: "images/ingredients/bouillon.png" }
   - { name: "Crème fraîche", qty: 10, unit: "cl", image: "images/ingredients/creme.jpg" }
-  - { name: "Noix de muscade", qty: 1, unit: "pincée" }
+  - { name: "Noix de muscade", qty: 1, unit: "pincée" , image: "images/ingredients/muscade.png" }
 pantry:
   - { name: "Beurre", qty: 20, unit: "g", image: "images/ingredients/beurre.png" }
   - { name: "Sel", note: "selon le goût", image: "images/ingredients/sel.png" }

@@ -17,13 +17,13 @@ servings_options: [4, 6, 8]
 rating: 4.8
 rating_count: 176
 ingredients:
-  - { name: "Bœuf haché", qty: 600, unit: "g" }
-  - { name: "Haricots rouges", qty: 400, unit: "g" }
-  - { name: "Tomates concassées", qty: 800, unit: "g" }
+  - { name: "Bœuf haché", qty: 600, unit: "g" , image: "images/ingredients/boeuf-hache.png" }
+  - { name: "Haricots rouges", qty: 400, unit: "g" , image: "images/ingredients/haricots-rouges.png" }
+  - { name: "Tomates concassées", qty: 800, unit: "g" , image: "images/ingredients/tomates.png" }
   - { name: "Oignon", qty: 2, unit: "", image: "images/ingredients/oignon.jpg" }
-  - { name: "Poivron rouge", qty: 1, unit: "" }
-  - { name: "Épices à chili (cumin, paprika, piment)", qty: 2, unit: "cs" }
-  - { name: "Ail", qty: 2, unit: "gousses" }
+  - { name: "Poivron rouge", qty: 1, unit: "" , image: "images/ingredients/poivron.png" }
+  - { name: "Épices à chili (cumin, paprika, piment)", qty: 2, unit: "cs" , image: "images/ingredients/epices.png" }
+  - { name: "Ail", qty: 2, unit: "gousses" , image: "images/ingredients/ail.png" }
 pantry:
   - { name: "Huile d'olive", qty: 2, unit: "cs", image: "images/ingredients/huile-olive.png" }
   - { name: "Sel", note: "selon le goût", image: "images/ingredients/sel.png" }
