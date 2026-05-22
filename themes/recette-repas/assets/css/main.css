@@ -405,6 +405,43 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .rc-arrow:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 @media (max-width: 760px) { .rc-arrow { display: none; } .rc-slide { flex-basis: 260px; } }
 
+/* ===== Hub recettes (sections + categories) ===== */
+.hub-header { background: var(--mint); border-bottom: 1px solid var(--line); padding: 40px 0 44px; }
+.hub-breadcrumb { font-family: var(--font-ui); font-size: 0.85rem; color: var(--text-light); margin-bottom: 18px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.hub-breadcrumb a { color: var(--text-light); }
+.hub-breadcrumb a:hover { color: var(--primary); }
+.hub-breadcrumb span:last-child { color: var(--ink); }
+.hub-header h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0 0 14px; }
+.hub-intro { max-width: 760px; color: var(--text-light); line-height: 1.75; }
+.hub-intro p { margin: 0 0 12px; }
+.hub-intro p:last-child { margin-bottom: 0; }
+.hub-count { display: inline-block; margin-top: 18px; font-family: var(--font-ui); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); }
+
+.hub-content { padding: 48px 0; background: var(--white); }
+.hub-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 28px; }
+.hub-card { display: flex; flex-direction: column; text-decoration: none; color: var(--ink); background: var(--white); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+.hub-card:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(39,72,62,0.12); }
+.hub-card-media { position: relative; aspect-ratio: 4/3; overflow: hidden; }
+.hub-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.hub-card:hover .hub-card-media img { transform: scale(1.05); }
+.hub-card-badge { position: absolute; top: 12px; left: 12px; background: var(--white); color: var(--ink); font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; padding: 5px 12px; border-radius: 100px; }
+.hub-card-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.hub-card-title { font-family: var(--font-heading); font-weight: 600; font-size: 1.2rem; color: var(--ink); margin: 0; line-height: 1.25; }
+.hub-card-desc { color: var(--text-light); font-size: 0.9rem; line-height: 1.5; margin: 0; }
+.hub-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.hub-card-tags span { font-family: var(--font-ui); font-size: 0.72rem; color: var(--primary); background: var(--mint); padding: 3px 10px; border-radius: 100px; }
+.hub-card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: auto; padding-top: 10px; border-top: 1px solid var(--line); font-family: var(--font-ui); font-size: 0.8rem; color: var(--text-light); }
+.hub-card-meta span { position: relative; }
+.hub-card-meta span:not(:last-child)::after { content: "·"; margin-left: 10px; color: var(--line); }
+.hub-card-meta span:last-child { font-weight: 600; color: var(--ink); }
+
+.hub-outro { padding: 8px 0 56px; background: var(--white); }
+.hub-outro h2 { font-size: 1.5rem; margin: 28px 0 12px; }
+.hub-outro h3 { font-size: 1.2rem; margin: 22px 0 10px; }
+.hub-outro p { color: var(--text-light); line-height: 1.75; margin: 0 0 14px; }
+.hub-outro ul { color: var(--text-light); line-height: 1.7; margin: 0 0 14px 1.1rem; }
+@media (max-width: 640px) { .hub-grid { grid-template-columns: 1fr 1fr; gap: 16px; } .hub-card-body { padding: 13px 14px 15px; } .hub-card-desc { display: none; } }
+
 /* --- Responsive --- */
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
