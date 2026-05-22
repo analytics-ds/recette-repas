@@ -61,7 +61,7 @@
           <div class="ingredient-grid">
             {{ range .Params.ingredients }}
             <div class="ingredient-card">
-              <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+              {{ if .image }}<img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">{{ else }}<span class="ingredient-img ingredient-img-ph" aria-hidden="true">{{ substr .name 0 1 | upper }}</span>{{ end }}
               <div class="ingredient-info">
                 <span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
                 <span class="ingredient-name">{{ .name }}</span>
@@ -76,7 +76,7 @@
           <div class="ingredient-grid">
             {{ range . }}
             <div class="ingredient-card">
-              <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+              {{ if .image }}<img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">{{ else }}<span class="ingredient-img ingredient-img-ph" aria-hidden="true">{{ substr .name 0 1 | upper }}</span>{{ end }}
               <div class="ingredient-info">
                 {{ if .qty }}<span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
                 {{ else }}<span class="ingredient-qty ingredient-qty-note">{{ .note | default "selon le goût" }}</span>{{ end }}
