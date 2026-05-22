@@ -190,7 +190,9 @@
 }
 .rr-recipe-meta { display: flex; align-items: center; gap: 8px; font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
 .rr-recipe-cat { font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-.rr-recipe h3 { font-size: 1.2rem; margin-bottom: 8px; }
+.rr-recipe h3 { font-size: 1.2rem; margin-bottom: 6px; }
+.rr-recipe-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
+.rr-recipe-rating .stars { font-size: 0.95rem; }
 .rr-recipe-ready { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
 .rr-panel-foot { text-align: center; margin-top: 40px; }
 
@@ -307,7 +309,7 @@
 .rr-footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,0.14); }
 .rr-footer-brand .rr-logo span { color: #fff; }
 .rr-footer-brand p { font-size: 0.9rem; color: #AFC3BB; margin: 16px 0 20px; max-width: 320px; }
-.rr-footer h4 { font-family: var(--sans); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; margin-bottom: 16px; }
+.rr-footer h2 { font-family: var(--sans); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #fff; margin: 0 0 16px; }
 .rr-footer ul { list-style: none; margin: 0; padding: 0; }
 .rr-footer li { margin-bottom: 10px; }
 .rr-footer a { color: #BFD0CA; text-decoration: none; font-size: 0.9rem; }

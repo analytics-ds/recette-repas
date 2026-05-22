@@ -22,6 +22,13 @@
         {{ if $cat }}<span class="recipe-cat">{{ $cat }}</span>{{ end }}
         <h1>{{ .Title }}</h1>
         {{ with .Description }}<p class="recipe-desc">{{ . }}</p>{{ end }}
+        {{ with .Params.rating }}
+        <div class="recipe-rating">
+          {{ partial "stars.html" . }}
+          <strong>{{ . }}</strong>
+          <span>({{ $.Params.rating_count }} avis)</span>
+        </div>
+        {{ end }}
         <div class="recipe-meta">
           <div class="recipe-meta-item"><span class="recipe-meta-label">Préparation</span><strong>{{ .Params.prep_min }} min</strong></div>
           <div class="recipe-meta-item"><span class="recipe-meta-label">Cuisson</span><strong>{{ .Params.cook_min }} min</strong></div>
@@ -183,6 +190,7 @@
   "recipeInstructions" $stepsLD
 }}
 {{ if $tools }}{{ $recipe = merge $recipe (dict "tool" $tools) }}{{ end }}
+{{ with .Params.rating }}{{ $recipe = merge $recipe (dict "aggregateRating" (dict "@type" "AggregateRating" "ratingValue" . "reviewCount" $.Params.rating_count "bestRating" 5 "worstRating" 1)) }}{{ end }}
 {{ with .Params.nutrition }}
   {{ $n := dict "@type" "NutritionInformation" }}
   {{ range . }}

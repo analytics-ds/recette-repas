@@ -61,10 +61,10 @@
       </div>
       <div class="rr-recipes">
         {{ $recipes := slice
-          (dict "img" "images/home/dish-1.jpg" "cat" "Entrées" "title" "Salade fraîcheur tomate et avocat" "time" "10 min" "alt" "Salade fraîcheur tomate et avocat")
-          (dict "img" "images/home/dish-2.jpg" "cat" "Cuisine du monde" "title" "Bol asiatique au saumon" "time" "25 min" "alt" "Bol asiatique au saumon")
-          (dict "img" "images/home/dish-3.jpg" "cat" "Entrées" "title" "Velouté de légumes réconfortant" "time" "30 min" "alt" "Velouté de légumes maison")
-          (dict "img" "images/home/cta.jpg" "cat" "Plats" "title" "Sandwich gourmand à l'ancienne" "time" "15 min" "alt" "Sandwich gourmand sur planche")
+          (dict "img" "images/home/dish-1.jpg" "cat" "Entrées" "title" "Salade fraîcheur tomate et avocat" "time" "10 min" "alt" "Salade fraîcheur tomate et avocat" "rating" 4.9 "count" 86)
+          (dict "img" "images/home/dish-2.jpg" "cat" "Cuisine du monde" "title" "Bol asiatique au saumon" "time" "25 min" "alt" "Bol asiatique au saumon" "rating" 4.7 "count" 112)
+          (dict "img" "images/home/dish-3.jpg" "cat" "Entrées" "title" "Velouté de légumes réconfortant" "time" "30 min" "alt" "Velouté de légumes maison" "rating" 4.8 "count" 64)
+          (dict "img" "images/home/cta.jpg" "cat" "Plats" "title" "Sandwich gourmand à l'ancienne" "time" "15 min" "alt" "Sandwich gourmand sur planche" "rating" 4.6 "count" 73)
         }}
         {{ range $recipes }}
         <a href="{{ "blog/" | relURL }}" class="rr-recipe" data-reveal>
@@ -75,6 +75,7 @@
           </div>
           <div class="rr-recipe-meta"><span class="rr-recipe-cat">{{ .cat }}</span></div>
           <h3>{{ .title }}</h3>
+          <div class="rr-recipe-rating">{{ partial "stars.html" .rating }} <span>{{ .rating }} ({{ .count }})</span></div>
           <span class="rr-recipe-ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Prêt en {{ .time }}</span>
         </a>
         {{ end }}

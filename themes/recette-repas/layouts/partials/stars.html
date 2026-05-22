@@ -1,0 +1,3 @@
+{{- $r := . | float -}}
+{{- $pct := math.Round (mul (div $r 5.0) 100) -}}
+<span class="stars" style="--pct:{{ $pct }}%" role="img" aria-label="Note : {{ $r }} sur 5"></span>

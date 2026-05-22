@@ -295,6 +295,17 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .recipe-meta-label { font-family: var(--font-ui); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); }
 .recipe-meta-item strong { font-family: var(--font-heading); font-size: 1.2rem; color: var(--ink); font-weight: 600; }
 .recipe-author { margin-top: 18px; font-size: 0.9rem; color: var(--text-light); }
+
+/* ===== Etoiles (note) ===== */
+.stars { display: inline-block; position: relative; font-family: Arial, "Apple Color Emoji", sans-serif; line-height: 1; white-space: nowrap; vertical-align: middle; }
+.stars::before { content: "\2605\2605\2605\2605\2605"; color: #dcdfdb; letter-spacing: 2px; }
+.stars::after { content: "\2605\2605\2605\2605\2605"; color: #f5a623; letter-spacing: 2px; position: absolute; top: 0; left: 0; width: var(--pct, 0%); overflow: hidden; }
+.recipe-rating { display: flex; align-items: center; gap: 8px; margin: 12px 0 0; font-family: var(--font-ui); font-size: 0.95rem; }
+.recipe-rating .stars { font-size: 1.1rem; }
+.recipe-rating strong { color: var(--ink); }
+.recipe-rating span { color: var(--text-light); }
+.rc-rating { display: flex; align-items: center; gap: 6px; margin: 6px 0 8px; font-family: var(--font-ui); font-size: 0.82rem; color: var(--text-light); }
+.rc-rating .stars { font-size: 0.95rem; }
 .recipe-header-media img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 44px rgba(39,72,62,0.16); }
 
 .recipe-ingredients { background: var(--mint); border-radius: 20px; padding: 32px; margin-bottom: 48px; }
