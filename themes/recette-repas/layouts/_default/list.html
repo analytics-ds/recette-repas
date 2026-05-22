@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{ $isBlog := eq .Section "blog" }}
-{{ $blog := site.GetPage "/blog" }}
+{{ $isBlog := eq .Section "recettes" }}
+{{ $blog := site.GetPage "/recettes" }}
 
 <section class="hub-header">
   <div class="container">

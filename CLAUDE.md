@@ -94,7 +94,7 @@ Cette limite sert a eviter la publication en masse et a maintenir un rythme de p
 ## Regles generales
 
 - Toujours utiliser `relURL` dans les templates Hugo pour les liens (compatibilite GitHub Pages)
-- Les articles vont dans `content/blog/`
+- Les articles vont dans `content/recettes/`
 - Les slugs sont en minuscules, sans accents, mots separes par des tirets
 - Ne JAMAIS utiliser `&` dans les noms de categories ou de tags — toujours remplacer par "et" (Hugo genere un double tiret `--` dans le slug, ce qui casse les URLs)
 - Le ton des articles est impersonnel (pas de je/tu/nous/vous) sauf instruction contraire

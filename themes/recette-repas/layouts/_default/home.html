@@ -10,7 +10,7 @@
         <h1>Des idées de recettes faciles pour <span class="rr-em">tous les jours</span></h1>
         <p>Trouvez l'inspiration avec des idées de recettes simples, testées et expliquées pas à pas, signées par un ancien chef, pour ne plus jamais se demander quoi manger.</p>
         <div class="rr-hero-cta">
-          <a href="{{ "blog/" | relURL }}" class="rr-btn">Découvrir les recettes</a>
+          <a href="{{ "recettes/" | relURL }}" class="rr-btn">Découvrir les recettes</a>
           <a href="{{ "a-propos/" | relURL }}" class="rr-btn-light">Le blog d'un chef</a>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="rr-fcard" data-reveal>
           <h3>Explorez le blog</h3>
           <p>Des recettes pour tous les jours, des idées de saison et des astuces concrètes pour progresser en cuisine.</p>
-          <a href="{{ "blog/" | relURL }}" class="rr-btn-light">Lire le blog</a>
+          <a href="{{ "recettes/" | relURL }}" class="rr-btn-light">Lire le blog</a>
           <img class="rr-fcard-img" src="{{ "images/home/food-2.jpg" | relURL }}" alt="Recettes du blog pour tous les jours" loading="lazy">
         </div>
         <div class="rr-fcard" data-reveal>
@@ -67,7 +67,7 @@
           (dict "img" "images/home/cta.jpg" "cat" "Plats" "title" "Sandwich gourmand à l'ancienne" "time" "15 min" "alt" "Sandwich gourmand sur planche" "rating" 4.6 "count" 73)
         }}
         {{ range $recipes }}
-        <a href="{{ "blog/" | relURL }}" class="rr-recipe" data-reveal>
+        <a href="{{ "recettes/" | relURL }}" class="rr-recipe" data-reveal>
           <div class="rr-recipe-media">
             <span class="rr-badge">Recette</span>
             <span class="rr-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
@@ -80,7 +80,7 @@
         </a>
         {{ end }}
       </div>
-      <div class="rr-panel-foot"><a href="{{ "blog/" | relURL }}" class="rr-btn">Voir toutes les recettes</a></div>
+      <div class="rr-panel-foot"><a href="{{ "recettes/" | relURL }}" class="rr-btn">Voir toutes les recettes</a></div>
     </div>
   </section>
 

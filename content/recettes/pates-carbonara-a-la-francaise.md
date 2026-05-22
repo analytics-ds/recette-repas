@@ -15,6 +15,7 @@ servings: 2
 servings_options: [2, 4, 6]
 rating: 4.8
 rating_count: 137
+aliases: ["/blog/pates-carbonara-a-la-francaise/"]
 ingredients:
   - { name: "Spaghetti", qty: 200, unit: "g", image: "images/ingredients/pates.jpg" }
   - { name: "Lardons fumés", qty: 150, unit: "g", image: "images/ingredients/lardons.jpg" }

@@ -22,7 +22,7 @@ Si le fichier `MEMORY.md` n'existe pas encore, le creer vide (il sera rempli a l
 
 Demander a l'utilisateur :
 - **Mot-cle principal** : le terme sur lequel l'article doit se positionner
-- **Categorie** : dans quelle categorie du blog ? (proposer les categories existantes du site, definies dans hugo.toml ou visibles dans content/blog/). L'utilisateur DOIT choisir une categorie, ne pas passer cette etape
+- **Categorie** : dans quelle categorie du blog ? (proposer les categories existantes du site, definies dans hugo.toml ou visibles dans content/recettes/). L'utilisateur DOIT choisir une categorie, ne pas passer cette etape
 
 Si l'utilisateur n'a pas de mot-cle precis, l'aider a en choisir un en fonction de la thematique du site.
 
@@ -49,7 +49,7 @@ Si l'utilisateur ne sait pas quel type choisir, l'aider en analysant l'intention
 
 ### Analyse du site
 
-Lister tous les articles existants dans `content/blog/` en lisant le sitemap (`content/plan-du-site.md` ou directement les fichiers dans `content/blog/`). Pour chaque article existant, noter :
+Lister tous les articles existants dans `content/recettes/` en lisant le sitemap (`content/plan-du-site.md` ou directement les fichiers dans `content/recettes/`). Pour chaque article existant, noter :
 - Le titre
 - Le mot-cle principal (visible dans le title et le nom du fichier)
 - La categorie
@@ -72,8 +72,8 @@ Identifier **au minimum 3 articles existants** thematiquement proches du nouvel 
 - Repartir les liens dans differentes sections de l'article (pas tous au meme endroit)
 
 Exemple :
-- Si l'article cible s'appelle "Les bienfaits du the vert", l'ancre doit etre quelque chose comme : "Comme nous l'avons vu dans notre article sur les **[bienfaits du the vert](/blog/bienfaits-the-vert/)**, ..."
-- PAS : "Pour en savoir plus, [cliquez ici](/blog/bienfaits-the-vert/)"
+- Si l'article cible s'appelle "Les bienfaits du the vert", l'ancre doit etre quelque chose comme : "Comme nous l'avons vu dans notre article sur les **[bienfaits du the vert](/recettes/bienfaits-the-vert/)**, ..."
+- PAS : "Pour en savoir plus, [cliquez ici](/recettes/bienfaits-the-vert/)"
 
 Si le site a moins de 3 articles, faire le maximum avec ce qui existe. Si le site est vide (premier article), noter dans un commentaire les futurs liens a ajouter quand d'autres articles seront publies.
 
