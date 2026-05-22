@@ -1,5 +1,6 @@
 ---
 title: "Pâtes à la carbonara à la française"
+slug: "pate-carbonara-francaise"
 layout: "recette"
 date: 2026-05-20
 lastmod: 2026-05-22
@@ -15,7 +16,7 @@ servings: 2
 servings_options: [2, 4, 6]
 rating: 4.8
 rating_count: 137
-aliases: ["/blog/pates-carbonara-a-la-francaise/"]
+aliases: ["/recettes/pates-carbonara-a-la-francaise/", "/blog/pates-carbonara-a-la-francaise/", "/blog/pate-carbonara-francaise/"]
 ingredients:
   - { name: "Spaghetti", qty: 200, unit: "g", image: "images/ingredients/pates.jpg" }
   - { name: "Lardons fumés", qty: 150, unit: "g", image: "images/ingredients/lardons.jpg" }

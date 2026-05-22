@@ -30,11 +30,11 @@ summaryLength = 30
     weight = 4
   [[menus.main]]
     name = "Cuisine du monde"
-    url = "/categories/cuisine-du-monde/"
+    url = "/categories/cuisine-monde/"
     weight = 5
   [[menus.main]]
     name = "Conseils et astuces"
-    url = "/categories/conseils-et-astuces/"
+    url = "/categories/conseils-astuces/"
     weight = 6
   [[menus.main]]
     name = "Batch cooking"

@@ -56,27 +56,24 @@
         <a class="rr-tab active" href="{{ "categories/entrees/" | relURL }}">Entrées</a>
         <a class="rr-tab" href="{{ "categories/plats/" | relURL }}">Plats</a>
         <a class="rr-tab" href="{{ "categories/desserts/" | relURL }}">Desserts</a>
-        <a class="rr-tab" href="{{ "categories/cuisine-du-monde/" | relURL }}">Cuisine du monde</a>
-        <a class="rr-tab" href="{{ "categories/conseils-et-astuces/" | relURL }}">Conseils</a>
+        <a class="rr-tab" href="{{ "categories/cuisine-monde/" | relURL }}">Cuisine du monde</a>
+        <a class="rr-tab" href="{{ "categories/conseils-astuces/" | relURL }}">Conseils</a>
       </div>
       <div class="rr-recipes">
-        {{ $recipes := slice
-          (dict "img" "images/home/dish-1.jpg" "cat" "Entrées" "title" "Salade fraîcheur tomate et avocat" "time" "10 min" "alt" "Salade fraîcheur tomate et avocat" "rating" 4.9 "count" 86)
-          (dict "img" "images/home/dish-2.jpg" "cat" "Cuisine du monde" "title" "Bol asiatique au saumon" "time" "25 min" "alt" "Bol asiatique au saumon" "rating" 4.7 "count" 112)
-          (dict "img" "images/home/dish-3.jpg" "cat" "Entrées" "title" "Velouté de légumes réconfortant" "time" "30 min" "alt" "Velouté de légumes maison" "rating" 4.8 "count" 64)
-          (dict "img" "images/home/cta.jpg" "cat" "Plats" "title" "Sandwich gourmand à l'ancienne" "time" "15 min" "alt" "Sandwich gourmand sur planche" "rating" 4.6 "count" 73)
-        }}
-        {{ range $recipes }}
-        <a href="{{ "recettes/" | relURL }}" class="rr-recipe" data-reveal>
+        {{/* Recettes reelles, les plus recentes, plafonnees au nombre de slots de la home (4) */}}
+        {{ range first 4 (where .Site.RegularPages "Section" "recettes").ByDate.Reverse }}
+        {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
+        {{ $rc := .Params.rating_count }}
+        <a href="{{ .RelPermalink }}" class="rr-recipe" data-reveal>
           <div class="rr-recipe-media">
             <span class="rr-badge">Recette</span>
             <span class="rr-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-            <img src="{{ .img | relURL }}" alt="{{ .alt }}" loading="lazy">
+            <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
           </div>
-          <div class="rr-recipe-meta"><span class="rr-recipe-cat">{{ .cat }}</span></div>
-          <h3>{{ .title }}</h3>
-          <div class="rr-recipe-rating">{{ partial "stars.html" .rating }} <span>{{ .rating }} ({{ .count }})</span></div>
-          <span class="rr-recipe-ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Prêt en {{ .time }}</span>
+          <div class="rr-recipe-meta">{{ with .Params.categories }}<span class="rr-recipe-cat">{{ index . 0 }}</span>{{ end }}</div>
+          <h3>{{ .Title }}</h3>
+          {{ with .Params.rating }}<div class="rr-recipe-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $rc }})</span></div>{{ end }}
+          {{ if $total }}<span class="rr-recipe-ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Prêt en {{ $total }} min</span>{{ end }}
         </a>
         {{ end }}
       </div>

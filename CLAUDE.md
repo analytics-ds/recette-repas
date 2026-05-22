@@ -96,6 +96,7 @@ Cette limite sert a eviter la publication en masse et a maintenir un rythme de p
 - Toujours utiliser `relURL` dans les templates Hugo pour les liens (compatibilite GitHub Pages)
 - Les articles vont dans `content/recettes/`
 - Les slugs sont en minuscules, sans accents, mots separes par des tirets
+- Les slugs doivent etre COURTS : retirer les mots de liaison (a, la, le, de, du, des, et, aux). Ex : "Pates a la carbonara a la francaise" -> `pate-carbonara-francaise` ; "Cuisine du monde" -> `cuisine-monde` ; "Conseils et astuces" -> `conseils-astuces`. Definir le slug via le champ `slug` du frontmatter (recettes) ou `url` (termes de taxonomie/categories), et ajouter un `aliases` si on raccourcit un slug deja en ligne
 - Ne JAMAIS utiliser `&` dans les noms de categories ou de tags — toujours remplacer par "et" (Hugo genere un double tiret `--` dans le slug, ce qui casse les URLs)
 - Le ton des articles est impersonnel (pas de je/tu/nous/vous) sauf instruction contraire
 - Les specs d'article (mots minimum, H2, blocs obligatoires) dependent du type choisi — lire les `<!-- NOTES POUR CLAUDE -->` dans chaque template d'article
