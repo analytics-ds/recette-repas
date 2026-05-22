@@ -22,11 +22,11 @@
                 <span class="author-name">{{ . }}</span>
             </div>
             {{ end }}
+            {{ with .Params.tags }}
             <div class="article-tags">
-                {{ range .Params.tags }}
-                <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag">#{{ . }}</a>
-                {{ end }}
+                {{ range . }}<span class="tag">#{{ . }}</span>{{ end }}
             </div>
+            {{ end }}
         </div>
     </header>
 

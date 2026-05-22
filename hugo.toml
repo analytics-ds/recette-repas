@@ -7,7 +7,6 @@ summaryLength = 30
 
 [taxonomies]
   category = "categories"
-  tag = "tags"
 
 [params]
   description = "Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien."
