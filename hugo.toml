@@ -4,6 +4,7 @@ title = "Recette & Repas"
 theme = "recette-repas"
 enableRobotsTXT = false
 summaryLength = 30
+removePathAccents = true
 
 [taxonomies]
   category = "categories"
