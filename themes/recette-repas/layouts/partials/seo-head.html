@@ -21,8 +21,8 @@
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
-<!-- JSON-LD Schema.org : BlogPosting (articles) -->
-{{ if .IsPage }}
+<!-- JSON-LD Schema.org : BlogPosting (articles standards uniquement ; les recettes fournissent leur propre schema Recipe) -->
+{{ if and .IsPage (eq .Section "recettes") (ne .Layout "recette") }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",

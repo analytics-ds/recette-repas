@@ -206,17 +206,17 @@
   {{ $n = merge $n (dict "servingSize" "1 portion") }}
   {{ $recipe = merge $recipe (dict "nutrition" $n) }}
 {{ end }}
-<script type="application/ld+json">{{ $recipe | jsonify }}</script>
+<script type="application/ld+json">{{ $recipe | jsonify | safeJS }}</script>
 
 {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" (.Site.BaseURL)) }}
 {{ if $cat }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $cat "item" $catURLAbs) }}{{ end }}
 {{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
-<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify }}</script>
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify | safeJS }}</script>
 
 {{ with .Params.faq }}
 {{ $faqLD := slice }}
 {{ range . }}{{ $faqLD = $faqLD | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
-<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqLD) | jsonify }}</script>
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqLD) | jsonify | safeJS }}</script>
 {{ end }}
 
 <script>
