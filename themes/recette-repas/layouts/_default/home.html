@@ -1,0 +1,311 @@
+{{ define "main" }}
+<div class="rr-home">
+
+  <!-- Hero -->
+  <section class="rr-hero">
+    <img class="rr-hero-bg" src="{{ "images/home/hero.jpg" | relURL }}" alt="L'application Recette & Repas affichée sur un téléphone, posé dans une cuisine entouré d'ingrédients frais">
+    <div class="rr-hero-overlay">
+    <div class="rr-wrap">
+      <div class="rr-hero-card" data-reveal>
+        <h1>Des idées de recettes faciles pour <span class="rr-em">tous les jours</span></h1>
+        <p>Trouvez l'inspiration avec des idées de recettes simples, testées et expliquées pas à pas, signées par un ancien chef, pour ne plus jamais se demander quoi manger.</p>
+        <div class="rr-hero-cta">
+          <a href="{{ "blog/" | relURL }}" class="rr-btn">Découvrir les recettes</a>
+          <a href="{{ "a-propos/" | relURL }}" class="rr-btn-light">Le blog d'un chef</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- 3 cartes -->
+  <section class="rr-features">
+    <div class="rr-wrap">
+      <h2 class="rr-section-title">Par où commencer ?</h2>
+      <div class="rr-features-grid">
+        <div class="rr-fcard" data-reveal>
+          <h3>À propos du chef</h3>
+          <p>Après des années en cuisine de restaurant, l'envie de transmettre des recettes simples et de qualité a pris le dessus.</p>
+          <a href="{{ "a-propos/" | relURL }}" class="rr-btn-light">En savoir plus</a>
+          <img class="rr-fcard-img" src="{{ "images/home/food-1.jpg" | relURL }}" alt="Assiette gourmande dressée par un chef" loading="lazy">
+        </div>
+        <div class="rr-fcard" data-reveal>
+          <h3>Explorez le blog</h3>
+          <p>Des recettes pour tous les jours, des idées de saison et des astuces concrètes pour progresser en cuisine.</p>
+          <a href="{{ "blog/" | relURL }}" class="rr-btn-light">Lire le blog</a>
+          <img class="rr-fcard-img" src="{{ "images/home/food-2.jpg" | relURL }}" alt="Recettes du blog pour tous les jours" loading="lazy">
+        </div>
+        <div class="rr-fcard" data-reveal>
+          <h3>Nos catégories</h3>
+          <p>Entrées, plats, desserts, cuisine du monde et conseils : trouvez l'inspiration selon le moment du repas.</p>
+          <a href="{{ "categories/plats/" | relURL }}" class="rr-btn-light">Voir les catégories</a>
+          <img class="rr-fcard-img" src="{{ "images/home/food-3.jpg" | relURL }}" alt="Catégories de recettes variées" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collection de recettes -->
+  <section class="rr-panel">
+    <div class="rr-wrap">
+      <div class="rr-panel-head" data-reveal>
+        <h2>Explorez notre collection de recettes</h2>
+        <p>Des recettes nourrissantes pour cuisiner au quotidien, simples, savoureuses et pleines de goût.</p>
+      </div>
+      <div class="rr-tabs" data-reveal>
+        <a class="rr-tab active" href="{{ "categories/entrees/" | relURL }}">Entrées</a>
+        <a class="rr-tab" href="{{ "categories/plats/" | relURL }}">Plats</a>
+        <a class="rr-tab" href="{{ "categories/desserts/" | relURL }}">Desserts</a>
+        <a class="rr-tab" href="{{ "categories/cuisine-du-monde/" | relURL }}">Cuisine du monde</a>
+        <a class="rr-tab" href="{{ "categories/conseils-et-astuces/" | relURL }}">Conseils</a>
+      </div>
+      <div class="rr-recipes">
+        {{ $recipes := slice
+          (dict "img" "images/home/dish-1.jpg" "cat" "Entrées" "title" "Salade fraîcheur tomate et avocat" "time" "10 min" "alt" "Salade fraîcheur tomate et avocat")
+          (dict "img" "images/home/dish-2.jpg" "cat" "Cuisine du monde" "title" "Bol asiatique au saumon" "time" "25 min" "alt" "Bol asiatique au saumon")
+          (dict "img" "images/home/dish-3.jpg" "cat" "Entrées" "title" "Velouté de légumes réconfortant" "time" "30 min" "alt" "Velouté de légumes maison")
+          (dict "img" "images/home/cta.jpg" "cat" "Plats" "title" "Sandwich gourmand à l'ancienne" "time" "15 min" "alt" "Sandwich gourmand sur planche")
+        }}
+        {{ range $recipes }}
+        <a href="{{ "blog/" | relURL }}" class="rr-recipe" data-reveal>
+          <div class="rr-recipe-media">
+            <span class="rr-badge">Recette</span>
+            <span class="rr-fav"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <img src="{{ .img | relURL }}" alt="{{ .alt }}" loading="lazy">
+          </div>
+          <div class="rr-recipe-meta"><span class="rr-recipe-cat">{{ .cat }}</span></div>
+          <h3>{{ .title }}</h3>
+          <span class="rr-recipe-ready"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Prêt en {{ .time }}</span>
+        </a>
+        {{ end }}
+      </div>
+      <div class="rr-panel-foot"><a href="{{ "blog/" | relURL }}" class="rr-btn">Voir toutes les recettes</a></div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="rr-panel alt">
+    <div class="rr-wrap">
+      <div class="rr-panel-head" data-reveal>
+        <h2>Parcourez par catégorie</h2>
+        <p>Naturelles, simples, délicieuses : choisissez selon vos envies du moment.</p>
+      </div>
+      <div class="rr-cats">
+        {{ with .Site.GetPage "/categories" }}
+        {{ range .Pages }}
+        <a href="{{ .RelPermalink }}" class="rr-cat" data-reveal>
+          <div class="rr-cat-media"><img src="{{ (index (slice "images/home/dish-3.jpg" "images/home/dish-1.jpg" "images/home/food-4.jpg" "images/home/dessert.jpg" "images/home/dish-2.jpg" "images/home/ingredients.jpg" "images/home/mealprep.jpg") .Weight) | relURL }}" alt="Idées de recettes : {{ .Title }}" loading="lazy"></div>
+          <h3>{{ .Title }}</h3>
+          <span>{{ len .Pages }} {{ if gt (len .Pages) 1 }}recettes{{ else }}recette{{ end }}</span>
+        </a>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee images -->
+  <div class="rr-marquee" aria-hidden="true">
+    <div class="rr-marquee-track">
+      {{ $strip := slice "images/home/dish-1.jpg" "images/home/food-4.jpg" "images/home/dessert.jpg" "images/home/dish-2.jpg" "images/home/food-1.jpg" "images/home/dish-3.jpg" "images/home/food-2.jpg" }}
+      {{ range $strip }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+      {{ range $strip }}<img src="{{ . | relURL }}" alt="" loading="lazy">{{ end }}
+    </div>
+  </div>
+
+  <!-- Suivez-nous / newsletter -->
+  <section class="rr-follow">
+    <div class="rr-wrap rr-follow-inner">
+      <div data-reveal>
+        <span class="rr-eyebrow">Rejoignez la communauté</span>
+        <h2>Plus que des recettes,<br>une cuisine qui rassemble</h2>
+        <p>Recevez chaque semaine de nouvelles recettes et les conseils du chef directement dans votre boîte mail. Et suivez-nous pour ne rien manquer.</p>
+        <form class="rr-form" onsubmit="return false">
+          <input type="email" placeholder="Votre adresse email" aria-label="Votre adresse email">
+          <button type="submit" class="rr-btn">S'inscrire</button>
+        </form>
+        <div class="rr-socials">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4H16V5.6c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.1H7.7V14h2.4v7z"/></svg></a>
+          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.4 1.8-2.4.9 0 1.3.6 1.3 1.4 0 .9-.6 2.2-.9 3.4-.2 1 .5 1.8 1.5 1.8 1.8 0 3-2.3 3-5 0-2-1.4-3.6-3.9-3.6a4.5 4.5 0 0 0-4.7 4.5c0 .9.3 1.5.7 2 .2.2.2.3.1.5l-.2.9c-.1.3-.3.4-.6.2-1.2-.5-1.8-1.9-1.8-3.5 0-2.6 2.2-5.7 6.5-5.7 3.5 0 5.7 2.5 5.7 5.2 0 3.5-2 6.2-4.9 6.2-1 0-1.9-.5-2.2-1.1l-.6 2.4c-.2.8-.7 1.7-1 2.3A10 10 0 1 0 12 2"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.6 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.4 12 27 27 0 0 0 22 8.2M10 15V9l5.2 3z"/></svg></a>
+        </div>
+      </div>
+      <div class="rr-follow-media" data-reveal>
+        <img src="{{ "images/home/dish-2.jpg" | relURL }}" alt="Plat gourmand de Recette & Repas" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Temoignages -->
+  <section class="rr-reviews">
+    <div class="rr-wrap">
+      <div class="rr-reviews-head" data-reveal>
+        <span class="rr-eyebrow">Ils cuisinent avec nous</span>
+        <h2>Une communauté de gourmands</h2>
+        <p>Ce que les lecteurs disent des recettes et des conseils du blog.</p>
+      </div>
+      <div class="rr-reviews-grid">
+        <div class="rr-review" data-reveal>
+          <div class="rr-stars">★★★★★</div>
+          <p>Des recettes vraiment faciles à suivre, et qui marchent à tous les coups. Le gratin dauphinois est devenu un classique à la maison.</p>
+          <div class="rr-author">Camille L.</div>
+        </div>
+        <div class="rr-review" data-reveal>
+          <div class="rr-stars">★★★★★</div>
+          <p>J'adore les astuces du chef, on sent l'expérience. J'ai enfin réussi mes cuissons sans stresser.</p>
+          <div class="rr-author">Thomas R.</div>
+        </div>
+        <div class="rr-review" data-reveal>
+          <div class="rr-stars">★★★★★</div>
+          <p>Les idées de saison et anti-gaspillage me font cuisiner différemment. Simple, clair et toujours gourmand.</p>
+          <div class="rr-author">Sarah B.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bandeau defilant -->
+  <div class="rr-strip" aria-hidden="true">
+    <div class="rr-strip-track">
+      {{ $tags := slice "Recettes faciles" "Testées par un chef" "De saison" "Anti-gaspillage" "Cuisine maison" "Pour tous les jours" }}
+      {{ range $tags }}<span>{{ . }} •</span>{{ end }}
+      {{ range $tags }}<span>{{ . }} •</span>{{ end }}
+    </div>
+  </div>
+
+  <!-- A propos du chef -->
+  <section class="rr-about">
+    <div class="rr-about-inner">
+      <div class="rr-about-media" data-reveal>
+        <img src="{{ "images/home/cta.jpg" | relURL }}" alt="Cuisine d'un ancien chef" loading="lazy">
+      </div>
+      <div data-reveal>
+        <span class="rr-eyebrow">Le blog d'un ancien chef</span>
+        <h2>Cuisinez comme un chef, <span class="rr-em">chez vous</span></h2>
+        <p>Recette &amp; Repas réunit des recettes accessibles et des conseils de métier pour progresser en cuisine, gagner du temps et régaler vos proches sans stress.</p>
+        <div class="rr-benefits">
+          <div class="rr-benefit">
+            <h3>Recettes testées</h3>
+            <p>Chaque recette est cuisinée avant d'être publiée.</p>
+          </div>
+          <div class="rr-benefit">
+            <h3>Gain de temps</h3>
+            <p>Des étapes claires et des repas rapides en semaine.</p>
+          </div>
+          <div class="rr-benefit">
+            <h3>Conseils de chef</h3>
+            <p>Les astuces d'un professionnel pour réussir.</p>
+          </div>
+          <div class="rr-benefit">
+            <h3>Anti-gaspillage</h3>
+            <p>Cuisiner mieux en jetant moins, idées pour les restes.</p>
+          </div>
+        </div>
+        <a href="{{ "a-propos/" | relURL }}" class="rr-btn">Découvrir l'histoire</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bloc editorial SEO : idées de recettes -->
+  <section class="rr-content">
+    <div class="rr-wrap">
+
+      <div class="rr-intro">
+        <span class="rr-eyebrow">Idées de recettes</span>
+        <h2>Des idées de recettes faciles pour ne plus jamais manquer d'inspiration</h2>
+        <p>Trouver une <strong>idée de recette</strong> qui plaît à toute la famille n'est pas toujours simple. Entre l'envie de manger sainement, le temps qui manque et les goûts de chacun, la question « qu'est-ce qu'on mange ? » revient chaque jour. Recette &amp; Repas réunit des centaines d'<strong>idées de recettes faciles</strong>, testées par un ancien chef, pour répondre à toutes les envies sans se compliquer la vie.</p>
+      </div>
+
+      <div class="rr-summary">
+        <h2>En résumé</h2>
+        <ul>
+          <li>Des idées de recettes faciles classées par moment du repas, du midi au dîner.</li>
+          <li>Des recettes rapides prêtes en 10 à 30 minutes pour le soir en semaine.</li>
+          <li>Des idées par saison et des plats du monde à partager en famille.</li>
+        </ul>
+      </div>
+
+      <div class="rr-row">
+        <div class="rr-row-media"><img src="{{ "images/home/dish-1.jpg" | relURL }}" alt="Idée de recette rapide et facile pour le soir" loading="lazy"></div>
+        <div class="rr-row-text">
+          <h2>Des idées de recettes rapides et faciles pour le soir</h2>
+          <p>Le soir, on cherche souvent une recette simple et rapide à préparer, avec quelques ingrédients frais sous la main. Pas besoin de passer des heures aux fourneaux pour un repas express et réconfortant. Voici des idées qui plaisent aux petits comme aux grands :</p>
+          <ul>
+            <li>Une <strong>omelette</strong> aux courgettes et au comté, prête en dix minutes.</li>
+            <li>Des <strong>pâtes</strong> aux tomates et au basilic, un classique express et inratable.</li>
+            <li>Une poêlée de <strong>légumes</strong> de saison avec des œufs au plat.</li>
+            <li>Un <strong>saumon</strong> fumé sur un toast de pain frais, sans aucune cuisson.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="rr-row reverse">
+        <div class="rr-row-media"><img src="{{ "images/home/dish-3.jpg" | relURL }}" alt="Idées de recettes de saison au printemps" loading="lazy"></div>
+        <div class="rr-row-text">
+          <h2>Des idées de recettes de saison, du printemps à l'hiver</h2>
+          <p>Cuisiner de saison, c'est l'assurance de produits frais, savoureux et plus économiques. Au <strong>printemps</strong>, les asperges, les petits pois et les courgettes inspirent des recettes légères et colorées. L'été appelle les salades et les grillades, l'automne les soupes et les tartes, et l'hiver les plats mijotés et les gratins réconfortants. Suivre le rythme du marché renouvelle naturellement les idées de recettes tout au long de l'année.</p>
+        </div>
+      </div>
+
+      <div class="rr-row">
+        <div class="rr-row-media"><img src="{{ "images/home/dish-2.jpg" | relURL }}" alt="Idées de recettes du monde à partager en famille" loading="lazy"></div>
+        <div class="rr-row-text">
+          <h2>Des idées de recettes du monde à partager en famille</h2>
+          <p>Voyager par l'assiette donne toujours de nouvelles idées. Un curry de <strong>légumes</strong> parfumé aux épices, un bol asiatique au <strong>saumon</strong> ou des tacos garnis se préparent facilement et se partagent en <strong>famille</strong>. Pour finir le repas en beauté, un plateau de fromages <strong>AOP</strong> comme le comté met tout le monde d'accord, sans la moindre cuisson.</p>
+        </div>
+      </div>
+
+      <div class="rr-block">
+        <div class="rr-stats">
+          <div class="rr-stat"><strong>+200</strong><span>idées de recettes faciles</span></div>
+          <div class="rr-stat"><strong>20 min</strong><span>en moyenne pour un repas du soir</span></div>
+          <div class="rr-stat"><strong>6</strong><span>catégories, des entrées aux desserts</span></div>
+        </div>
+        <h2>Des idées de recettes par catégorie : entrées, plats et desserts</h2>
+        <p>Pour composer un repas complet, le plus simple est de piocher une idée dans chaque catégorie. Le tableau ci-dessous rassemble des idées de recettes faciles selon le moment du repas :</p>
+        <table class="rr-table">
+          <thead><tr><th>Moment du repas</th><th>Idées de recettes faciles</th></tr></thead>
+          <tbody>
+            <tr><td>En entrée</td><td>Salade de tomates et mozzarella, velouté de légumes, œufs farcis</td></tr>
+            <tr><td>En plat</td><td>Poulet rôti, saumon en papillote, pâtes aux lentilles, tarte salée</td></tr>
+            <tr><td>En dessert</td><td>Tarte aux pommes, salade de fruits, crème aux épices</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Qu'est-ce qu'on peut faire à manger le soir ?</h2>
+        <p>Pour le repas du soir, privilégiez des recettes simples et rapides : une grande salade complète, une soupe de légumes, un gratin réconfortant ou un plat de pâtes. Ces idées se préparent en moins de trente minutes, limitent la vaisselle et permettent d'utiliser ce qu'il reste dans le réfrigérateur pour éviter le gaspillage.</p>
+
+        <h2>Quels menus pour la semaine ?</h2>
+        <p>Pour gagner du temps, planifiez vos idées de recettes sur la semaine : un plat mijoté le lundi, une tarte salée le mardi, un poisson le jeudi et un grand repas en famille le week-end. Préparer un menu à l'avance évite le gaspillage, allège la charge mentale et met fin à la question quotidienne du « qu'est-ce qu'on mange ce soir ? ».</p>
+
+        <h2>Combien de temps faut-il pour préparer une idée de recette facile ?</h2>
+        <p>La majorité de nos idées de recettes se préparent en 10 à 30 minutes. Pour un repas du soir express, comptez environ 15 minutes avec 5 ingrédients : une omelette, des pâtes ou une poêlée de légumes sont prêtes en un quart d'heure. Le week-end, un plat mijoté ou un poulet rôti demande davantage de patience, entre 45 minutes et 2 heures de cuisson, mais seulement 15 minutes de préparation active. Pour gagner du temps en semaine, le batch cooking permet de cuisiner 4 à 5 repas en une seule session de 2 heures le dimanche. Quelle que soit l'envie, il existe toujours une idée de recette adaptée au temps disponible : une salade ou un velouté pour les soirs pressés, une tarte ou un gratin pour les repas en famille. Cuisiner maison reste accessible, même avec un emploi du temps chargé.</p>
+
+        <h2>Questions fréquentes sur les idées de recettes</h2>
+        <div class="rr-faq">
+        <details open>
+          <summary><h3>Qu'est-ce qu'on pourrait faire à manger aujourd'hui ?</h3></summary>
+          <p>Selon l'envie et le temps disponible, une idée de recette facile comme une salade composée, une poêlée de légumes ou un plat de pâtes fait toujours l'affaire. Pour un repas plus copieux, un poulet rôti ou une tarte salée sont des valeurs sûres.</p>
+        </details>
+        <details>
+          <summary><h3>Quelles idées de recettes rapides et faciles pour le soir ?</h3></summary>
+          <p>Omelette, pâtes aux tomates, soupe de légumes ou saumon poêlé : ces recettes express se préparent en moins de vingt minutes, avec peu d'ingrédients et un minimum de vaisselle.</p>
+        </details>
+        <details>
+          <summary><h3>Comment trouver des idées de recettes de saison ?</h3></summary>
+          <p>Partez des produits du marché. Au printemps, misez sur les asperges, les petits pois et les courgettes ; en hiver, sur les soupes, les gratins et les plats mijotés. Cuisiner de saison renouvelle les idées sans effort.</p>
+        </details>
+        <details>
+          <summary><h3>Quelles idées de recettes pour un grand repas en famille ?</h3></summary>
+          <p>Un poulet rôti, une tarte salée ou un gratin généreux, suivis d'une tarte aux pommes maison, plaisent à tous les convives. Ces plats se préparent à l'avance et se partagent facilement.</p>
+        </details>
+      </div>
+      </div>
+
+    </div>
+  </section>
+
+
+</div>
+{{ end }}

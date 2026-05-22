@@ -1,0 +1,26 @@
+# Recette & Repas
+
+> Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien.
+
+## A propos
+
+Recette & Repas est un blog de cuisine animé par un ancien chef. Il propose des recettes accessibles, testées, et des conseils pratiques pour cuisiner mieux au quotidien.
+
+## Contenu principal
+
+- Entrées : idées d'entrées faciles et gourmandes, froides ou chaudes.
+- Plats : recettes de plats principaux du quotidien aux repas du dimanche.
+- Desserts : gâteaux, tartes et douceurs maison simples et inratables.
+- Cuisine du monde : recettes venues d'ailleurs à refaire chez soi.
+- Conseils et astuces : techniques et conseils de chef pour gagner du temps et limiter le gaspillage.
+
+## Articles recents
+
+Aucun article publié pour le moment. Le blog est en cours de lancement.
+
+## Informations techniques
+
+- Generateur : Hugo
+- Hebergement : GitHub Pages
+- Sitemap : https://analyticsds.github.io/recette-repas/sitemap.xml
+- RSS : https://analyticsds.github.io/recette-repas/index.xml

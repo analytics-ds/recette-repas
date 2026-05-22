@@ -1,0 +1,142 @@
+{{ define "main" }}
+{{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
+{{ $catPage := "" }}{{ if $cat }}{{ $catPage = (printf "/categories/%s/" (urlize $cat)) }}{{ end }}
+{{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
+
+<article class="recipe">
+  <div class="container container-narrow">
+
+    <nav class="recipe-breadcrumb" aria-label="Fil d'Ariane">
+      <a href="{{ "/" | relURL }}">Accueil</a>
+      {{ if $cat }}<span>/</span><a href="{{ $catPage | relURL }}">{{ $cat }}</a>{{ end }}
+      <span>/</span><span>{{ .Title }}</span>
+    </nav>
+
+    <header class="recipe-header">
+      <div class="recipe-header-text">
+        {{ if $cat }}<span class="recipe-cat">{{ $cat }}</span>{{ end }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="recipe-desc">{{ . }}</p>{{ end }}
+        <div class="recipe-meta">
+          <div class="recipe-meta-item"><span class="recipe-meta-label">Préparation</span><strong>{{ .Params.prep_min }} min</strong></div>
+          <div class="recipe-meta-item"><span class="recipe-meta-label">Cuisson</span><strong>{{ .Params.cook_min }} min</strong></div>
+          <div class="recipe-meta-item"><span class="recipe-meta-label">Total</span><strong>{{ $total }} min</strong></div>
+          <div class="recipe-meta-item"><span class="recipe-meta-label">Difficulté</span><strong>{{ .Params.difficulty }}</strong></div>
+        </div>
+        {{ with .Params.author }}<p class="recipe-author">Une recette de <strong>{{ . }}</strong></p>{{ end }}
+      </div>
+      {{ with .Params.image }}
+      <div class="recipe-header-media"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="eager"></div>
+      {{ end }}
+    </header>
+
+    <section class="recipe-ingredients">
+      <div class="recipe-ingredients-head">
+        <h2>Ingrédients</h2>
+        <div class="recipe-servings" data-base="{{ .Params.servings }}">
+          <span>Pour</span>
+          <div class="servings-btns">
+            {{ range .Params.servings_options }}
+            <button type="button" data-servings="{{ . }}"{{ if eq . $.Params.servings }} class="active"{{ end }}>{{ . }}</button>
+            {{ end }}
+          </div>
+          <span>pers.</span>
+        </div>
+      </div>
+      <div class="ingredient-grid">
+        {{ range .Params.ingredients }}
+        <div class="ingredient-card">
+          <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+          <div class="ingredient-info">
+            <span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
+            <span class="ingredient-name">{{ .name }}</span>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </section>
+
+    <section class="recipe-steps">
+      <h2>Préparation</h2>
+      <ol class="steps-list">
+        {{ range $i, $s := .Params.steps }}
+        <li><span class="step-num">{{ add $i 1 }}</span><div class="step-text">{{ $s }}</div></li>
+        {{ end }}
+      </ol>
+    </section>
+
+    {{ with .Content }}<section class="recipe-body">{{ . }}</section>{{ end }}
+
+    {{ with .Params.faq }}
+    <section class="recipe-faq">
+      <h2>Questions fréquentes</h2>
+      {{ range . }}
+      <details>
+        <summary><h3>{{ .q }}</h3></summary>
+        <p>{{ .a }}</p>
+      </details>
+      {{ end }}
+    </section>
+    {{ end }}
+
+  </div>
+</article>
+
+{{/* ===== Donnees structurees ===== */}}
+{{ $ingList := slice }}
+{{ range .Params.ingredients }}{{ $ingList = $ingList | append (trim (printf "%v %s %s" .qty (.unit | default "") .name) " ") }}{{ end }}
+{{ $stepsLD := slice }}
+{{ range .Params.steps }}{{ $stepsLD = $stepsLD | append (dict "@type" "HowToStep" "text" .) }}{{ end }}
+{{ $recipe := dict
+  "@context" "https://schema.org"
+  "@type" "Recipe"
+  "name" .Title
+  "description" .Description
+  "image" (.Params.image | absURL)
+  "author" (dict "@type" "Person" "name" (.Params.author | default .Site.Params.author_name))
+  "datePublished" (.Date.Format "2006-01-02")
+  "prepTime" (printf "PT%dM" (int .Params.prep_min))
+  "cookTime" (printf "PT%dM" (int .Params.cook_min))
+  "totalTime" (printf "PT%dM" $total)
+  "recipeYield" (printf "%d portions" (int .Params.servings))
+  "recipeCategory" $cat
+  "recipeCuisine" "Française"
+  "recipeIngredient" $ingList
+  "recipeInstructions" $stepsLD
+}}
+<script type="application/ld+json">{{ $recipe | jsonify }}</script>
+
+{{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" (.Site.BaseURL)) }}
+{{ if $cat }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" $cat "item" ($catPage | absURL)) }}{{ end }}
+{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify }}</script>
+
+{{ with .Params.faq }}
+{{ $faqLD := slice }}
+{{ range . }}{{ $faqLD = $faqLD | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqLD) | jsonify }}</script>
+{{ end }}
+
+<script>
+(function(){
+  var wrap=document.querySelector('.recipe-servings');
+  if(!wrap) return;
+  var base=parseFloat(wrap.dataset.base)||1;
+  var btns=wrap.querySelectorAll('button');
+  function fmt(v){ v=Math.round(v*100)/100; return Number.isInteger(v)?String(v):v.toFixed(1).replace(/\.0$/,''); }
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      var n=parseFloat(b.dataset.servings);
+      document.querySelectorAll('.ingredient-qty').forEach(function(q){
+        var baseQty=parseFloat(q.dataset.base); var unit=q.dataset.unit||'';
+        if(isNaN(baseQty)) return;
+        var val=baseQty*n/base;
+        q.textContent=(fmt(val)+(unit?' '+unit:'')).trim();
+      });
+    });
+  });
+})();
+</script>
+{{ end }}

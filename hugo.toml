@@ -1,0 +1,51 @@
+baseURL = "https://analyticsds.github.io/recette-repas/"
+languageCode = "fr-fr"
+title = "Recette & Repas"
+theme = "recette-repas"
+enableRobotsTXT = false
+summaryLength = 30
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien."
+  author = "Julien Marchand"
+  author_name = "Julien Marchand"
+  author_url = "https://www.linkedin.com/in/julien-marchand-chef/"
+  author_job_title = "Ancien chef de cuisine"
+
+[menus]
+  [[menus.main]]
+    name = "Entrées"
+    url = "/categories/entrees/"
+    weight = 2
+  [[menus.main]]
+    name = "Plats"
+    url = "/categories/plats/"
+    weight = 3
+  [[menus.main]]
+    name = "Desserts"
+    url = "/categories/desserts/"
+    weight = 4
+  [[menus.main]]
+    name = "Cuisine du monde"
+    url = "/categories/cuisine-du-monde/"
+    weight = 5
+  [[menus.main]]
+    name = "Conseils et astuces"
+    url = "/categories/conseils-et-astuces/"
+    weight = 6
+  [[menus.main]]
+    name = "Batch cooking"
+    url = "/categories/batch-cooking/"
+    weight = 7
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[markup.goldmark.renderer]
+  unsafe = true

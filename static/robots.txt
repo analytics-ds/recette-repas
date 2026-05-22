@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://analyticsds.github.io/recette-repas/sitemap.xml

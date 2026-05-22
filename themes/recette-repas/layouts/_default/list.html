@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<section class="list-header">
+    <div class="container">
+        <h1>{{ .Title }}</h1>
+        {{ with .Description }}<p class="list-description">{{ . }}</p>{{ end }}
+        <span class="list-count">{{ len .Pages }} {{ if gt (len .Pages) 1 }}recettes{{ else }}recette{{ end }}</span>
+    </div>
+</section>
+
+<section class="list-content">
+    <div class="container">
+        {{ if .Pages }}
+        <div class="recipe-carousel">
+            <button class="rc-arrow rc-prev" type="button" aria-label="Précédent">&lsaquo;</button>
+            <div class="rc-track">
+                {{ range .Pages.ByDate.Reverse }}
+                <a class="rc-slide" href="{{ .RelPermalink }}">
+                    <div class="rc-slide-media">
+                        <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
+                        {{ with .Params.categories }}<span class="rc-badge">{{ index . 0 }}</span>{{ end }}
+                    </div>
+                    <div class="rc-slide-body">
+                        <h3>{{ .Title }}</h3>
+                        <div class="rc-meta">
+                            {{ if .Params.prep_min }}<span>{{ add (int .Params.prep_min) (int .Params.cook_min) }} min</span>{{ end }}
+                            {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
+                        </div>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+            <button class="rc-arrow rc-next" type="button" aria-label="Suivant">&rsaquo;</button>
+        </div>
+        {{ else }}
+        <p class="list-empty">Les premières recettes arrivent très bientôt. Revenez vite pour découvrir nos idées de recettes faciles.</p>
+        {{ end }}
+    </div>
+</section>
+
+<script>
+(function(){
+  var track=document.querySelector('.rc-track'); if(!track) return;
+  var prev=document.querySelector('.rc-prev'), next=document.querySelector('.rc-next');
+  function step(){ var c=track.querySelector('.rc-slide'); return c? c.getBoundingClientRect().width+18 : 320; }
+  if(prev) prev.addEventListener('click',function(){ track.scrollBy({left:-step()*1.5,behavior:'smooth'}); });
+  if(next) next.addEventListener('click',function(){ track.scrollBy({left:step()*1.5,behavior:'smooth'}); });
+})();
+</script>
+
+{{ end }}

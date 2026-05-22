@@ -1,0 +1,26 @@
+<div class="rr-topbar">
+  <div class="rr-announce">De nouvelles recettes faciles chaque semaine, signées par un ancien chef</div>
+  <header class="rr-header">
+    <div class="rr-header-bar">
+      <a href="{{ "/" | relURL }}" class="rr-logo">
+        <img src="{{ "images/logo-mark.png" | relURL }}" alt="Recette & Repas" width="46" height="46">
+        <span>Recette &amp; Repas</span>
+      </a>
+      <nav class="rr-nav">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <div class="rr-header-actions">
+        <a href="{{ "blog/" | relURL }}" class="rr-btn">Toutes nos recettes</a>
+        <button class="rr-burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+</div>
+<script>
+(function(){
+  var b=document.querySelector('.rr-burger'), n=document.querySelector('.rr-nav');
+  if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});}
+})();
+</script>

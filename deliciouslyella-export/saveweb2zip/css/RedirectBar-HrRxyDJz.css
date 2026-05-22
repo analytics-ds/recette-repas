@@ -1,0 +1,1 @@
+.redirect-bar{display:flex;box-sizing:border-box;width:100%;flex-wrap:wrap;align-items:center;list-style:none;padding:1rem 1.3rem;justify-content:center;gap:20px}.redirect-bar .redirect-bar__note{font-size:18px}.redirect-bar .actions{display:flex;gap:20px}@media screen and (min-width:1024px){.redirect-bar{padding:1rem 6%}}
