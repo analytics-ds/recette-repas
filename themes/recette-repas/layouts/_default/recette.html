@@ -4,7 +4,7 @@
 {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
 
 <article class="recipe">
-  <div class="container container-narrow">
+  <div class="container">
 
     <nav class="recipe-breadcrumb" aria-label="Fil d'Ariane">
       <a href="{{ "/" | relURL }}">Accueil</a>
@@ -30,54 +30,124 @@
       {{ end }}
     </header>
 
-    <section class="recipe-ingredients">
-      <div class="recipe-ingredients-head">
-        <h2>Ingrédients</h2>
-        <div class="recipe-servings" data-base="{{ .Params.servings }}">
-          <span>Pour</span>
-          <div class="servings-btns">
-            {{ range .Params.servings_options }}
-            <button type="button" data-servings="{{ . }}"{{ if eq . $.Params.servings }} class="active"{{ end }}>{{ . }}</button>
+    <div class="recipe-layout">
+      <div class="recipe-main">
+
+        <section class="recipe-ingredients">
+          <div class="recipe-ingredients-head">
+            <h2>Ingrédients</h2>
+            <div class="recipe-servings" data-base="{{ .Params.servings }}">
+              <span>Pour</span>
+              <div class="servings-btns">
+                {{ range .Params.servings_options }}
+                <button type="button" data-servings="{{ . }}"{{ if eq . $.Params.servings }} class="active"{{ end }}>{{ . }}</button>
+                {{ end }}
+              </div>
+              <span>pers.</span>
+            </div>
+          </div>
+          <div class="ingredient-grid">
+            {{ range .Params.ingredients }}
+            <div class="ingredient-card">
+              <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+              <div class="ingredient-info">
+                <span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
+                <span class="ingredient-name">{{ .name }}</span>
+              </div>
+            </div>
             {{ end }}
           </div>
-          <span>pers.</span>
-        </div>
-      </div>
-      <div class="ingredient-grid">
-        {{ range .Params.ingredients }}
-        <div class="ingredient-card">
-          <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
-          <div class="ingredient-info">
-            <span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
-            <span class="ingredient-name">{{ .name }}</span>
+
+          {{ with .Params.pantry }}
+          <h3 class="recipe-subhead">Ingrédients de base</h3>
+          <p class="recipe-subnote">À avoir dans vos placards.</p>
+          <div class="ingredient-grid">
+            {{ range . }}
+            <div class="ingredient-card">
+              <img class="ingredient-img" src="{{ .image | relURL }}" alt="{{ .name }}" loading="lazy">
+              <div class="ingredient-info">
+                {{ if .qty }}<span class="ingredient-qty" data-base="{{ .qty }}" data-unit="{{ .unit }}">{{ .qty }}{{ with .unit }} {{ . }}{{ end }}</span>
+                {{ else }}<span class="ingredient-qty ingredient-qty-note">{{ .note | default "selon le goût" }}</span>{{ end }}
+                <span class="ingredient-name">{{ .name }}</span>
+              </div>
+            </div>
+            {{ end }}
           </div>
-        </div>
+          {{ end }}
+        </section>
+
+        {{ with .Params.ustensiles }}
+        <section class="recipe-tools">
+          <h2>Ustensiles nécessaires</h2>
+          <div class="tool-grid">
+            {{ range . }}
+            {{ $tname := .name }}
+            <div class="tool-card">
+              {{ with .image }}<img class="tool-img" src="{{ . | relURL }}" alt="{{ $tname }}" loading="lazy">{{ end }}
+              <span class="tool-name">{{ $tname }}</span>
+            </div>
+            {{ end }}
+          </div>
+        </section>
         {{ end }}
+
+        <section class="recipe-steps">
+          <h2>Préparation pas à pas</h2>
+          <ol class="steps-list">
+            {{ range $i, $s := .Params.steps }}
+            <li>
+              <span class="step-num">{{ add $i 1 }}</span>
+              <div class="step-text">
+                {{ if reflect.IsMap $s }}
+                  {{ with $s.title }}<strong class="step-title">{{ . }}</strong>{{ end }}
+                  <p>{{ $s.text }}</p>
+                {{ else }}
+                  <p>{{ $s }}</p>
+                {{ end }}
+              </div>
+            </li>
+            {{ end }}
+          </ol>
+        </section>
+
+        {{ with .Content }}<section class="recipe-body">{{ . }}</section>{{ end }}
+
+        {{ with .Params.faq }}
+        <section class="recipe-faq">
+          <h2>Questions fréquentes</h2>
+          {{ range . }}
+          <details>
+            <summary><h3>{{ .q }}</h3></summary>
+            <p>{{ .a }}</p>
+          </details>
+          {{ end }}
+        </section>
+        {{ end }}
+
       </div>
-    </section>
 
-    <section class="recipe-steps">
-      <h2>Préparation</h2>
-      <ol class="steps-list">
-        {{ range $i, $s := .Params.steps }}
-        <li><span class="step-num">{{ add $i 1 }}</span><div class="step-text">{{ $s }}</div></li>
-        {{ end }}
-      </ol>
-    </section>
-
-    {{ with .Content }}<section class="recipe-body">{{ . }}</section>{{ end }}
-
-    {{ with .Params.faq }}
-    <section class="recipe-faq">
-      <h2>Questions fréquentes</h2>
-      {{ range . }}
-      <details>
-        <summary><h3>{{ .q }}</h3></summary>
-        <p>{{ .a }}</p>
-      </details>
+      {{ with .Params.nutrition }}
+      <aside class="recipe-aside">
+        <div class="nutrition-card" data-mode="portion">
+          <h2 class="nutrition-title">Valeurs nutritionnelles</h2>
+          <div class="nutrition-toggle">
+            <button type="button" data-mode="portion" class="active">par portion</button>
+            <button type="button" data-mode="100g">pour 100 g</button>
+          </div>
+          <dl class="nutrition-list">
+            {{ range . }}
+            <div class="nutrition-row{{ if .sub }} nutrition-row-sub{{ end }}">
+              <dt>{{ .label }}</dt>
+              <dd data-portion="{{ .portion }}" data-100g="{{ .per100g }}" data-unit="{{ .unit }}">{{ .portion }} {{ .unit }}</dd>
+            </div>
+            {{ end }}
+          </dl>
+          {{ with $.Params.nutrition_note }}<p class="nutrition-note">{{ . }}</p>{{ end }}
+        </div>
+      </aside>
       {{ end }}
-    </section>
-    {{ end }}
+
+    </div>
 
   </div>
 </article>
@@ -85,8 +155,11 @@
 {{/* ===== Donnees structurees ===== */}}
 {{ $ingList := slice }}
 {{ range .Params.ingredients }}{{ $ingList = $ingList | append (trim (printf "%v %s %s" .qty (.unit | default "") .name) " ") }}{{ end }}
+{{ range .Params.pantry }}{{ $ingList = $ingList | append (trim (printf "%v %s %s" (.qty | default "") (.unit | default "") .name) " ") }}{{ end }}
 {{ $stepsLD := slice }}
-{{ range .Params.steps }}{{ $stepsLD = $stepsLD | append (dict "@type" "HowToStep" "text" .) }}{{ end }}
+{{ range .Params.steps }}{{ if reflect.IsMap . }}{{ $stepsLD = $stepsLD | append (dict "@type" "HowToStep" "name" (.title | default "Étape") "text" .text) }}{{ else }}{{ $stepsLD = $stepsLD | append (dict "@type" "HowToStep" "text" .) }}{{ end }}{{ end }}
+{{ $tools := slice }}
+{{ range .Params.ustensiles }}{{ $tools = $tools | append (dict "@type" "HowToTool" "name" .name) }}{{ end }}
 {{ $recipe := dict
   "@context" "https://schema.org"
   "@type" "Recipe"
@@ -104,6 +177,22 @@
   "recipeIngredient" $ingList
   "recipeInstructions" $stepsLD
 }}
+{{ if $tools }}{{ $recipe = merge $recipe (dict "tool" $tools) }}{{ end }}
+{{ with .Params.nutrition }}
+  {{ $n := dict "@type" "NutritionInformation" }}
+  {{ range . }}
+    {{ if eq .label "Énergie" }}{{ if eq .unit "kcal" }}{{ $n = merge $n (dict "calories" (printf "%v kcal" .portion)) }}{{ end }}{{ end }}
+    {{ if eq .label "Matières grasses" }}{{ $n = merge $n (dict "fatContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "dont acides gras saturés" }}{{ $n = merge $n (dict "saturatedFatContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "Glucides" }}{{ $n = merge $n (dict "carbohydrateContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "dont sucres" }}{{ $n = merge $n (dict "sugarContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "Fibres alimentaires" }}{{ $n = merge $n (dict "fiberContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "Protéines" }}{{ $n = merge $n (dict "proteinContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+    {{ if eq .label "Sel" }}{{ $n = merge $n (dict "sodiumContent" (printf "%v %s" .portion .unit)) }}{{ end }}
+  {{ end }}
+  {{ $n = merge $n (dict "servingSize" "1 portion") }}
+  {{ $recipe = merge $recipe (dict "nutrition" $n) }}
+{{ end }}
 <script type="application/ld+json">{{ $recipe | jsonify }}</script>
 
 {{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" (.Site.BaseURL)) }}
@@ -120,23 +209,40 @@
 <script>
 (function(){
   var wrap=document.querySelector('.recipe-servings');
-  if(!wrap) return;
-  var base=parseFloat(wrap.dataset.base)||1;
-  var btns=wrap.querySelectorAll('button');
-  function fmt(v){ v=Math.round(v*100)/100; return Number.isInteger(v)?String(v):v.toFixed(1).replace(/\.0$/,''); }
-  btns.forEach(function(b){
-    b.addEventListener('click',function(){
-      btns.forEach(function(x){x.classList.remove('active');});
-      b.classList.add('active');
-      var n=parseFloat(b.dataset.servings);
-      document.querySelectorAll('.ingredient-qty').forEach(function(q){
-        var baseQty=parseFloat(q.dataset.base); var unit=q.dataset.unit||'';
-        if(isNaN(baseQty)) return;
-        var val=baseQty*n/base;
-        q.textContent=(fmt(val)+(unit?' '+unit:'')).trim();
+  if(wrap){
+    var base=parseFloat(wrap.dataset.base)||1;
+    var btns=wrap.querySelectorAll('button');
+    function fmt(v){ v=Math.round(v*100)/100; return Number.isInteger(v)?String(v):v.toFixed(1).replace(/\.0$/,''); }
+    btns.forEach(function(b){
+      b.addEventListener('click',function(){
+        btns.forEach(function(x){x.classList.remove('active');});
+        b.classList.add('active');
+        var n=parseFloat(b.dataset.servings);
+        document.querySelectorAll('.ingredient-qty[data-base]').forEach(function(q){
+          var baseQty=parseFloat(q.dataset.base); var unit=q.dataset.unit||'';
+          if(isNaN(baseQty)) return;
+          var val=baseQty*n/base;
+          q.textContent=(fmt(val)+(unit?' '+unit:'')).trim();
+        });
       });
     });
-  });
+  }
+  var card=document.querySelector('.nutrition-card');
+  if(card){
+    var nbtns=card.querySelectorAll('.nutrition-toggle button');
+    nbtns.forEach(function(b){
+      b.addEventListener('click',function(){
+        nbtns.forEach(function(x){x.classList.remove('active');});
+        b.classList.add('active');
+        var mode=b.dataset.mode;
+        card.querySelectorAll('.nutrition-row dd').forEach(function(d){
+          var v=mode==='100g'?d.dataset['100g']:d.dataset.portion;
+          var unit=d.dataset.unit||'';
+          d.textContent=(v+' '+unit).trim();
+        });
+      });
+    });
+  }
 })();
 </script>
 {{ end }}
