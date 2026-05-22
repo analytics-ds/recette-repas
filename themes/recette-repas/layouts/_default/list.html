@@ -58,4 +58,10 @@
 </section>
 {{ end }}
 
+{{/* ===== BreadcrumbList ===== */}}
+{{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" .Site.BaseURL) }}
+{{ if and $blog (not $isBlog) }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" "Recettes" "item" $blog.Permalink) }}{{ end }}
+{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify | safeJS }}</script>
+
 {{ end }}

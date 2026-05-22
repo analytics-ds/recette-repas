@@ -91,22 +91,57 @@
 {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "{{ .Site.BaseURL }}#website",
     "name": "{{ .Site.Title }}",
+    "alternateName": "Recette & Repas",
     "description": "{{ .Site.Params.description }}",
-    "url": "{{ .Site.BaseURL }}"
+    "url": "{{ .Site.BaseURL }}",
+    "inLanguage": "fr-FR",
+    "publisher": { "@id": "{{ .Site.BaseURL }}#organization" }
 }
 </script>
 
 <!-- JSON-LD Schema.org : Organization (accueil) -->
-{{ with .Site.Params.author_name }}
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "{{ $.Site.Title }}",
-    "url": "{{ $.Site.BaseURL }}",
-    "description": "{{ $.Site.Params.description }}"
+    "@id": "{{ .Site.BaseURL }}#organization",
+    "name": "Recette & Repas",
+    "url": "{{ .Site.BaseURL }}",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "{{ "images/logo-mark.png" | absURL }}",
+        "width": 512,
+        "height": 512
+    },
+    "image": "{{ "images/logo-mark.png" | absURL }}",
+    "description": "{{ .Site.Params.description }}",
+    "slogan": "Des recettes faciles signées par un ancien chef",
+    "foundingDate": "2024",
+    "email": "contact@recette-repas.com",
+    "knowsAbout": ["Cuisine", "Recettes de cuisine", "Pâtisserie", "Cuisine du monde", "Batch cooking", "Astuces de cuisine"],
+    "founder": {
+        "@type": "Person",
+        "name": "Julien Marchand",
+        "jobTitle": "Ancien chef de cuisine"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "service client",
+        "email": "contact@recette-repas.com",
+        "availableLanguage": ["French"]
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+    },
+    "sameAs": [
+        "https://www.instagram.com/recetterepas",
+        "https://www.facebook.com/recetterepas",
+        "https://www.pinterest.fr/recetterepas",
+        "https://www.youtube.com/@recetterepas"
+    ]
 }
 </script>
-{{ end }}
 {{ end }}

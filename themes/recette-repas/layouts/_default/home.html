@@ -284,24 +284,23 @@
         <p>La majorité de nos idées de recettes se préparent en 10 à 30 minutes. Pour un repas du soir express, comptez environ 15 minutes avec 5 ingrédients : une omelette, des pâtes ou une poêlée de légumes sont prêtes en un quart d'heure. Le week-end, un plat mijoté ou un poulet rôti demande davantage de patience, entre 45 minutes et 2 heures de cuisson, mais seulement 15 minutes de préparation active. Pour gagner du temps en semaine, le batch cooking permet de cuisiner 4 à 5 repas en une seule session de 2 heures le dimanche. Quelle que soit l'envie, il existe toujours une idée de recette adaptée au temps disponible : une salade ou un velouté pour les soirs pressés, une tarte ou un gratin pour les repas en famille. Cuisiner maison reste accessible, même avec un emploi du temps chargé.</p>
 
         <h2>Questions fréquentes sur les idées de recettes</h2>
+        {{ $homeFaq := slice
+          (dict "q" "Qu'est-ce qu'on pourrait faire à manger aujourd'hui ?" "a" "Selon l'envie et le temps disponible, une idée de recette facile comme une salade composée, une poêlée de légumes ou un plat de pâtes fait toujours l'affaire. Pour un repas plus copieux, un poulet rôti ou une tarte salée sont des valeurs sûres.")
+          (dict "q" "Quelles idées de recettes rapides et faciles pour le soir ?" "a" "Omelette, pâtes aux tomates, soupe de légumes ou saumon poêlé : ces recettes express se préparent en moins de vingt minutes, avec peu d'ingrédients et un minimum de vaisselle.")
+          (dict "q" "Comment trouver des idées de recettes de saison ?" "a" "Partez des produits du marché. Au printemps, misez sur les asperges, les petits pois et les courgettes ; en hiver, sur les soupes, les gratins et les plats mijotés. Cuisiner de saison renouvelle les idées sans effort.")
+          (dict "q" "Quelles idées de recettes pour un grand repas en famille ?" "a" "Un poulet rôti, une tarte salée ou un gratin généreux, suivis d'une tarte aux pommes maison, plaisent à tous les convives. Ces plats se préparent à l'avance et se partagent facilement.")
+        }}
         <div class="rr-faq">
-        <details open>
-          <summary><h3>Qu'est-ce qu'on pourrait faire à manger aujourd'hui ?</h3></summary>
-          <p>Selon l'envie et le temps disponible, une idée de recette facile comme une salade composée, une poêlée de légumes ou un plat de pâtes fait toujours l'affaire. Pour un repas plus copieux, un poulet rôti ou une tarte salée sont des valeurs sûres.</p>
+        {{ range $i, $f := $homeFaq }}
+        <details{{ if eq $i 0 }} open{{ end }}>
+          <summary><h3>{{ $f.q }}</h3></summary>
+          <p>{{ $f.a }}</p>
         </details>
-        <details>
-          <summary><h3>Quelles idées de recettes rapides et faciles pour le soir ?</h3></summary>
-          <p>Omelette, pâtes aux tomates, soupe de légumes ou saumon poêlé : ces recettes express se préparent en moins de vingt minutes, avec peu d'ingrédients et un minimum de vaisselle.</p>
-        </details>
-        <details>
-          <summary><h3>Comment trouver des idées de recettes de saison ?</h3></summary>
-          <p>Partez des produits du marché. Au printemps, misez sur les asperges, les petits pois et les courgettes ; en hiver, sur les soupes, les gratins et les plats mijotés. Cuisiner de saison renouvelle les idées sans effort.</p>
-        </details>
-        <details>
-          <summary><h3>Quelles idées de recettes pour un grand repas en famille ?</h3></summary>
-          <p>Un poulet rôti, une tarte salée ou un gratin généreux, suivis d'une tarte aux pommes maison, plaisent à tous les convives. Ces plats se préparent à l'avance et se partagent facilement.</p>
-        </details>
+        {{ end }}
       </div>
+      {{ $faqLD := slice }}
+      {{ range $homeFaq }}{{ $faqLD = $faqLD | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+      <script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqLD) | jsonify | safeJS }}</script>
       </div>
 
     </div>
