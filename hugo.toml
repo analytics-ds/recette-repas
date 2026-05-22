@@ -1,4 +1,4 @@
-baseURL = "https://analyticsds.github.io/recette-repas/"
+baseURL = "https://analytics-ds.github.io/recette-repas/"
 languageCode = "fr-fr"
 title = "Recette & Repas"
 theme = "recette-repas"

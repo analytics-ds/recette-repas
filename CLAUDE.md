@@ -72,7 +72,7 @@ Ce repo ne contient pas de site. Il contient les **instructions et templates** p
 
 - **Nom du site** : Recette & Repas
 - **Description** : Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien.
-- **URL** : https://analyticsds.github.io/recette-repas/ (GitHub Pages, repo `analyticsds/recette-repas`, domaine custom a venir)
+- **URL** : https://analytics-ds.github.io/recette-repas/ (GitHub Pages, repo `analytics-ds/recette-repas`, domaine custom a venir)
 - **Couleurs** : DA SaaS clean (cf. `DESIGN.md`). Texte titres `#111827`, corps `#374151`, attenue `#6B7280`. Fond `#FFFFFF` / alt `#F9FAFB`. Bordures `#F2F3F5` / rails `#E5E7EB`. Accent principal degrade vert `#21C45E -> #099D67`. Accent secondaire degrade indigo `#3C80F5 -> #4D4BE6`.
 - **Polices** : Inter (titres + corps + UI)
 - **Categories** : Entrées, Plats, Desserts, Cuisine du monde, Conseils et astuces
