@@ -40,6 +40,21 @@
         </ul>
       </div>
     </div>
+    <div class="rr-newsletter">
+      <div class="rr-newsletter-text">
+        <h2>Recevez nos meilleures recettes</h2>
+        <p>Une sélection de recettes faciles et de conseils de cuisine, directement dans votre boîte mail. Pas plus d'un email par semaine. Désinscription en un clic.</p>
+      </div>
+      <form class="rr-newsletter-form" action="https://formspree.io/f/PLACEHOLDER" method="POST" novalidate>
+        <label for="rr-nl-email" class="rr-sr-only">Adresse email</label>
+        <input id="rr-nl-email" type="email" name="email" placeholder="votre.email@exemple.fr" required autocomplete="email">
+        <label class="rr-newsletter-consent">
+          <input type="checkbox" name="consent" required>
+          <span>J'accepte de recevoir la newsletter et la <a href="{{ "politique-de-confidentialite/" | relURL }}">politique de confidentialité</a>.</span>
+        </label>
+        <button type="submit">S'inscrire</button>
+      </form>
+    </div>
     <div class="rr-footer-bottom">© {{ now.Year }} Recette &amp; Repas. Tous droits réservés.</div>
   </div>
 </footer>

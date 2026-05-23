@@ -406,6 +406,60 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .rc-arrow:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 @media (max-width: 760px) { .rc-arrow { display: none; } .rc-slide { flex-basis: 260px; } }
 
+/* ===== Newsletter footer ===== */
+.rr-newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 36px;
+  margin: 40px 0 24px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  border-radius: 18px;
+  color: #fff;
+}
+.rr-newsletter-text h2 { font-family: var(--font-heading); font-size: 1.6rem; margin: 0 0 8px; color: #fff; }
+.rr-newsletter-text p { margin: 0; opacity: 0.92; line-height: 1.55; font-size: 0.95rem; }
+.rr-newsletter-form { display: flex; flex-direction: column; gap: 12px; }
+.rr-newsletter-form input[type="email"] {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: 10px;
+  border: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+}
+.rr-newsletter-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.4;
+}
+.rr-newsletter-consent input[type="checkbox"] { margin-top: 3px; }
+.rr-newsletter-consent a { color: #fff; text-decoration: underline; }
+.rr-newsletter-form button {
+  background: #fff;
+  color: var(--primary);
+  border: 0;
+  border-radius: 100px;
+  padding: 13px 20px;
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background .15s, transform .1s;
+}
+.rr-newsletter-form button:hover { background: var(--background-alt, #F9F7F5); transform: translateY(-1px); }
+.rr-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+@media (max-width: 720px) {
+  .rr-newsletter { grid-template-columns: 1fr; gap: 20px; padding: 24px; }
+}
+
 /* ===== Date mise à jour visible header article ===== */
 .article-date-updated {
   display: inline-flex;

@@ -231,6 +231,13 @@
 <script type="application/ld+json">{{ $faqItems := slice }}{{ range . }}{{ $faqItems = $faqItems | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqItems) | jsonify | safeJS }}</script>
 {{ end }}
 
+{{ with .Params.howto_steps }}
+{{ $htImg := "" }}{{ with $.Params.image }}{{ $htImg = . | absURL }}{{ end }}
+{{ $steps := slice }}{{ range $i, $s := . }}{{ $steps = $steps | append (dict "@type" "HowToStep" "position" (add $i 1) "name" $s.name "text" $s.text "url" (printf "%s#step-%d" $.Permalink (add $i 1))) }}{{ end }}
+{{ $howto := dict "@context" "https://schema.org" "@type" "HowTo" "name" ($.Params.howto_name | default $.Title) "description" ($.Params.howto_description | default $.Description) "totalTime" ($.Params.howto_total_time | default "PT2H") "image" $htImg "step" $steps }}
+<script type="application/ld+json">{{ $howto | jsonify | safeJS }}</script>
+{{ end }}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
