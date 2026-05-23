@@ -45,11 +45,29 @@ faq:
   - q: "Par où commencer pour découvrir la cuisine asiatique ?"
     a: "Les recettes les plus accessibles pour débuter sont le curry au lait de coco, le riz cantonais, les nouilles sautées au wok et le poulet teriyaki. On peut ensuite progresser vers les ramen, les currys thaïs ou les sushis maison."
 outro: |
-  ## Voyager par les saveurs
+  ## Voyager par les saveurs sans quitter sa cuisine
 
-  Italie, Asie, Maghreb, Amérique latine : la cuisine du monde est une invitation au voyage sans quitter sa cuisine. Nous adaptons les recettes traditionnelles avec des ingrédients faciles à trouver, tout en gardant l'essentiel de leurs saveurs.
+  La cuisine du monde est une formidable invitation au voyage, à découvrir depuis sa propre cuisine et avec des ingrédients que l'on trouve facilement en France. Italie, Asie, Maghreb, Amérique latine, Inde, Japon, Espagne : chaque région du globe propose des idées de plats uniques, marquées par leur sauce signature, leur cuisson particulière et leurs épices caractéristiques. Notre collection regroupe des recettes traditionnelles adaptées à la cuisine française, avec des explications claires pour les réussir du premier coup.
 
-  Chaque recette détaille les étapes, le temps de préparation et la difficulté, pour découvrir de nouveaux plats en toute confiance.
+  ## Les grands classiques italiens
+
+  La cuisine italienne reste sans doute la plus populaire en France, parce qu'elle utilise des ingrédients simples (tomates, basilic, parmesan, huile d'olive) pour des résultats incroyablement gourmands. Les pâtes carbonara, les lasagnes à la bolognaise, le risotto crémeux aux champignons, la pizza maison sur pierre chaude, l'osso buco aux légumes ou les gnocchis poêlés au beurre sage sont des recettes intemporelles qui plaisent à toute la famille. La sauce tomate maison, base de la cuisine italienne, se prépare en une heure avec quelques tomates mûres, de l'oignon, de l'ail et un peu de basilic frais.
+
+  ## Saveurs d'Asie : curry, nouilles et plats sautés
+
+  La cuisine asiatique séduit par ses parfums marqués et ses préparations rapides au wok. Le curry de poulet au lait de coco est sans doute la recette la plus accessible pour débuter, avec sa sauce crémeuse parfumée au curry rouge, gingembre et citronnelle. Les nouilles sautées aux légumes, le pad thaï au porc et aux crevettes, le poulet teriyaki à la japonaise, le bo bun vietnamien ou la soupe pho aromatique sont d'autres incontournables. On trouve les ingrédients de base (sauce soja, lait de coco, nouilles de riz, gingembre frais, piment rouge) dans la plupart des grandes surfaces, et les épiceries asiatiques permettent d'aller plus loin.
+
+  ## Cuisines orientale, latine et autres horizons
+
+  La cuisine du Maghreb apporte ses tajines mijotés au citron confit, ses couscous parfumés, ses pastilla feuilletées au poulet et ses petits pains au sésame. Le couscous se prépare avec une bonne semoule fine, un bouillon de viande et de légumes (carottes, courgettes, pois chiches, navets, pommes de terre) et un mélange d'épices (ras-el-hanout, cumin, coriandre). Côté Amérique latine, le chili con carne mexicain, les tacos au porc effiloché, les fajitas au poivron et oignon, les empanadas argentines ou la guacamole maison sont des recettes conviviales à partager. Pour la cuisine indienne, le poulet tikka massala, le dahl de lentilles aux épinards ou le naan au yaourt sont des entrées d'initiation idéales.
+
+  ## Adapter les recettes du monde à sa cuisine
+
+  Pour réussir une recette du monde à la maison, on garde l'essentiel : la technique de cuisson, les épices clés et la sauce signature. On peut adapter quelques ingrédients selon ce qu'on trouve, sans dénaturer le plat. Une bonne sauce tomate italienne se fait avec des tomates pelées de qualité, un curry asiatique gagne à utiliser de la pâte de curry rouge ou verte authentique, un couscous mérite un bouillon maison parfumé. Quelques équipements aident : un wok pour les sautés asiatiques, une cocotte en fonte pour les mijotés, une plancha pour les grillades. Mais l'essentiel reste les bons produits et un peu de patience.
+
+  ## Toutes nos recettes de cuisine du monde
+
+  Notre collection de recettes du monde s'enrichit régulièrement avec des classiques de chaque pays, des plats traditionnels et des idées gourmandes adaptées à la cuisine de tous les jours. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de voyager culinairement en fonction de vos envies et du temps dont vous disposez.
 ---
 
 Envie d'évasion ? Nos recettes de cuisine du monde vous font voyager le temps d'un repas. Des plats emblématiques aux spécialités plus méconnues, retrouvez des idées venues d'ailleurs, expliquées simplement et adaptées à la cuisine de tous les jours.

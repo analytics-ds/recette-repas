@@ -1,0 +1,6 @@
+plats|idée recette plat|2b5d5e79-2bd8-4aea-ae8a-1b20868ed0f4
+entrees|idée recette entrée|2e85f079-1c3c-42ef-9c98-6468a5daeddd
+desserts|idée recette dessert|13101714-b0b4-4e3d-ac8a-aaaeed427043
+cuisine-monde|recette cuisine du monde|721ba3e7-d353-4293-8093-26e2c0d79237
+batch-cooking|recette batch cooking|1d111424-d8cc-4a45-a2ec-65d0d1495eaf
+conseils-astuces|astuce cuisine|6898a803-6bb6-419e-beb0-7e6492243c78

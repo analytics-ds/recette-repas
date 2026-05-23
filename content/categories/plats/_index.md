@@ -45,11 +45,25 @@ faq:
   - q: "Comment adapter les portions ?"
     a: "Pour un plat principal, comptez environ 150 g de viande ou de poisson par adulte, 200 g de pâtes ou de riz cru, et 300 g de légumes. Adaptez les épices et le sel progressivement, en goûtant."
 outro: |
-  ## Que cuisiner comme plat principal ?
+  ## Idée recette plat : nos meilleures suggestions
 
-  Du plat de pâtes express aux mijotés du dimanche, cette catégorie réunit nos recettes de plats principaux pour tous les moments de la semaine. Viandes, poissons, gratins, plats végétariens : il y en a pour toutes les envies et tous les niveaux.
+  Le plat principal, c'est le moment central du repas, celui qui rassemble la famille autour de la table et qui donne le ton à toute la soirée. Pour trouver une idée recette plat qui plaît à tous, on regarde d'abord le temps que l'on a devant soi. Pour les soirs de semaine, on privilégie des recettes simples à préparer en moins de trente minutes : un sauté de bœuf aux légumes, une tarte salée au chèvre et aux courgettes, des pâtes à la carbonara, un curry de poulet au lait de coco. Toutes ces idées se cuisinent avec des ingrédients faciles à trouver et donnent un résultat gourmand sans passer une heure derrière les fourneaux. Une bonne idée recette plat ne demande ni matériel de chef ni produits compliqués, simplement quelques bons réflexes en cuisine.
 
-  Chaque recette précise le temps de préparation, la difficulté et les valeurs nutritionnelles, pour vous aider à choisir selon le temps dont vous disposez et l'équilibre du repas.
+  ## Plats du dimanche et mijotés traditionnels
+
+  Quand on a plus de temps, on se tourne vers les plats mijotés, ces grands classiques de la cuisine française qui demandent quelques heures de cuisson lente mais récompensent la patience. Bœuf bourguignon, hachis parmentier, blanquette de veau, lasagnes à la bolognaise : autant de plats complets qui se préparent souvent la veille pour gagner en saveurs. Servis avec un pain de campagne maison, un gratin dauphinois ou simplement quelques pommes de terre vapeur, ces recettes transforment un dîner ordinaire en repas du dimanche, ou en repas de fête pour les grandes occasions.
+
+  ## Idées de plats créatifs et saisonniers
+
+  Pour varier les plaisirs et sortir de la routine, ne négligez pas les recettes plus créatives qui mettent en valeur les produits de saison. Une tarte aux légumes du potager, des courgettes farcies au jambon et au fromage de chèvre, un tian de tomates et aubergines, une quiche aux poireaux et au saumon fumé : autant d'idées simples qui apportent une touche de fraîcheur et de couleur dans l'assiette. Les recettes au four ont aussi l'avantage de cuire seules pendant que vous préparez l'entrée ou le dessert, ce qui est très pratique quand on reçoit du monde et qu'on veut profiter de ses invités sans rester en cuisine.
+
+  ## Bien équilibrer ses repas tout au long de la semaine
+
+  Côté équilibre alimentaire, alterner les sources de protéines reste la meilleure approche. Une semaine type avec deux plats à base de viande, deux à base de poisson, un végétarien et deux plats complets de type quiche, gratin ou tarte salée couvre largement les besoins de toute la famille sans tomber dans la routine. Adapter les portions selon l'âge et l'activité de chacun, ajuster le sel et les épices au goût, accompagner d'une salade verte fraîche : ces petits réflexes font toute la différence entre un plat correct et un plat vraiment réussi.
+
+  ## Trouver une idée recette plat pour chaque occasion
+
+  Que vous cherchiez une idée recette plat rapide pour ce soir, un mijoté familial pour le dimanche ou une recette plus originale pour recevoir, notre collection couvre tous les besoins du quotidien. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir en un coup d'œil et de cuisiner sans stress. Pour trouver l'idée recette plat parfaite, partez du temps disponible, du nombre de convives et des ingrédients en stock dans le frigo : tout le reste en découle naturellement.
 ---
 
 Le plat principal, c'est le cœur du repas. Retrouvez ici nos recettes de plats faciles et réconfortants, pensées pour être réussies sans stress : des classiques de la cuisine française aux idées plus rapides pour les soirs pressés.

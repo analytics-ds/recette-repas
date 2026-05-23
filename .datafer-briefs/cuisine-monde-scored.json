@@ -1,0 +1,127 @@
+{
+  "id": "721ba3e7-d353-4293-8093-26e2c0d79237",
+  "score": 74,
+  "breakdown": {
+    "total": 74,
+    "rawTotal": 74,
+    "competitorMedian": 0,
+    "seoTotal": 76,
+    "geoTotal": 53,
+    "keyword": {
+      "score": 10,
+      "max": 15,
+      "details": {
+        "count": 4,
+        "density": 0.99,
+        "softCoverage": "100%",
+        "exactBonus": 3
+      }
+    },
+    "nlpCoverage": {
+      "score": 23,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 10,
+        "essentialsTotal": 10,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 19,
+        "importantsTotal": 30,
+        "importantsCoverage": 63,
+        "importantsScore": 6,
+        "used": 29,
+        "total": 40,
+        "coverage": 86
+      }
+    },
+    "contentLength": {
+      "score": 5,
+      "max": 7,
+      "details": {
+        "wc": 1611,
+        "target": 1747
+      }
+    },
+    "headings": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 14,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "distribution": "3/4 exact, 1/4 soft"
+      }
+    },
+    "structure": {
+      "score": 3,
+      "max": 6,
+      "details": {
+        "paragraphs": 60,
+        "ratio": 1.46
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 36
+      }
+    },
+    "images": {
+      "score": 2,
+      "max": 4,
+      "details": {
+        "count": 12,
+        "target": 30
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 53,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "statistics": {
+        "ok": false,
+        "score": 13,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 51,
+    "best": 70,
+    "bestUrl": "https://www.marieclaire.fr/cuisine/le-tour-du-monde-en-25-recettes,1339572.asp",
+    "count": 10
+  }
+}

@@ -45,11 +45,25 @@ faq:
   - q: "Quels desserts plaisent aux enfants ?"
     a: "Les desserts simples et un peu régressifs marchent toujours : mousse au chocolat, gâteau au yaourt, tarte aux pommes, riz au lait. Impliquer les enfants dans la préparation leur donne aussi envie de goûter."
 outro: |
-  ## Des desserts maison inratables
+  ## Idée recette dessert : nos meilleures sélections maison
 
-  Gâteaux moelleux, tartes aux fruits, crèmes, mousses et petites douceurs : nos recettes de desserts sont pensées pour être réussies même sans matériel de pâtissier. On privilégie les ingrédients simples et les étapes claires, pour un résultat gourmand à tous les coups.
+  Le dessert, c'est la touche finale qui fait plaisir à tout le monde et qui termine le repas sur une note gourmande. Trouver la bonne idée recette dessert dépend du moment, du temps disponible et de l'envie du jour. Nos recettes sont pensées pour être réussies même sans matériel de pâtissier, avec des ingrédients simples du placard et des étapes claires. Gâteau moelleux au yaourt, tarte aux pommes croustillante, mousse au chocolat aérienne, tiramisu express aux fruits rouges, clafoutis aux cerises, crumble pommes-poires, cake au citron : autant d'idées faciles à réaliser pour se faire plaisir au quotidien. Une bonne idée recette dessert ne demande ni technique compliquée ni matériel pro, simplement un peu d'envie et de bons ingrédients.
 
-  Chaque recette indique le temps de préparation, la difficulté et les valeurs nutritionnelles, pour se faire plaisir en connaissance de cause.
+  ## Desserts au chocolat, le grand classique
+
+  Le chocolat reste le grand favori des desserts maison, et pour de bonnes raisons : il se travaille facile, donne toujours un résultat gourmand et plaît aux petits comme aux grands. La mousse au chocolat, le fondant au cœur coulant, le gâteau moelleux au chocolat noir, les profiteroles ou encore le moelleux choco-poires sont des recettes intemporelles que l'on peut décliner à l'infini. Pour réussir un dessert au chocolat, on choisit un chocolat de qualité (minimum 60 % de cacao pour un goût intense), on le fait fondre doucement au bain-marie sans le brûler, et on respecte les temps de cuisson au degré près pour garder le cœur fondant.
+
+  ## Tartes, gâteaux et desserts aux fruits
+
+  Les desserts aux fruits suivent les saisons et apportent fraîcheur et légèreté au repas. La tarte aux pommes reste un grand classique français, simple à réaliser avec une bonne pâte brisée maison et des pommes fondantes caramélisées. En été, on se tourne vers le clafoutis aux cerises, la tarte aux fraises sur lit de crème pâtissière, ou un crumble aux fruits rouges express. L'automne est la saison des poires pochées, des tartes aux figues et des gâteaux à la noix. L'hiver appelle au crémeux au citron, à la tarte au chocolat ou aux desserts originales à base d'orange et d'épices.
+
+  ## Desserts express pour les soirs pressés
+
+  Quand on a peu de temps, certains desserts se réalisent en moins de quinze minutes et sont prêts à servir après une courte cuisson. La salade de fruits frais, la mousse au chocolat express, le crumble minute, le tiramisu rapide sans œufs ou le gâteau au yaourt sont autant d'idées faciles à improviser. Pour gagner du temps, on peut aussi préparer le dessert la veille : la plupart des entremets et des mousses gagnent même en saveur après une nuit au frais.
+
+  ## Trouver une idée recette dessert pour chaque occasion
+
+  Que vous cherchiez une idée recette dessert pour clôturer un repas du dimanche, un dessert express pour ce soir ou une recette plus originale pour un anniversaire, notre collection de recettes de desserts couvre toutes les envies. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon le moment et le niveau de gourmandise visé. La meilleure idée recette dessert, c'est souvent celle qu'on a déjà testée et qu'on sait réussir : on garde ses classiques sous la main et on explore une nouveauté de temps en temps pour se renouveler.
 ---
 
 Le dessert, c'est la touche finale qui fait plaisir à tout le monde. Retrouvez nos recettes de desserts faciles, des grands classiques de la pâtisserie française aux douceurs rapides à préparer avec ce que l'on a dans les placards.

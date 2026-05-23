@@ -1,0 +1,127 @@
+{
+  "id": "13101714-b0b4-4e3d-ac8a-aaaeed427043",
+  "score": 66,
+  "breakdown": {
+    "total": 66,
+    "rawTotal": 66,
+    "competitorMedian": 0,
+    "seoTotal": 67,
+    "geoTotal": 60,
+    "keyword": {
+      "score": 7,
+      "max": 15,
+      "details": {
+        "count": 0,
+        "density": 0,
+        "softCoverage": "100%",
+        "exactBonus": 0
+      }
+    },
+    "nlpCoverage": {
+      "score": 23,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 14,
+        "essentialsTotal": 14,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 16,
+        "importantsTotal": 26,
+        "importantsCoverage": 62,
+        "importantsScore": 6,
+        "used": 30,
+        "total": 40,
+        "coverage": 86
+      }
+    },
+    "contentLength": {
+      "score": 5,
+      "max": 7,
+      "details": {
+        "wc": 1428,
+        "target": 818
+      }
+    },
+    "headings": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 14,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 5,
+      "max": 13,
+      "details": {
+        "distribution": "0/4 exact, 4/4 soft"
+      }
+    },
+    "structure": {
+      "score": 4,
+      "max": 6,
+      "details": {
+        "paragraphs": 58,
+        "ratio": 1
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 34
+      }
+    },
+    "images": {
+      "score": 2,
+      "max": 4,
+      "details": {
+        "count": 12,
+        "target": 29
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 60,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "statistics": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 51,
+    "best": 69,
+    "bestUrl": "https://www.toc.fr/info/c/79-desserts",
+    "count": 10
+  }
+}

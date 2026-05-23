@@ -45,11 +45,25 @@ faq:
   - q: "Comment marier l'entrée avec le reste du repas ?"
     a: "L'idée est de construire un repas équilibré : une entrée légère avant un plat riche, ou inversement. On évite de répéter un ingrédient phare (par exemple pas de saumon en entrée puis en plat) et on alterne les textures et les températures."
 outro: |
-  ## Quelle entrée choisir ?
+  ## Toutes nos idées d'entrées pour le repas
 
-  Une entrée réussie donne le ton du repas. Salades fraîches, veloutés, tartines, verrines ou bouchées à partager : retrouvez nos idées d'entrées faciles, adaptées à chaque saison et à chaque occasion, du dîner improvisé au repas de fête.
+  Une entrée réussie donne le ton du repas, ouvre l'appétit sans saturer et met en valeur les saveurs du plat principal qui suit. Pour bien la choisir, on tient compte du moment de l'année, du type de repas et du temps disponible en cuisine. Salades composées, veloutés et soupes, tartines gourmandes, verrines, bouchées feuilletées : la palette d'idées est large et permet d'adapter chaque entrée à l'occasion.
 
-  Toutes nos entrées indiquent le temps de préparation et la difficulté, pour s'organiser sereinement et préparer ce qui peut l'être à l'avance.
+  ## Entrées froides pour les beaux jours
+
+  Quand il fait chaud, on privilégie une entrée froide, fraîche et facile à préparer à l'avance. La salade composée reste un grand classique, à décliner selon les saisons : tomates et mozzarella, salade de chèvre chaud aux noix, taboulé aux fruits, salade de saumon fumé à l'aneth. Les verrines apportent une touche élégante quand on reçoit, avec des recettes simples comme la verrine avocat-crevettes, le tartare de saumon ou la mousse au thon. Les œufs mimosa, les tartines au saumon fumé et les tartelettes à la tapenade sont aussi des entrées toutes simples qui plaisent à tous les coups.
+
+  ## Entrées chaudes pour les saisons fraîches
+
+  Dès l'arrivée des saisons fraîches, les entrées chaudes prennent le relais. Les soupes et veloutés réchauffent et apportent de bons légumes en début de repas : velouté de potiron, soupe à l'oignon gratinée, velouté de courgettes au chèvre, soupe minestrone aux pâtes. Les tartes salées et les feuilletés sont aussi de très bonnes idées d'entrées chaudes pour Noël ou les repas de fête, avec une pâte feuilletée croustillante garnie de saumon, de jambon ou de fromage. Les bouchées à la reine et autres feuilletés individuels font aussi sensation lors d'un repas un peu plus formel.
+
+  ## Bien doser et accompagner ses entrées
+
+  Pour savoir quelle quantité prévoir par personne, comptez entre 80 et 120 grammes pour une salade composée, 25 à 30 centilitres pour une soupe ou un velouté, deux à trois pièces pour les verrines ou les bouchées. L'idée est d'ouvrir le repas sans couper l'appétit pour la suite. Si votre plat principal est riche, choisissez une entrée plus légère type salade ou velouté. Si vous prévoyez un plat léger, vous pouvez vous lâcher sur une entrée plus consistante. La sauce qui accompagne l'entrée doit aussi être pensée pour ne pas faire doublon avec celle du plat.
+
+  ## Toutes nos recettes d'entrées faciles
+
+  Que vous cherchiez une idée d'entrée pour un dîner improvisé entre amis, un repas de famille ou un grand repas de fête, notre collection regroupe des recettes simples, des classiques revisités et quelques idées originales. Chaque entrée détaille le temps de préparation, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon l'occasion et le temps dont vous disposez.
 ---
 
 Pour bien commencer un repas, rien de tel qu'une entrée simple et gourmande. Découvrez nos recettes d'entrées froides et chaudes, légères ou plus généreuses, faciles à réaliser même quand on manque de temps.
