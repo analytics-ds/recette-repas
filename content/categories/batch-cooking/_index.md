@@ -2,13 +2,13 @@
 title: "Batch cooking"
 date: 2026-05-22
 lastmod: 2026-05-23
-seo_title: "Recette batch cooking : préparer ses repas à l'avance"
-h1: "Recette batch cooking : cuisiner pour toute la semaine"
+seo_title: "Batchcooking : recettes pour cuisiner toute la semaine"
+h1: "Batchcooking : le guide complet et nos meilleures recettes"
 url: "/recettes/batch-cooking/"
 aliases: ["/categories/batch-cooking/"]
 image: "images/categories/batch-cooking.jpg"
 weight: 6
-description: "Des idées de batch cooking pour préparer ses repas de la semaine à l'avance, gagner du temps et limiter le gaspillage."
+description: "Le batchcooking pour préparer ses repas de la semaine en une session : recettes faciles, planning de batch cooking, conseils d'organisation et idées de menus à cuisiner à l'avance."
 subthemes_title: "Du batch cooking pour gagner du temps toute la semaine"
 subthemes_intro: "Mijotés à réchauffer, soupes congelables, légumes prêts à assembler : nos recettes pensées pour être préparées en avance et déclinées sur plusieurs repas."
 subthemes:
@@ -49,9 +49,9 @@ faq:
   - q: "Quel matériel utile pour le batch cooking ?"
     a: "L'essentiel : 6 à 8 contenants en verre avec couvercles hermétiques (taille variée), une grande cocotte ou un faitout, deux planches à découper, et des sacs congélation réutilisables pour les portions. La verrine en verre vaut largement le plastique pour la conservation et le réchauffage au four."
 outro: |
-  ## Le batch cooking, principe et bénéfices
+  ## Le batchcooking, principe et bénéfices
 
-  Le batch cooking, c'est l'art de cuisiner une seule fois pour préparer plusieurs repas à l'avance, généralement sur deux à cinq jours. Le principe est simple : on consacre une session de deux à trois heures, en général le dimanche, à préparer les bases de la semaine. Le reste du temps, on assemble rapidement les éléments déjà cuits pour servir un repas chaud en dix à quinze minutes. Résultat : moins de stress le soir, moins de gaspillage alimentaire, une meilleure conservation des aliments et des repas faits maison même les jours les plus chargés. Sur un mois, on économise plusieurs heures de cuisine sans sacrifier la qualité de l'assiette.
+  Le batchcooking, c'est l'art de cuisiner une seule fois pour préparer plusieurs repas à l'avance, généralement sur deux à cinq jours. Aussi appelé batch cooking (en deux mots), le principe est simple : on consacre une session de deux à trois heures, en général le dimanche, à préparer les bases de la semaine. Le reste du temps, on assemble rapidement les éléments déjà cuits pour servir un repas chaud en dix à quinze minutes. Résultat : moins de stress le soir, moins de gaspillage alimentaire, une meilleure conservation des aliments et des repas faits maison même les jours les plus chargés. Sur un mois, un batchcooking bien organisé permet d'économiser plusieurs heures de cuisine sans sacrifier la qualité de l'assiette.
 
   ## Construire un menu de batch cooking équilibré
 

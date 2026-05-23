@@ -14,7 +14,7 @@
                 <span class="reading-time">{{ .ReadingTime }} min de lecture</span>
                 {{ end }}
             </div>
-            <h1>{{ .Title }}</h1>
+            <h1>{{ with .Params.h1 }}{{ . }}{{ else }}{{ $.Title }}{{ end }}</h1>
             {{ with .Description }}
             <p class="article-description">{{ . }}</p>
             {{ end }}

@@ -1,0 +1,6 @@
+hub|batchcooking|b479cece-c19a-4e7e-b167-3df70e0c6bf2
+semaine|batchcooking semaine|9e237184-e350-47b6-b281-a5a7a5601158
+thermomix|batchcooking thermomix|e85d6995-1dc5-48f7-adb9-a57ed47297eb
+bebe|batchcooking bébé|871e244a-d129-45b1-8a4f-2188e713f0b2
+automne|batchcooking automne|ec23fdab-9ff2-4347-a82d-b50a8c4e46fe
+livre|livre batch cooking|9051f1ae-4aa0-4fee-b6cd-56a2a330f494

@@ -1,0 +1,127 @@
+{
+  "id": "e85d6995-1dc5-48f7-adb9-a57ed47297eb",
+  "score": 77,
+  "breakdown": {
+    "total": 77,
+    "rawTotal": 77,
+    "competitorMedian": 0,
+    "seoTotal": 80,
+    "geoTotal": 40,
+    "keyword": {
+      "score": 9,
+      "max": 15,
+      "details": {
+        "count": 9,
+        "density": 1.51,
+        "softCoverage": "100%",
+        "exactBonus": 2
+      }
+    },
+    "nlpCoverage": {
+      "score": 25,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 6,
+        "essentialsTotal": 6,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 25,
+        "importantsTotal": 33,
+        "importantsCoverage": 76,
+        "importantsScore": 8,
+        "used": 31,
+        "total": 39,
+        "coverage": 91
+      }
+    },
+    "contentLength": {
+      "score": 5,
+      "max": 7,
+      "details": {
+        "wc": 1192,
+        "target": 1210
+      }
+    },
+    "headings": {
+      "score": 12,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 0,
+        "h1HasKw": true
+      }
+    },
+    "placement": {
+      "score": 13,
+      "max": 13,
+      "details": {
+        "distribution": "4/4 exact, 0/4 soft"
+      }
+    },
+    "structure": {
+      "score": 5,
+      "max": 6,
+      "details": {
+        "paragraphs": 31,
+        "ratio": 0.91
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 45
+      }
+    },
+    "images": {
+      "score": 0,
+      "max": 4,
+      "details": {
+        "count": 0,
+        "target": 10
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 40,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "statistics": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 45,
+    "best": 63,
+    "bestUrl": "https://www.vorwerk.com/fr/fr/c/vorwerk/produits/thermomix/batchcooking",
+    "count": 10
+  }
+}

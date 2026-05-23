@@ -1,0 +1,127 @@
+{
+  "id": "871e244a-d129-45b1-8a4f-2188e713f0b2",
+  "score": 74,
+  "breakdown": {
+    "total": 74,
+    "rawTotal": 74,
+    "competitorMedian": 0,
+    "seoTotal": 77,
+    "geoTotal": 40,
+    "keyword": {
+      "score": 11,
+      "max": 15,
+      "details": {
+        "count": 3,
+        "density": 0.59,
+        "softCoverage": "100%",
+        "exactBonus": 4
+      }
+    },
+    "nlpCoverage": {
+      "score": 22,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 16,
+        "essentialsTotal": 16,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 13,
+        "importantsTotal": 24,
+        "importantsCoverage": 54,
+        "importantsScore": 5,
+        "used": 29,
+        "total": 40,
+        "coverage": 83
+      }
+    },
+    "contentLength": {
+      "score": 7,
+      "max": 7,
+      "details": {
+        "wc": 1019,
+        "target": 995
+      }
+    },
+    "headings": {
+      "score": 10,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 0,
+        "h1HasKw": true
+      }
+    },
+    "placement": {
+      "score": 10,
+      "max": 13,
+      "details": {
+        "distribution": "1/4 exact, 1/4 soft"
+      }
+    },
+    "structure": {
+      "score": 5,
+      "max": 6,
+      "details": {
+        "paragraphs": 31,
+        "ratio": 1
+      }
+    },
+    "quality": {
+      "score": 4,
+      "max": 5,
+      "details": {
+        "diversity": 50
+      }
+    },
+    "images": {
+      "score": 0,
+      "max": 4,
+      "details": {
+        "count": 0,
+        "target": 8
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 40,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "statistics": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 44,
+    "best": 54,
+    "bestUrl": "https://www.cuisinez-pour-bebe.fr/menus-batch-cooking-bebe/",
+    "count": 10
+  }
+}

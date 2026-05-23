@@ -1,0 +1,127 @@
+{
+  "id": "9051f1ae-4aa0-4fee-b6cd-56a2a330f494",
+  "score": 67,
+  "breakdown": {
+    "total": 67,
+    "rawTotal": 67,
+    "competitorMedian": 0,
+    "seoTotal": 70,
+    "geoTotal": 27,
+    "keyword": {
+      "score": 12,
+      "max": 15,
+      "details": {
+        "count": 10,
+        "density": 2.33,
+        "softCoverage": "100%",
+        "exactBonus": 5
+      }
+    },
+    "nlpCoverage": {
+      "score": 18,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 9,
+        "essentialsTotal": 16,
+        "essentialsCoverage": 56,
+        "essentialsScore": 10,
+        "importantsUsed": 18,
+        "importantsTotal": 24,
+        "importantsCoverage": 75,
+        "importantsScore": 8,
+        "used": 27,
+        "total": 40,
+        "coverage": 63
+      }
+    },
+    "contentLength": {
+      "score": 3,
+      "max": 7,
+      "details": {
+        "wc": 1290,
+        "target": 1654
+      }
+    },
+    "headings": {
+      "score": 10,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 7,
+        "h3": 0,
+        "h1HasKw": true
+      }
+    },
+    "placement": {
+      "score": 13,
+      "max": 13,
+      "details": {
+        "distribution": "3/4 exact, 1/4 soft"
+      }
+    },
+    "structure": {
+      "score": 3,
+      "max": 6,
+      "details": {
+        "paragraphs": 32,
+        "ratio": 0.34
+      }
+    },
+    "quality": {
+      "score": 4,
+      "max": 5,
+      "details": {
+        "diversity": 46
+      }
+    },
+    "images": {
+      "score": 0,
+      "max": 4,
+      "details": {
+        "count": 0,
+        "target": 30
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 27,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "statistics": {
+        "ok": false,
+        "score": 7,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 55,
+    "best": 73,
+    "bestUrl": "https://www.amazon.fr/livre-batch-cooking/s?k=livre+batch+cooking",
+    "count": 10
+  }
+}
