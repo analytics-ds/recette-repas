@@ -2,35 +2,23 @@
 title: "À propos"
 date: 2026-05-22
 lastmod: 2026-05-23
-seo_title: "À propos de Recette & Repas : le blog d'un ancien chef"
-description: "Recette & Repas est animé par Julien Marchand, ancien chef de cuisine passé en restaurant pendant quinze ans, qui partage ses recettes testées et ses conseils de cuisine au quotidien."
+seo_title: "À propos de Recette & Repas : recettes testées et conseils"
+description: "Recette & Repas est un blog culinaire qui partage des recettes testées et des conseils de cuisine pour bien manger au quotidien sans y passer des heures."
 ---
 
 ## L'histoire de Recette & Repas
 
-Recette & Repas est né d'une conviction simple : **bien manger ne demande ni matériel compliqué ni heures passées en cuisine**. Après quinze ans en restaurant, à voir tous les soirs des clients étonnés par la simplicité de ce qu'ils avaient dans l'assiette, l'envie de transmettre ces gestes au grand public a pris le dessus. Le blog rassemble aujourd'hui des recettes testées chez soi, des conseils issus du métier et des idées pour cuisiner mieux au quotidien, sans complication ni frustration.
+Recette & Repas est né d'une conviction simple : **bien manger ne demande ni matériel compliqué ni heures passées en cuisine**. Le blog rassemble des recettes testées chez soi, des conseils issus de l'expérience en cuisine et des idées pour cuisiner mieux au quotidien, sans complication ni frustration.
 
 L'objectif éditorial est clair : **toute recette publiée doit pouvoir être réussie du premier coup**, par quelqu'un qui cuisine occasionnellement, avec des ingrédients que l'on trouve dans n'importe quelle moyenne ou grande surface française. Pas de matériel professionnel, pas de produits introuvables, pas de technique impossible à comprendre : juste une cuisine accessible, saisonnière et savoureuse.
 
-## Julien Marchand, le chef derrière le blog
+## Une rédaction animée par un ancien chef
 
-Julien Marchand a commencé en cuisine à dix-sept ans, en apprentissage dans une brasserie lyonnaise. Pendant les quinze années suivantes, il est passé par plusieurs maisons en France, du bistrot de quartier au restaurant gastronomique étoilé. Cette diversité d'expériences a forgé une conviction profonde : la qualité d'un plat dépend bien plus de la maîtrise des techniques de base et du choix des produits que de la complexité de la recette.
+Recette & Repas est rédigé par Julien Marchand, ancien chef de cuisine reconverti dans l'écriture culinaire. La rédaction s'appuie sur une expérience professionnelle en cuisine pour produire des contenus testés et des conseils concrets, adaptés à la cuisine maison.
 
-Après plusieurs années à occuper le poste de chef de cuisine dans un restaurant traditionnel parisien, il a décidé en 2024 de quitter le service pour se consacrer à la transmission. Recette & Repas est l'aboutissement de cette transition : un espace pour partager des recettes éprouvées, des conseils d'organisation, et la philosophie d'une cuisine simple mais exigeante sur la qualité.
+La conviction défendue dans chaque article est claire : **la cuisine maison gagne toujours à privilégier les produits frais de saison et les techniques de base bien exécutées**. Cuire correctement un légume vapeur, saisir une viande sans la cramer, monter une vinaigrette qui ne tranche pas : ces gestes simples font la moitié de la réussite d'un repas. Le reste, c'est le choix des ingrédients et un peu d'organisation.
 
-### Le parcours en quelques étapes
-
-- **2009 à 2011** : apprentissage CAP cuisine en alternance dans une brasserie traditionnelle à Lyon.
-- **2011 à 2014** : commis puis demi-chef de partie dans plusieurs restaurants de la région lyonnaise.
-- **2014 à 2018** : chef de partie dans un restaurant gastronomique étoilé en région parisienne, expérience qui marque profondément son rapport au produit et à la rigueur en cuisine.
-- **2018 à 2024** : chef de cuisine dans un bistrot moderne parisien, en charge de la carte, des fournisseurs et de l'équipe.
-- **Depuis 2024** : auteur culinaire à temps plein, fondateur et rédacteur principal du blog Recette & Repas.
-
-### Une philosophie : produits frais, gestes simples
-
-Quinze années en restaurant ont donné à Julien Marchand une conviction qu'il défend dans chaque article : **la cuisine maison gagne toujours à privilégier les produits frais de saison et les techniques de base bien exécutées**. Cuire correctement un légume vapeur, saisir une viande sans la cramer, monter une vinaigrette qui ne tranche pas : ces gestes simples font cinquante pour cent de la réussite d'un repas. Le reste, c'est le choix des ingrédients et un peu d'organisation.
-
-Cette philosophie se traduit concrètement dans chaque recette du blog : étapes détaillées, temps de cuisson précis, astuces du métier pour anticiper les écueils, et toujours une variante adaptée selon les saisons ou les goûts.
+Cette philosophie se traduit concrètement dans chaque recette du blog : étapes détaillées, temps de cuisson précis, astuces pour anticiper les écueils, et toujours une variante adaptée selon les saisons ou les goûts.
 
 ## Notre méthodologie de publication
 

@@ -14,7 +14,7 @@ disableKinds = ["taxonomy"]
   description = "Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien."
   author = "Julien Marchand"
   author_name = "Julien Marchand"
-  author_url = "https://www.linkedin.com/in/julien-marchand-chef/"
+  author_url = ""
   author_job_title = "Ancien chef de cuisine"
 
 [menus]
