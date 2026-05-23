@@ -1,7 +1,7 @@
 ---
 title: "Toutes nos recettes"
 description: "Toutes les recettes de Recette & Repas : idées de plats, entrées, desserts et conseils, à parcourir et à cuisiner facilement."
-aliases: ["/blog/"]
+aliases: ["/blog/", "/categories/"]
 outro: |
   ## Des recettes pour tous les jours
 

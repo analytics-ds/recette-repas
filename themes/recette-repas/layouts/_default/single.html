@@ -5,7 +5,9 @@
         <div class="container">
             <div class="article-meta">
                 {{ with .Params.categories }}
-                <a href="{{ "/categories/" | relURL }}{{ index . 0 | urlize }}/" class="article-category">{{ index . 0 }}</a>
+                {{ $catName := index . 0 }}
+                {{ $catTerm := site.GetPage (printf "/categories/%s" (urlize $catName)) }}
+                <a href="{{ if $catTerm }}{{ $catTerm.RelPermalink }}{{ else }}{{ relURL (printf "recettes/%s/" (urlize $catName)) }}{{ end }}" class="article-category">{{ $catName }}</a>
                 {{ end }}
                 {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
                 {{ if .Params.readingTime }}

@@ -5,6 +5,7 @@ theme = "recette-repas"
 enableRobotsTXT = false
 summaryLength = 30
 removePathAccents = true
+disableKinds = ["taxonomy"]
 
 [taxonomies]
   category = "categories"
@@ -19,27 +20,27 @@ removePathAccents = true
 [menus]
   [[menus.main]]
     name = "Entrées"
-    url = "/categories/entrees/"
+    url = "/recettes/entrees/"
     weight = 2
   [[menus.main]]
     name = "Plats"
-    url = "/categories/plats/"
+    url = "/recettes/plats/"
     weight = 3
   [[menus.main]]
     name = "Desserts"
-    url = "/categories/desserts/"
+    url = "/recettes/desserts/"
     weight = 4
   [[menus.main]]
     name = "Cuisine du monde"
-    url = "/categories/cuisine-monde/"
+    url = "/recettes/cuisine-monde/"
     weight = 5
   [[menus.main]]
     name = "Conseils et astuces"
-    url = "/categories/conseils-astuces/"
+    url = "/recettes/conseils-astuces/"
     weight = 6
   [[menus.main]]
     name = "Batch cooking"
-    url = "/categories/batch-cooking/"
+    url = "/recettes/batch-cooking/"
     weight = 7
 
 [sitemap]

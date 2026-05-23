@@ -1,0 +1,219 @@
+{{ define "main" }}
+{{ $blog := site.GetPage "/recettes" }}
+{{ $heroImg := .Params.image | default "images/home/hero.jpg" }}
+
+<section class="cat-hero" style="background-image: url('{{ $heroImg | relURL }}');">
+  <div class="cat-hero-overlay"></div>
+  <div class="container cat-hero-inner">
+    <nav class="cat-hero-crumb" aria-label="Fil d'Ariane">
+      <a href="{{ .Site.Home.RelPermalink }}">Accueil</a>
+      {{ with $blog }}<span>/</span><a href="{{ .RelPermalink }}">Recettes</a>{{ end }}
+      <span>/</span><span>{{ .Title }}</span>
+    </nav>
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="cat-hero-intro">{{ .Content }}</div>
+    {{ else }}{{ with .Description }}<p class="cat-hero-intro">{{ . }}</p>{{ end }}{{ end }}
+    <span class="cat-hero-count">{{ len .Pages }} {{ if gt (len .Pages) 1 }}recettes{{ else }}recette{{ end }}</span>
+  </div>
+</section>
+
+<section class="hub-content">
+  <div class="container">
+    {{ if .Pages }}
+    <div class="hub-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
+      {{ $kcal := "" }}{{ range .Params.nutrition }}{{ if and (eq .label "Énergie") (eq .unit "kcal") }}{{ $kcal = .portion }}{{ end }}{{ end }}
+      {{ $rc := .Params.rating_count }}
+      <a class="hub-card" href="{{ .RelPermalink }}">
+        <div class="hub-card-media">
+          <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
+          {{ with .Params.categories }}<span class="hub-card-badge">{{ index . 0 }}</span>{{ end }}
+        </div>
+        <div class="hub-card-body">
+          <h2 class="hub-card-title">{{ .Title }}</h2>
+          {{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $rc }})</span></div>{{ end }}
+          {{ with .Description }}<p class="hub-card-desc">{{ . | truncate 90 }}</p>{{ end }}
+          {{ with .Params.tags }}
+          <div class="hub-card-tags">{{ range first 3 . }}<span>{{ . }}</span>{{ end }}</div>
+          {{ end }}
+          <div class="hub-card-meta">
+            {{ if $total }}<span>{{ $total }} min</span>{{ end }}
+            {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
+            {{ with $kcal }}<span>{{ . }} kcal</span>{{ end }}
+          </div>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="list-empty">Les premières recettes arrivent très bientôt. Revenez vite pour découvrir nos idées de recettes faciles.</p>
+    {{ end }}
+  </div>
+</section>
+
+{{/* ===== Section Sous-themes (editorial blocks alternes) ===== */}}
+{{ with .Params.subthemes }}
+<section class="cat-subthemes">
+  <div class="container">
+    <div class="cat-section-head">
+      {{ with $.Params.subthemes_title }}<h2>{{ . }}</h2>{{ else }}<h2>Recettes de {{ $.Title | lower }} pour tous les goûts</h2>{{ end }}
+      {{ with $.Params.subthemes_intro }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="cat-subtheme-list">
+      {{ range . }}
+      <article class="cat-subtheme">
+        <div class="cat-subtheme-media">
+          <img src="{{ .image | relURL }}" alt="{{ .title }}" loading="lazy">
+        </div>
+        <div class="cat-subtheme-body">
+          <h3>{{ .title }}</h3>
+          {{ with .intro }}<p class="cat-subtheme-intro">{{ . }}</p>{{ end }}
+          {{ with .recipes }}
+          <ul class="cat-subtheme-recipes">
+            {{ range . }}
+            <li>{{ if .url }}<a href="{{ .url | relURL }}"><strong>{{ .title }}</strong></a>{{ else }}<strong>{{ .title }}</strong>{{ end }} : {{ .desc }}</li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          {{ if .cta_url }}<a href="{{ .cta_url | relURL }}" class="cat-subtheme-cta">{{ .cta_label | default "Découvrir" }}</a>{{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ===== Section Essentiels (top 3 best-rated, des 1 recette) ===== */}}
+{{ if ge (len .Pages) 1 }}
+{{ $best := first 3 (.Pages.ByParam "rating").Reverse }}
+{{ $n := len $best }}
+{{ $gridClass := "" }}
+{{ if eq $n 1 }}{{ $gridClass = " has-one" }}{{ else if eq $n 2 }}{{ $gridClass = " has-two" }}{{ end }}
+<section class="cat-essentiels">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2>Les essentiels {{ .Title | lower }}</h2>
+      <p>Notre sélection des recettes les mieux notées de cette catégorie, à essayer en priorité.</p>
+    </div>
+    <div class="cat-essentiels-grid{{ $gridClass }}">
+      {{ range $best }}
+      {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
+      <a class="cat-feature" href="{{ .RelPermalink }}">
+        <div class="cat-feature-media">
+          <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
+        </div>
+        <div class="cat-feature-body">
+          <h3>{{ .Title }}</h3>
+          {{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $.Params.rating_count }})</span></div>{{ end }}
+          {{ with .Description }}<p>{{ . | truncate 140 }}</p>{{ end }}
+          <div class="cat-feature-meta">
+            {{ if $total }}<span>{{ $total }} min</span>{{ end }}
+            {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
+          </div>
+          <span class="cat-feature-cta">Voir la recette →</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ===== Section Value Props ===== */}}
+<section class="cat-value">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2>Pourquoi cuisiner avec Recette &amp; Repas</h2>
+      <p>Notre engagement pour des recettes vraiment réussies, expliquées simplement.</p>
+    </div>
+    <div class="cat-value-grid">
+      <div class="cat-value-card">
+        <div class="cat-value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Recettes testées</h3>
+        <p>Chaque recette est cuisinée et validée en cuisine avant d'être publiée, pour un résultat garanti.</p>
+      </div>
+      <div class="cat-value-card">
+        <div class="cat-value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Étapes claires</h3>
+        <p>Des explications pas à pas, des temps précis et des astuces concrètes pour cuisiner sans stress.</p>
+      </div>
+      <div class="cat-value-card">
+        <div class="cat-value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 7v13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7l-3-5Z"/><path d="M3 7h18"/><path d="M16 11a4 4 0 0 1-8 0"/></svg></div>
+        <h3>Ingrédients simples</h3>
+        <p>Des produits que vous trouvez en supermarché ou chez votre primeur, sans courses compliquées.</p>
+      </div>
+      <div class="cat-value-card">
+        <div class="cat-value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 4 13a7 7 0 0 1 14 0 7 7 0 0 1-7 7Z"/><path d="M11 3v2"/><path d="M11 21v-2"/><path d="m4.2 5.2 1.4 1.4"/></svg></div>
+        <h3>Valeurs nutritionnelles</h3>
+        <p>Calories, protéines, glucides : chaque recette affiche ses valeurs pour choisir en connaissance de cause.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ===== Section Autres categories ===== */}}
+{{ $current := .Title }}
+{{ $catRoot := site.GetPage "/categories" }}
+{{ $otherTerms := slice }}
+{{ if $catRoot }}{{ range $catRoot.Pages }}{{ if ne .Title $current }}{{ $otherTerms = $otherTerms | append . }}{{ end }}{{ end }}{{ end }}
+{{ if $otherTerms }}
+<section class="cat-related">
+  <div class="container">
+    <div class="cat-section-head">
+      <h2>Explorez toutes nos recettes</h2>
+      <p>Parcourez les autres catégories pour trouver l'inspiration selon le moment du repas.</p>
+    </div>
+    <div class="cat-related-grid">
+      {{ range $otherTerms }}
+      <a class="cat-related-card" href="{{ .RelPermalink }}">
+        <div class="cat-related-media">
+          <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
+        </div>
+        <div class="cat-related-body">
+          <h3>{{ .Title }}</h3>
+          <span class="cat-related-count">{{ len .Pages }} recette{{ if gt (len .Pages) 1 }}s{{ end }}</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.outro }}
+<section class="hub-outro">
+  <div class="container container-narrow">{{ . | markdownify }}</div>
+</section>
+{{ end }}
+
+{{/* ===== Section FAQ (en bas de page) ===== */}}
+{{ with .Params.faq }}
+<section class="cat-faq">
+  <div class="container container-narrow">
+    <div class="cat-section-head">
+      <h2>Questions fréquentes</h2>
+      <p>Les réponses aux questions les plus courantes sur les recettes de {{ $.Title | lower }}.</p>
+    </div>
+    <div class="cat-faq-list">
+      {{ range . }}
+      <details class="cat-faq-item">
+        <summary>{{ .q }}</summary>
+        <div class="cat-faq-answer">{{ .a | markdownify }}</div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">{{ $faqItems := slice }}{{ range . }}{{ $faqItems = $faqItems | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqItems) | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ===== BreadcrumbList ===== */}}
+{{ $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Accueil" "item" .Site.BaseURL) }}
+{{ if $blog }}{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" 2 "name" "Recettes" "item" $blog.Permalink) }}{{ end }}
+{{ $crumbs = $crumbs | append (dict "@type" "ListItem" "position" (add (len $crumbs) 1) "name" .Title "item" .Permalink) }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs) | jsonify | safeJS }}</script>
+
+{{ end }}

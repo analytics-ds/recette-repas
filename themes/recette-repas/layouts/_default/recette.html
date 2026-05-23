@@ -4,7 +4,7 @@
 {{ if $cat }}
   {{ $catTerm := site.GetPage (printf "/categories/%s" (urlize $cat)) }}
   {{ if $catTerm }}{{ $catURL = $catTerm.RelPermalink }}{{ $catURLAbs = $catTerm.Permalink }}
-  {{ else }}{{ $catURL = relURL (printf "categories/%s/" (urlize $cat)) }}{{ $catURLAbs = absURL (printf "categories/%s/" (urlize $cat)) }}{{ end }}
+  {{ else }}{{ $catURL = relURL (printf "recettes/%s/" (urlize $cat)) }}{{ $catURLAbs = absURL (printf "recettes/%s/" (urlize $cat)) }}{{ end }}
 {{ end }}
 {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
 
