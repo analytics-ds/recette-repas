@@ -35,7 +35,13 @@
           <div class="recipe-meta-item"><span class="recipe-meta-label">Total</span><strong>{{ $total }} min</strong></div>
           <div class="recipe-meta-item"><span class="recipe-meta-label">Difficulté</span><strong>{{ .Params.difficulty }}</strong></div>
         </div>
-        {{ with .Params.author }}<p class="recipe-author">Une recette de <strong>{{ . }}</strong></p>{{ end }}
+        {{ with .Params.author }}<p class="recipe-author">Une recette de <a href="{{ "a-propos/" | relURL }}"><strong>{{ . }}</strong></a>{{ with $.Site.Params.author_job_title }}, {{ . | lower }}{{ end }}</p>{{ end }}
+        <div class="recipe-dates">
+          {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}" class="article-date-published">Publié le {{ .Date.Format "2 January 2006" }}</time>{{ end }}
+          {{ if and (not .Lastmod.IsZero) (ne (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
+          <time datetime="{{ .Lastmod.Format "2006-01-02" }}" class="article-date-updated">Mis à jour le {{ .Lastmod.Format "2 January 2006" }}</time>
+          {{ end }}
+        </div>
       </div>
       {{ with .Params.image }}
       <div class="recipe-header-media"><img src="{{ . | relURL }}" alt="{{ $.Title }}" loading="eager"></div>
@@ -162,6 +168,24 @@
     </div>
 
   </div>
+  {{ with .Params.author }}
+  <aside class="author-card" aria-label="À propos de l'auteur">
+    <div class="container container-narrow">
+      <div class="author-card-inner">
+        <div class="author-card-avatar">
+          <img src="{{ "images/logo-mark.png" | relURL }}" alt="{{ . }}" width="96" height="96" loading="lazy">
+        </div>
+        <div class="author-card-body">
+          <span class="author-card-label">À propos de l'auteur</span>
+          <h3 class="author-card-name">{{ . }}</h3>
+          {{ with $.Site.Params.author_job_title }}<p class="author-card-job">{{ . }}</p>{{ end }}
+          <p class="author-card-bio">Quinze ans en restaurant, du bistrot lyonnais au gastronomique étoilé parisien. Depuis 2024, il partage ses recettes testées et ses conseils de cuisine sur Recette &amp; Repas, avec une seule règle : chaque recette doit pouvoir être réussie du premier coup.</p>
+          <p class="author-card-links"><a href="{{ "a-propos/" | relURL }}">En savoir plus sur l'auteur →</a></p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  {{ end }}
 </article>
 
 {{/* ===== Donnees structurees ===== */}}

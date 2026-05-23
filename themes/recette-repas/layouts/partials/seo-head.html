@@ -29,194 +29,311 @@
 <meta name="twitter:image" content="{{ $ogImg }}">
 <meta name="twitter:image:alt" content="{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
 
-<!-- JSON-LD Schema.org : BlogPosting (articles standards uniquement ; les recettes fournissent leur propre schema Recipe) -->
-{{ if and .IsPage (eq .Section "recettes") (ne .Layout "recette") }}
+{{/* ================================
+     JSON-LD @graph : WebSite + Organization + Person Julien Marchand
+     Emis sur toutes les pages, sert d'ancrage @id pour les autres schemas
+     ================================ */}}
+{{ $aggregateRecipes := where .Site.RegularPages "Params.rating" "!=" nil }}
+{{ $totalRatings := 0 }}
+{{ $sumRatings := 0.0 }}
+{{ range $aggregateRecipes }}
+  {{ $totalRatings = add $totalRatings (int (.Params.rating_count | default 0)) }}
+  {{ $sumRatings = add $sumRatings (mul (float (.Params.rating | default 0)) (int (.Params.rating_count | default 0))) }}
+{{ end }}
+{{ $avgRating := 0.0 }}
+{{ if gt $totalRatings 0 }}{{ $avgRating = div $sumRatings (float $totalRatings) }}{{ end }}
+
 <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "{{ .Title }}",
-    "description": "{{ .Description }}",
-    "datePublished": "{{ .Date.Format "2006-01-02" }}",
-    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-    "wordCount": {{ .WordCount }},
-    "timeRequired": "PT{{ .ReadingTime }}M",
-    {{ with .Params.author }}
-    "author": {
-        "@type": "Person",
-        "name": "{{ . }}"{{ with $.Site.Params.author_url }},
-        "url": "{{ . }}"{{ end }}{{ with $.Site.Params.author_job_title }},
-        "jobTitle": "{{ . }}"{{ end }}
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "{{ .Site.BaseURL }}#website",
+      "name": "{{ .Site.Title }}",
+      "alternateName": "Recette & Repas",
+      "description": "{{ .Site.Params.description }}",
+      "url": "{{ .Site.BaseURL }}",
+      "inLanguage": "fr-FR",
+      "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ .Site.BaseURL }}?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
-    {{ end }}
-    "publisher": {
-        "@type": "Organization",
-        "name": "{{ .Site.Title }}"
-    },
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
-    },
-    "isPartOf": {
-        "@type": "Blog",
-        "name": "{{ .Site.Title }}",
-        "url": "{{ .Site.BaseURL }}"
-    }
-}
-</script>
-
-<!-- JSON-LD Schema.org : BreadcrumbList (articles) -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-        {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Accueil",
-            "item": "{{ .Site.BaseURL }}"
-        },
-        {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Blog",
-            "item": "{{ "recettes/" | absURL }}"
-        },
-        {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "{{ .Title }}",
-            "item": "{{ .Permalink }}"
-        }
-    ]
-}
-</script>
-{{ else if or (eq .Kind "term") (and (eq .Kind "section") (eq .Section "recettes")) }}
-
-<!-- JSON-LD Schema.org : CollectionPage + ItemList (pages categories) -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "{{ .Permalink }}#collection",
-    "url": "{{ .Permalink }}",
-    "name": "{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}",
-    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-    "inLanguage": "fr-FR",
-    "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
-    "about": { "@id": "{{ .Site.BaseURL }}#organization" },
-    "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "{{ $ogImg }}"
-    },
-    "mainEntity": {
-        "@type": "ItemList",
-        "numberOfItems": {{ len .Pages }},
-        "itemListElement": [
-            {{ range $i, $p := .Pages.ByDate.Reverse }}{{ if $i }},{{ end }}
-            {
-                "@type": "ListItem",
-                "position": {{ add $i 1 }},
-                "url": "{{ $p.Permalink }}",
-                "name": "{{ $p.Title }}"
-            }
-            {{ end }}
-        ]
-    }
-}
-</script>
-
-<!-- JSON-LD WebSite + Organization references pour categories -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "WebSite",
-            "@id": "{{ .Site.BaseURL }}#website",
-            "name": "{{ .Site.Title }}",
-            "url": "{{ .Site.BaseURL }}",
-            "inLanguage": "fr-FR",
-            "publisher": { "@id": "{{ .Site.BaseURL }}#organization" }
-        },
-        {
-            "@type": "Organization",
-            "@id": "{{ .Site.BaseURL }}#organization",
-            "name": "Recette & Repas",
-            "url": "{{ .Site.BaseURL }}",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "{{ "images/logo-mark.png" | absURL }}"
-            },
-            "founder": {
-                "@type": "Person",
-                "name": "{{ .Site.Params.author_name }}",
-                "jobTitle": "{{ .Site.Params.author_job_title }}"
-            }
-        }
-    ]
-}
-</script>
-
-{{ else if .IsHome }}
-
-<!-- JSON-LD Schema.org : WebSite (accueil) -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "{{ .Site.BaseURL }}#website",
-    "name": "{{ .Site.Title }}",
-    "alternateName": "Recette & Repas",
-    "description": "{{ .Site.Params.description }}",
-    "url": "{{ .Site.BaseURL }}",
-    "inLanguage": "fr-FR",
-    "publisher": { "@id": "{{ .Site.BaseURL }}#organization" }
-}
-</script>
-
-<!-- JSON-LD Schema.org : Organization (accueil) -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "{{ .Site.BaseURL }}#organization",
-    "name": "Recette & Repas",
-    "url": "{{ .Site.BaseURL }}",
-    "logo": {
+    {
+      "@type": "Organization",
+      "@id": "{{ .Site.BaseURL }}#organization",
+      "name": "Recette & Repas",
+      "alternateName": "Recette et Repas",
+      "url": "{{ .Site.BaseURL }}",
+      "logo": {
         "@type": "ImageObject",
         "url": "{{ "images/logo-mark.png" | absURL }}",
         "width": 512,
         "height": 512
-    },
-    "image": "{{ "images/logo-mark.png" | absURL }}",
-    "description": "{{ .Site.Params.description }}",
-    "slogan": "Des recettes faciles signées par un ancien chef",
-    "foundingDate": "2024",
-    "email": "contact@recette-repas.com",
-    "knowsAbout": ["Cuisine", "Recettes de cuisine", "Pâtisserie", "Cuisine du monde", "Batch cooking", "Astuces de cuisine"],
-    "founder": {
-        "@type": "Person",
-        "name": "Julien Marchand",
-        "jobTitle": "Ancien chef de cuisine"
-    },
-    "contactPoint": {
+      },
+      "image": "{{ "images/logo-mark.png" | absURL }}",
+      "description": "{{ .Site.Params.description }}",
+      "slogan": "Des recettes faciles signées par un ancien chef",
+      "foundingDate": "2024",
+      "email": "contact@recette-repas.fr",
+      "knowsAbout": [
+        "Cuisine française",
+        "Recettes faciles",
+        "Pâtisserie maison",
+        "Cuisine du monde",
+        "Batch cooking",
+        "Astuces de cuisine",
+        "Diversification alimentaire",
+        "Cuisine au quotidien",
+        "Techniques de cuisson",
+        "Conservation des aliments"
+      ],
+      "founder": { "@id": "{{ .Site.BaseURL }}#person-julien-marchand" },
+      "employee": { "@id": "{{ .Site.BaseURL }}#person-julien-marchand" },
+      "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "service client",
-        "email": "contact@recette-repas.com",
-        "availableLanguage": ["French"]
-    },
-    "address": {
+        "email": "contact@recette-repas.fr",
+        "availableLanguage": ["French"],
+        "areaServed": "FR"
+      },
+      "address": {
         "@type": "PostalAddress",
+        "streetAddress": "12 rue des Gourmets",
+        "postalCode": "75011",
+        "addressLocality": "Paris",
         "addressCountry": "FR"
-    },
-    "sameAs": [
+      },
+      "publishingPrinciples": "{{ "a-propos/" | absURL }}#notre-methodologie-de-publication",
+      "actionableFeedbackPolicy": "{{ "contact/" | absURL }}",
+      "correctionsPolicy": "{{ "a-propos/" | absURL }}#notre-methodologie-de-publication",
+      "ethicsPolicy": "{{ "a-propos/" | absURL }}#nos-engagements",
+      "sameAs": [
         "https://www.instagram.com/recetterepas",
         "https://www.facebook.com/recetterepas",
         "https://www.pinterest.fr/recetterepas",
         "https://www.youtube.com/@recetterepas"
+      ]{{ if gt $totalRatings 0 }},
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{ printf "%.1f" $avgRating }}",
+        "ratingCount": {{ $totalRatings }},
+        "bestRating": "5",
+        "worstRating": "1"
+      }{{ end }}
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ .Site.BaseURL }}#person-julien-marchand",
+      "name": "Julien Marchand",
+      "givenName": "Julien",
+      "familyName": "Marchand",
+      "jobTitle": "Ancien chef de cuisine, auteur culinaire",
+      "description": "Ancien chef de cuisine avec quinze ans d'expérience en restaurant, fondateur et rédacteur principal du blog Recette & Repas.",
+      "url": "{{ "a-propos/" | absURL }}",
+      "image": "{{ "images/logo-mark.png" | absURL }}",
+      "gender": "Male",
+      "nationality": { "@type": "Country", "name": "France" },
+      "worksFor": { "@id": "{{ .Site.BaseURL }}#organization" },
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Chef de cuisine",
+        "occupationLocation": { "@type": "Country", "name": "France" },
+        "skills": [
+          "Cuisine française traditionnelle",
+          "Pâtisserie",
+          "Gestion d'équipe en restaurant",
+          "Création de cartes",
+          "Sélection de produits frais",
+          "Techniques de cuisson",
+          "Mise en place professionnelle"
+        ]
+      },
+      "knowsAbout": [
+        "Cuisine française",
+        "Recettes du quotidien",
+        "Pâtisserie maison",
+        "Batch cooking",
+        "Diversification alimentaire bébé",
+        "Conservation des aliments",
+        "Techniques de cuisson",
+        "Cuisine du monde",
+        "Organisation en cuisine"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Apprentissage CAP cuisine",
+        "address": { "@type": "PostalAddress", "addressLocality": "Lyon", "addressCountry": "FR" }
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/julien-marchand-chef/",
+        "https://www.instagram.com/recetterepas"
+      ]
+    }
+  ]
+}
+</script>
+
+{{/* ================================
+     Schemas conditionnels par type de page
+     ================================ */}}
+
+{{/* --- Page A propos --- */}}
+{{ if eq .File.Path "a-propos.md" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": "{{ .Permalink }}#aboutpage",
+  "url": "{{ .Permalink }}",
+  "name": "{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}",
+  "description": "{{ .Description }}",
+  "inLanguage": "fr-FR",
+  "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
+  "primaryImageOfPage": { "@type": "ImageObject", "url": "{{ $ogImg }}" },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "mainEntity": { "@id": "{{ .Site.BaseURL }}#person-julien-marchand" },
+  "about": { "@id": "{{ .Site.BaseURL }}#organization" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ .Site.BaseURL }}" },
+      { "@type": "ListItem", "position": 2, "name": "À propos", "item": "{{ .Permalink }}" }
     ]
+  }
+}
+</script>
+{{ end }}
+
+{{/* --- Page Contact --- */}}
+{{ if eq .File.Path "contact.md" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "@id": "{{ .Permalink }}#contactpage",
+  "url": "{{ .Permalink }}",
+  "name": "{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}",
+  "description": "{{ .Description }}",
+  "inLanguage": "fr-FR",
+  "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
+  "primaryImageOfPage": { "@type": "ImageObject", "url": "{{ $ogImg }}" },
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "mainEntity": { "@id": "{{ .Site.BaseURL }}#organization" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ .Site.BaseURL }}" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "{{ .Permalink }}" }
+    ]
+  }
+}
+</script>
+{{ end }}
+
+{{/* --- BlogPosting + HowTo + FAQPage : guides (is_guide=true) --- */}}
+{{ if and .IsPage (eq .Section "recettes") (ne .Layout "recette") (eq .Params.is_guide true) }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "{{ .Permalink }}#article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "image": "{{ $ogImg }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "wordCount": {{ .WordCount }},
+  "timeRequired": "PT{{ .ReadingTime }}M",
+  "inLanguage": "fr-FR",
+  "author": { "@id": "{{ .Site.BaseURL }}#person-julien-marchand" },
+  "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" },
+  "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
+  "articleSection": "{{ with .Params.categories }}{{ index . 0 }}{{ end }}",
+  "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", ".callout-brief"] }
+}
+</script>
+
+{{ with .Params.faq }}
+<script type="application/ld+json">{{ $faqItems := slice }}{{ range . }}{{ $faqItems = $faqItems | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $faqItems) | jsonify | safeJS }}</script>
+{{ end }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ .Site.BaseURL }}" },
+    { "@type": "ListItem", "position": 2, "name": "Recettes", "item": "{{ "recettes/" | absURL }}" },
+    { "@type": "ListItem", "position": 3, "name": "{{ .Title }}", "item": "{{ .Permalink }}" }
+  ]
+}
+</script>
+
+{{/* --- Article standard (recettes section, pas guide, pas layout recette) --- */}}
+{{ else if and .IsPage (eq .Section "recettes") (ne .Layout "recette") }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "{{ .Permalink }}#article",
+  "headline": "{{ .Title }}",
+  "description": "{{ .Description }}",
+  "image": "{{ $ogImg }}",
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "wordCount": {{ .WordCount }},
+  "timeRequired": "PT{{ .ReadingTime }}M",
+  "inLanguage": "fr-FR",
+  "author": { "@id": "{{ .Site.BaseURL }}#person-julien-marchand" },
+  "publisher": { "@id": "{{ .Site.BaseURL }}#organization" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "{{ .Permalink }}" },
+  "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "{{ .Site.BaseURL }}" },
+    { "@type": "ListItem", "position": 2, "name": "Recettes", "item": "{{ "recettes/" | absURL }}" },
+    { "@type": "ListItem", "position": 3, "name": "{{ .Title }}", "item": "{{ .Permalink }}" }
+  ]
+}
+</script>
+
+{{/* --- CollectionPage + ItemList : pages catégories et section /recettes/ --- */}}
+{{ else if or (eq .Kind "term") (and (eq .Kind "section") (eq .Section "recettes")) }}
+{{ $items := where .Pages "Params.is_guide" "!=" true }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": "{{ .Permalink }}#collection",
+  "url": "{{ .Permalink }}",
+  "name": "{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}",
+  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+  "inLanguage": "fr-FR",
+  "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
+  "about": { "@id": "{{ .Site.BaseURL }}#organization" },
+  "primaryImageOfPage": { "@type": "ImageObject", "url": "{{ $ogImg }}" },
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": {{ len $items }},
+    "itemListElement": [
+      {{ range $i, $p := $items.ByDate.Reverse }}{{ if $i }},{{ end }}
+      { "@type": "ListItem", "position": {{ add $i 1 }}, "url": "{{ $p.Permalink }}", "name": "{{ $p.Title }}" }
+      {{ end }}
+    ]
+  }
 }
 </script>
 {{ end }}
