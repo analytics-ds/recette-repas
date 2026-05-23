@@ -35,9 +35,9 @@ Le batch cooking pour bébé est une **vraie alliée des parents** qui veulent c
 
 ## Pourquoi le batch cooking est idéal pour bébé
 
-Cuisiner pour un bébé en diversification alimentaire demande de l'attention : portions adaptées, textures évolutives selon l'âge, saveurs douces, ingrédients de saison de qualité. Le batch cooking permet de prendre ce temps une seule fois par semaine, dans le calme du dimanche par exemple, plutôt que de devoir improviser un petit plat chaque soir. On gagne en sérénité, et bébé profite d'une cuisine maison qui suit ses besoins jour après jour.
+Cuisiner pour un bébé en diversification alimentaire demande de l'attention : **portions adaptées**, **textures évolutives selon l'âge**, saveurs douces, **ingrédients de saison de qualité**. Le batch cooking permet de prendre ce temps **une seule fois par semaine**, dans le calme du dimanche par exemple, plutôt que de devoir improviser un petit plat chaque soir. On gagne en **sérénité**, et bébé profite d'une cuisine maison qui suit ses besoins jour après jour.
 
-L'autre intérêt, c'est la maîtrise totale des ingrédients : pas de sel ajouté, pas de sucre, pas d'additifs, des légumes choisis bio si on le souhaite, des combinaisons adaptées à chaque âge. Pour la famille, c'est aussi une façon de partager la même base alimentaire : les parents peuvent assaisonner leur version, tandis que bébé garde sa portion neutre.
+L'autre intérêt, c'est la **maîtrise totale des ingrédients** : pas de sel ajouté, pas de sucre, pas d'additifs, des légumes choisis bio si on le souhaite, des **combinaisons adaptées à chaque âge**. Pour la famille, c'est aussi une façon de partager la même base alimentaire : les parents peuvent assaisonner leur version, tandis que **bébé garde sa portion neutre**.
 
 ## Adapter le batch cooking aux besoins par âge
 
@@ -70,7 +70,7 @@ Côté cuisson, on privilégie la vapeur douce qui préserve les vitamines et do
 
 ## Conservation et hygiène
 
-Les règles de conservation sont plus strictes pour bébé que pour la famille. Au frigo, les petits plats faits maison se gardent 48 heures maximum, dans des contenants en verre fermés hermétiquement. Le verre est largement préféré au plastique, plus neutre côté santé et plus facile à nettoyer. Au congélateur, on conserve deux mois en portions individuelles : bacs à glaçons pour les tout-petits qui mangent peu (chaque cube fait 30 g environ), petits pots en verre de 130 à 200 g pour les bébés plus grands.
+Les **règles de conservation** sont plus strictes pour bébé que pour la famille. Au frigo, les petits plats faits maison se gardent **48 heures maximum**, dans des **contenants en verre fermés hermétiquement**. Le verre est largement préféré au plastique, plus neutre côté santé et plus facile à nettoyer. Au congélateur, on conserve **deux mois en portions individuelles** : bacs à glaçons pour les tout-petits qui mangent peu (chaque cube fait **30 g environ**), petits pots en verre de **130 à 200 g** pour les bébés plus grands.
 
 À la décongélation, on réchauffe doucement au four à micro-ondes ou au bain-marie, jamais à température ambiante. La température finale doit être tiède, pas brûlante, et toujours vérifiée avant de servir. On ne recongèle jamais un plat décongelé, et on jette le reste d'une portion entamée plutôt que de la garder pour le repas suivant.
 

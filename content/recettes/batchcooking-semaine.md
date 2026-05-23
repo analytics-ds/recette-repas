@@ -35,9 +35,9 @@ Le [batchcooking](/recettes/batch-cooking/) semaine, c'est l'art de cuisiner une
 
 ## Pourquoi le batchcooking change la semaine
 
-Le vrai bénéfice du batchcooking ne tient pas qu'au gain de temps. C'est aussi la sérénité : savoir, en partant au travail le lundi matin, ce qu'on mangera ce soir et les quatre soirs suivants. Plus de panique à 19h devant un frigo vide, plus de pizza surgelée par défaut, plus de gaspillage de légumes oubliés au fond du bac. Une session de deux heures bien organisée nourrit toute une petite famille pour la semaine, avec des recettes faites maison et des ingrédients que l'on a choisis soi-même.
+Le vrai bénéfice du batchcooking ne tient pas qu'au **gain de temps**. C'est aussi la **sérénité** : savoir, en partant au travail le lundi matin, ce qu'on mangera ce soir et les quatre soirs suivants. Plus de panique à 19h devant un frigo vide, plus de pizza surgelée par défaut, plus de gaspillage de légumes oubliés au fond du bac. Une **session de deux heures bien organisée** nourrit toute une petite famille pour la semaine, avec des recettes faites maison et des ingrédients que l'on a choisis soi-même.
 
-Côté économies, l'écart est net. Une famille qui passe au batchcooking évite généralement quatre à cinq plats préparés ou livraisons par semaine, soit cinquante à quatre-vingts euros mensuels. Le tout en mangeant mieux : plus de légumes, moins de sel ajouté, moins d'additifs, des sauces maison à la place des sauces industrielles bourrées de sucre.
+Côté **économies**, l'écart est net. Une famille qui passe au batchcooking évite généralement quatre à cinq plats préparés ou livraisons par semaine, soit **cinquante à quatre-vingts euros mensuels**. Le tout en mangeant mieux : plus de légumes, moins de sel ajouté, moins d'additifs, des **sauces maison** à la place des sauces industrielles bourrées de sucre.
 
 ## Menu type pour une semaine complète
 
@@ -64,7 +64,7 @@ Pour ce menu type, voici la liste de courses pour quatre personnes :
 - Féculents : 500 g de pâtes complètes, 300 g de riz basmati, 1 paquet de pâtes carbonara.
 - Bases : 1 pot de pâte de curry, 1 boîte de lait de coco, fromage de chèvre, parmesan, crème fraîche.
 
-La session du dimanche se déroule comme suit. On démarre le poulet au four (1h à 180°C) pendant qu'on cuit les pâtes complètes et le riz dans deux casseroles en parallèle. Pendant ce temps, on prépare la pâte à quiche, on émince les légumes, on rôtit les courgettes et le potimarron au four sur la même plaque que le poulet. On cuit la quiche après le poulet (35 minutes). On prépare le curry de pois chiches et la sauce curry pendant que la quiche cuit. Tout est terminé en deux heures.
+La **session du dimanche** se déroule comme suit. On démarre le poulet au four (**1h à 180°C**) pendant qu'on cuit les pâtes complètes et le riz dans deux casseroles en parallèle. Pendant ce temps, on prépare la pâte à quiche, on émince les légumes, on rôtit les courgettes et le potimarron au four sur la même plaque que le poulet. On cuit la quiche après le poulet (**35 minutes**). On prépare le curry de pois chiches et la sauce curry pendant que la quiche cuit. **Tout est terminé en deux heures**.
 
 ## Conservation et organisation pour la semaine
 
@@ -74,17 +74,17 @@ Petit conseil d'organisation : on étiquette chaque contenant avec la date et le
 
 ## Astuces pour gagner du temps en cuisine
 
-Quelques réflexes accélèrent la session de batchcooking. D'abord, la mise en place : on sort tous les ingrédients avant d'allumer le feu, on lit le déroulé du menu en entier, on prépare les ustensiles. Cette habitude des cuisines pro fait gagner facilement vingt minutes sur une session de batch.
+Quelques **réflexes** accélèrent la session de batchcooking. D'abord, la **mise en place** : on sort tous les ingrédients avant d'allumer le feu, on lit le déroulé du menu en entier, on prépare les ustensiles. Cette habitude des cuisines pro fait gagner facilement **vingt minutes** sur une session de batch.
 
-Ensuite, on regroupe les tâches similaires : on émince tous les oignons d'un coup, on lave toute la salade en même temps, on assemble les sauces en parallèle. Et on utilise le four en simultané : poulet rôti, légumes rôtis, quiche cuite à la suite sur la même plaque, on ne préchauffe qu'une seule fois.
+Ensuite, on **regroupe les tâches similaires** : on émince tous les oignons d'un coup, on lave toute la salade en même temps, on assemble les sauces en parallèle. Et on **utilise le four en simultané** : poulet rôti, légumes rôtis, quiche cuite à la suite sur la même plaque, on ne préchauffe qu'une seule fois.
 
 Pour les ustensiles, on lave au fur et à mesure pendant les temps de cuisson, plutôt que de tout laisser pour la fin. Une cuisine rangée en parallèle de la cuisson, c'est aussi du temps gagné le dimanche soir.
 
 ## Décliner les bases pour varier les plaisirs
 
-L'objectif d'un bon batchcooking semaine, c'est d'éviter la sensation de manger la même chose tous les soirs. Pour ça, on joue sur les déclinaisons. Le poulet rôti de dimanche soir devient une salade asiatique au sésame le lundi, un bowl mexicain avec haricots rouges et tomates le mardi, une quesadilla express avec fromage et avocat le mercredi. Le riz cuit se transforme en bowl avec légumes et sauce différente chaque soir : sauce soja et gingembre un soir, vinaigrette tahini un autre, sauce yaourt et herbes fraîches le troisième.
+L'objectif d'un bon batchcooking semaine, c'est d'éviter la sensation de manger la même chose tous les soirs. Pour ça, on joue sur les **déclinaisons**. Le poulet rôti de dimanche soir devient une **salade asiatique au sésame** le lundi, un **bowl mexicain** avec haricots rouges et tomates le mardi, une **quesadilla express** avec fromage et avocat le mercredi. Le riz cuit se transforme en bowl avec légumes et sauce différente chaque soir : sauce soja et gingembre un soir, vinaigrette tahini un autre, sauce yaourt et herbes fraîches le troisième.
 
-Avec quelques sauces préparées en avance (vinaigrette, sauce yaourt, sauce soja-miel, pesto maison), on transforme les mêmes ingrédients en cinq dîners totalement différents. C'est tout le secret du batchcooking semaine : préparer une fois, décliner cinq fois.
+Avec quelques **sauces préparées en avance** (vinaigrette, sauce yaourt, sauce soja-miel, pesto maison), on transforme les mêmes ingrédients en **cinq dîners totalement différents**. C'est tout le secret du batchcooking semaine : **préparer une fois, décliner cinq fois**.
 
 ## Le batchcooking semaine en pratique
 

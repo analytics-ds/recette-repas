@@ -35,7 +35,7 @@ Le batchcooking au Thermomix est sans doute la **méthode la plus rapide** pour 
 
 ## Pourquoi le Thermomix est idéal pour le batchcooking
 
-Le principe du batchcooking, c'est de préparer en une seule session les bases de plusieurs repas. Le Thermomix amplifie cette méthode parce qu'il cuit sans surveillance : on lance une soupe à 100°C pendant 20 minutes, et pendant ce temps on émince les légumes, on lave la salade, on prépare la pâte à quiche au robot pâtissier ou à la main. Pendant qu'une préparation tourne, on en démarre une autre. Sur une seule session de deux heures, on cumule facilement six recettes prêtes à servir toute la semaine.
+Le principe du batchcooking, c'est de **préparer en une seule session** les bases de plusieurs repas. Le Thermomix amplifie cette méthode parce qu'il **cuit sans surveillance** : on lance une soupe à **100°C pendant 20 minutes**, et pendant ce temps on émince les légumes, on lave la salade, on prépare la pâte à quiche au robot pâtissier ou à la main. Pendant qu'une préparation tourne, on en démarre une autre. Sur une **seule session de deux heures**, on cumule facilement **six recettes** prêtes à servir toute la semaine.
 
 L'autre avantage, c'est la facilité d'ajouter des ingrédients en cours de cuisson. Le TM6 permet d'ajouter les légumes, la sauce, les épices au bon moment, sans avoir à surveiller la casserole. Cela ouvre la porte à des plats complets comme les currys, les risottos crémeux, les soupes mixées juste avant la fin. Chaque recette devient simple à reproduire, même pour quelqu'un qui débute en cuisine.
 
