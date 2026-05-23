@@ -22,7 +22,16 @@ faq:
     a: "Trois critères suffisent : le nombre de personnes par menu (2, 4 ou 6), la durée moyenne d'une session (1h, 2h ou 3h), et le type de cuisine (généraliste, végétarien, light, sans gluten, famille avec enfants). Croiser ces trois éléments avec votre quotidien permet de choisir un ouvrage qui vous suivra vraiment toute l'année."
 ---
 
-Le batch cooking séduit de plus en plus de familles, et l'édition culinaire a suivi le mouvement. Une trentaine de livres dédiés sont sortis en France ces dernières années, du guide débutant à l'ouvrage spécialisé, des recettes généralistes aux versions végétariennes. Voici nos critères pour choisir un livre de batch cooking adapté à votre quotidien, et un panorama des grandes familles d'ouvrages disponibles.
+Le batch cooking séduit de plus en plus de familles, et l'édition culinaire a suivi le mouvement. **Une trentaine de livres dédiés** sont sortis en France ces dernières années, du guide débutant à l'ouvrage spécialisé, des recettes généralistes aux versions végétariennes. Voici nos critères pour choisir un livre de batch cooking adapté à votre quotidien, et un panorama des grandes familles d'ouvrages disponibles.
+
+<div class="callout-brief">
+
+- **Budget** : 15 à 25 € pour un livre de référence, 5 à 10 € pour un ebook.
+- **Format conseillé** : 52 menus annuels avec liste de courses et déroulé minuté.
+- **À regarder** : nombre de personnes par menu, durée de session, type de cuisine.
+- **Astuce** : tester d'abord à la bibliothèque avant d'investir.
+
+</div>
 
 ## Pourquoi acheter un livre de batch cooking
 
@@ -32,7 +41,17 @@ L'autre intérêt, c'est l'inspiration. Un livre bien construit fait découvrir 
 
 ## Les grandes catégories de livres de batch cooking
 
-Le marché du livre batch cooking se segmente en plusieurs grandes familles, chacune répondant à un profil utilisateur précis.
+Le marché du livre batch cooking se segmente en **plusieurs grandes familles**, chacune répondant à un profil utilisateur précis.
+
+| Type de livre | Cible | Prix moyen | Avantage clé |
+|---|---|---|---|
+| **Guide généraliste** | Débutants, famille | 15-20 € | 52 menus complets sur l'année |
+| **Ouvrage saisonnier** | Marché et terroir | 18-25 € | Suit le rythme des produits |
+| **Spécial robot** | Thermomix, Cookeo, Companion | 20-25 € | Programmes calibrés machine |
+| **Diététique** | Végé, light, sans gluten, bébé | 15-22 € | Expertise nutritionnelle |
+| **Express** | Sessions courtes (1h) | 12-18 € | Approche moins engageante |
+
+{{< figure src="/images/cluster-bc/livre-cuisine.jpg" alt="Livre de cuisine posé dans une cuisine moderne pour planifier une session de batch cooking" caption="Le bon livre, c'est celui qui suit votre quotidien, pas l'inverse." >}}
 
 - **Les guides généralistes** : ils proposent en général 12, 26 ou 52 semaines de menus, avec une cible familiale (4 personnes) et une session de cuisine de 1h30 à 2h. Idéal pour démarrer. On y trouve les classiques de la cuisine française, italienne, asiatique, dans des proportions équilibrées entre viande, poisson et végétarien.
 - **Les ouvrages saisonniers** : organisés autour des produits de chaque saison, ces livres suivent le rythme du marché. On trouve des menus printemps avec asperges et fraises, été avec tomates et courgettes, automne avec courges et champignons, hiver avec poireaux et légumes racines. Une belle approche pour qui veut manger de saison.

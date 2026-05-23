@@ -22,7 +22,16 @@ faq:
     a: "Les utilisateurs réguliers trouvent généralement leur autonomie sans livre dédié : la communauté Thermomix partage énormément de recettes sur Cookidoo et les forums. Cela dit, certains livres comme ceux d'Emilie Laraison ou les éditions Vorwerk officielles compilent les meilleures recettes batchcooking testées spécifiquement pour le TM6."
 ---
 
-Le batchcooking au Thermomix est sans doute la méthode la plus rapide pour préparer toute une semaine de repas. Grâce à son mode de cuisson automatique et à sa capacité à enchaîner plusieurs préparations sans surveillance, le TM6 permet de cuisiner cinq à six recettes en moins de deux heures, là où une cuisine classique en demanderait trois. Pour les utilisateurs réguliers, c'est un gain de temps considérable et un confort d'organisation incomparable.
+Le batchcooking au Thermomix est sans doute la **méthode la plus rapide** pour préparer toute une semaine de repas. Grâce à son mode de cuisson automatique et à sa capacité à enchaîner plusieurs préparations sans surveillance, le TM6 permet de cuisiner **cinq à six recettes en moins de deux heures**, là où une cuisine classique en demanderait trois. Pour les utilisateurs réguliers, c'est un gain de temps considérable et un confort d'organisation incomparable.
+
+<div class="callout-brief">
+
+- **Gain de temps** : 40 minutes économisées sur une session de 2h vs cuisine classique.
+- **Recettes par session** : 5 à 6 préparations enchaînées sans surveillance.
+- **Programmes utiles** : mode soupe, mijoté, riz, sauce, dessert.
+- **Prérequis** : un TM6 ou équivalent, des contenants en verre, une liste de courses préparée à l'avance.
+
+</div>
 
 ## Pourquoi le Thermomix est idéal pour le batchcooking
 
@@ -32,13 +41,17 @@ L'autre avantage, c'est la facilité d'ajouter des ingrédients en cours de cuis
 
 ## Organisation type d'une session batchcooking au Thermomix
 
-Voici un déroulé concret de deux heures, optimisé pour préparer toute la semaine avec le TM6. La règle d'or : alterner les préparations rapides (15-20 minutes au robot) avec celles qui demandent plus de temps mais peu de surveillance, comme un plat mijoté de 45 minutes.
+Voici un déroulé concret de deux heures, optimisé pour préparer toute la semaine avec le TM6. La règle d'or : **alterner les préparations rapides** (15-20 minutes au robot) avec celles qui demandent plus de temps mais peu de surveillance, comme un plat mijoté de 45 minutes.
 
-- **Bloc 1 (0 à 25 minutes)** : velouté de courge ou de carottes. On lance le mode soupe automatique pendant qu'on lave et coupe les légumes pour la suite.
-- **Bloc 2 (25 à 50 minutes)** : sauce tomate maison ou sauce bolognaise pour les pâtes et les lasagnes de la semaine. Pendant ce temps, on prépare la pâte à tarte pour une quiche.
-- **Bloc 3 (50 à 80 minutes)** : riz basmati ou semoule au bouillon (15 minutes au TM6). On lance un plat mijoté en parallèle dans une cocotte sur la plaque (curry de pois chiches, bourguignon ou similaire) pendant 45 minutes.
-- **Bloc 4 (80 à 110 minutes)** : dessert au Thermomix (compote de pommes, crème vanille, mousse chocolat selon les envies). Pendant ce temps, on cuit la quiche au four.
-- **Bloc 5 (110 à 120 minutes)** : refroidissement, mise en pot, étiquetage et rangement au frigo.
+| Bloc | Temps | Préparation au TM6 | Tâche en parallèle |
+|---|---|---|---|
+| **1** | 0-25 min | Velouté de courge ou carottes (mode soupe) | Lavage et découpe légumes |
+| **2** | 25-50 min | Sauce tomate ou bolognaise | Préparation pâte à quiche |
+| **3** | 50-80 min | Riz basmati ou semoule au bouillon | Mijoté sur plaque (curry, bourguignon) |
+| **4** | 80-110 min | Dessert (compote, crème, mousse) | Cuisson quiche au four |
+| **5** | 110-120 min | Refroidissement et conditionnement | Étiquetage et rangement frigo |
+
+{{< figure src="/images/cluster-bc/thermomix-cuisson.jpg" alt="Robot cuiseur en cours de cuisson dans une cuisine pour une session de batchcooking au Thermomix" caption="Le mode de cuisson autonome libère du temps pour préparer en parallèle les autres préparations." >}}
 
 En deux heures, on a soupe, sauce, riz, plat mijoté, quiche et dessert pour cinq dîners. C'est l'efficacité maximale du batchcooking Thermomix.
 

@@ -22,7 +22,16 @@ faq:
     a: "Pas indispensable mais utile pour démarrer. Plusieurs livres proposent des plannings hebdomadaires complets adaptés à chaque âge. À défaut, les sites spécialisés en nutrition infantile et les blogs de pédiatres-nutritionnistes donnent des bases solides gratuitement. L'essentiel reste de respecter les besoins par âge et de varier les familles d'aliments."
 ---
 
-Le batch cooking pour bébé est une vraie alliée pour les parents qui veulent cuisiner maison sans y passer toute la semaine. En préparant une grande quantité de petits plats équilibrés en une seule fois, on s'assure que bébé mange varié, sain et adapté à ses besoins, sans céder aux petits pots industriels par manque de temps. Voici comment organiser une session efficace, étape par étape.
+Le batch cooking pour bébé est une **vraie alliée des parents** qui veulent cuisiner maison sans y passer toute la semaine. En préparant une grande quantité de **petits plats équilibrés** en une seule fois, on s'assure que bébé mange varié, sain et adapté à ses besoins, sans céder aux petits pots industriels par manque de temps. Voici comment organiser une session efficace, étape par étape.
+
+<div class="callout-brief">
+
+- **Démarrage** : dès 4-6 mois, en début de diversification alimentaire.
+- **Durée session** : 1h30 à 2h pour 10 repas (5 déjeuners + 5 dîners).
+- **Conservation** : 48h au frigo, 2 mois au congélateur en portions individuelles.
+- **Textures** : purée lisse jusqu'à 8 mois, mouliné puis morceaux ensuite.
+
+</div>
 
 ## Pourquoi le batch cooking est idéal pour bébé
 
@@ -32,12 +41,16 @@ L'autre intérêt, c'est la maîtrise totale des ingrédients : pas de sel ajout
 
 ## Adapter le batch cooking aux besoins par âge
 
-Les besoins évoluent vite chez l'enfant en bas âge, et le batch cooking doit s'adapter. Voici les grandes étapes.
+Les besoins évoluent vite chez l'enfant en bas âge, et le **batch cooking doit s'adapter**. Voici les grandes étapes.
 
-- **De 4 à 6 mois (début de diversification)** : purées 100 % légume ou 100 % fruit, en très petite quantité (30 à 80 g par repas), une famille d'aliments à la fois pour identifier les éventuelles allergies. Carotte, courgette sans peau, patate douce, brocoli, butternut, pomme, poire en purée fine et lisse.
-- **De 6 à 8 mois** : on introduit progressivement les viandes (10 à 20 g, mixées finement), les poissons (10 à 20 g), les œufs (un quart de jaune au début), et on commence à combiner deux légumes par plat.
-- **De 8 à 12 mois** : les textures évoluent vers le mouliné puis les petits morceaux. Les portions montent à 130-200 g par repas. On élargit la palette : céréales (riz, semoule, pâtes), légumineuses bien cuites (lentilles corail, pois cassés), fromages doux.
-- **Au-delà de 12 mois** : bébé mange peu ou prou comme la famille, en version moins assaisonnée et avec des textures adaptées à ses dents. Le batch cooking famille remplace petit à petit le batch cooking bébé spécifique.
+| Âge | Texture | Portion | Aliments à introduire |
+|---|---|---|---|
+| **4-6 mois** | Purée fine et lisse | 30-80 g | Carotte, courgette, patate douce, brocoli, butternut, pomme, poire |
+| **6-8 mois** | Purée légèrement plus épaisse | 80-130 g | Viandes mixées (10-20 g), poissons, jaune d'œuf, deux légumes combinés |
+| **8-12 mois** | Mouliné puis petits morceaux | 130-200 g | Céréales (riz, semoule, pâtes), légumineuses (lentilles, pois cassés), fromages doux |
+| **12 mois et +** | Petits morceaux fondants | Portion adulte allégée | Comme la famille, version moins assaisonnée |
+
+{{< figure src="/images/cluster-bc/bebe-cuillere.jpg" alt="Parent qui propose une cuillère de purée maison à bébé pour la diversification alimentaire" caption="Préparer en avance permet de prendre le temps du repas avec bébé, sans courir en cuisine." >}}
 
 ## Exemple de planning batch cooking pour bébé sur la semaine
 

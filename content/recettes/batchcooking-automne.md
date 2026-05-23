@@ -22,7 +22,16 @@ faq:
     a: "Les jours raccourcissent, on rentre fatigué le soir, l'envie de cuisiner baisse. Le batchcooking d'automne change la donne : on rentre du travail à 19h, on assemble en dix minutes un repas complet et chaud à partir des préparations du dimanche. C'est aussi la saison où les légumes sont les plus économiques au marché, donc le batch fait gagner sur tous les tableaux."
 ---
 
-Le batchcooking d'automne est sans doute la saison la plus agréable pour cuisiner à l'avance. Les courges, les champignons, les poireaux, les patates douces s'invitent au marché à des prix doux, les plats mijotés réchauffent les jours qui raccourcissent, et la cuisine d'automne se prête particulièrement bien à la conservation. Voici comment construire une session batchcooking qui exploite toutes les saveurs de saison.
+Le batchcooking d'automne est sans doute la **saison la plus agréable** pour cuisiner à l'avance. Les courges, les champignons, les poireaux, les patates douces s'invitent au marché à des prix doux, les plats mijotés réchauffent les jours qui raccourcissent, et la cuisine d'automne se prête particulièrement bien à la conservation. Voici comment construire une session batchcooking qui exploite **toutes les saveurs de saison**.
+
+<div class="callout-brief">
+
+- **Saison** : septembre à novembre, légumes au prix le plus bas de l'année.
+- **Stars de la saison** : courges (potimarron, butternut), champignons, poireaux, patates douces.
+- **Conservation** : 4-5 jours au frigo pour les soupes, 2-3 mois au congélateur en portions.
+- **Avantage** : les plats mijotés gagnent en saveur au repos, parfaits pour le batchcooking.
+
+</div>
 
 ## Les légumes stars de l'automne
 
@@ -34,15 +43,19 @@ Côté verdure, le chou kale, les épinards frais, le chou-fleur et les brocolis
 
 ## Idées de recettes pour une session d'automne
 
-Voici un menu type pour cinq dîners d'automne, à préparer en une session de deux à trois heures le dimanche.
+Voici un menu type pour cinq dîners d'automne, à préparer en une **session de deux à trois heures** le dimanche.
 
-- **Lundi** : velouté de potimarron-coco aux graines de courge grillées, avec du pain de campagne maison.
-- **Mardi** : gratin de pommes de terre et poireaux à la fourme d'Ambert.
-- **Mercredi** : pâtes complètes aux champignons et parmesan, salade verte.
-- **Jeudi** : curry doux de patate douce et lentilles corail au lait de coco, riz basmati.
-- **Vendredi** : tarte salée poireaux et saumon fumé, salade composée.
+| Jour | Plat | Ingrédient star | Conservation |
+|---|---|---|---|
+| **Lundi** | Velouté de potimarron-coco, pain de campagne | Potimarron | 5 jours frigo |
+| **Mardi** | Gratin pommes de terre et poireaux à la fourme | Poireaux | 3 jours frigo |
+| **Mercredi** | Pâtes complètes aux champignons et parmesan | Champignons | 3 jours frigo |
+| **Jeudi** | Curry doux de patate douce-lentilles corail au lait de coco | Patate douce | 4 jours frigo |
+| **Vendredi** | Tarte salée poireaux et saumon fumé | Poireaux et saumon | 3 jours frigo |
 
-Tous ces plats utilisent des bases préparées à l'avance pendant la session du dimanche : velouté en bocaux d'un litre, gratin déjà assemblé prêt à enfourner, sauce aux champignons en pot, curry mijoté à réchauffer, tarte cuite intégralement le dimanche.
+{{< figure src="/images/cluster-bc/automne-soupe.jpg" alt="Velouté de potimarron servi dans un bol avec graines, plat typique du batchcooking d'automne" caption="Le velouté de potimarron, star du batchcooking d'automne, se conserve cinq jours au frigo." >}}
+
+Tous ces plats utilisent des **bases préparées à l'avance** pendant la session du dimanche : velouté en bocaux d'un litre, gratin déjà assemblé prêt à enfourner, sauce aux champignons en pot, curry mijoté à réchauffer, tarte cuite intégralement le dimanche.
 
 ## Liste de courses pour un batchcooking d'automne
 

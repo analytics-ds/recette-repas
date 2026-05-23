@@ -22,7 +22,16 @@ faq:
     a: "L'astuce, c'est de préparer des bases neutres (céréales, légumes rôtis, protéines) et de les décliner avec des sauces et assaisonnements différents chaque soir. Un même riz cuit devient un bowl asiatique avec sauce soja un soir, une salade méditerranéenne avec feta et tomates un autre, un curry crémeux le lendemain."
 ---
 
-Le [batchcooking](/recettes/batch-cooking/) semaine, c'est l'art de cuisiner une seule fois pour préparer cinq dîners d'avance. Le principe : on consacre deux heures le dimanche à préparer les bases (céréales, légumes rôtis, sauces, protéines), puis on assemble en quinze minutes chaque soir de la semaine. Résultat : on mange mieux, on dépense moins en plats préparés, et on retrouve du temps libre en rentrant du travail.
+Le [batchcooking](/recettes/batch-cooking/) semaine, c'est l'art de cuisiner une seule fois pour préparer **cinq dîners d'avance**. Le principe : on consacre deux heures le dimanche à préparer les bases (céréales, légumes rôtis, sauces, protéines), puis on assemble en quinze minutes chaque soir de la semaine. Résultat : on mange mieux, on dépense moins en plats préparés, et on retrouve du temps libre en rentrant du travail.
+
+<div class="callout-brief">
+
+- **Durée de la session** : 2h le dimanche pour 5 dîners de la semaine.
+- **Économies** : 50 à 80 € par mois en évitant plats préparés et livraisons.
+- **Conservation** : 3 à 4 jours au frigo pour les plats mijotés, congélation en portions individuelles pour décaler.
+- **Matériel essentiel** : 6 à 8 contenants en verre, une grande cocotte, un bon couteau, une plaque de four.
+
+</div>
 
 ## Pourquoi le batchcooking change la semaine
 
@@ -32,15 +41,19 @@ Côté économies, l'écart est net. Une famille qui passe au batchcooking évit
 
 ## Menu type pour une semaine complète
 
-Voici un exemple concret de batchcooking semaine, équilibré entre viandes, poissons et plats végétariens, avec des saveurs variées pour ne pas se lasser.
+Voici un exemple concret de batchcooking semaine, **équilibré entre viandes, poissons et plats végétariens**, avec des saveurs variées pour ne pas se lasser.
 
-- **Lundi** : pâtes complètes au curry de pois chiches et épinards, salade verte à part.
-- **Mardi** : bowl asiatique au poulet rôti et riz, légumes vapeur, sauce soja-gingembre.
-- **Mercredi** : quiche aux courgettes et fromage de chèvre, salade composée tomates-pois chiches.
-- **Jeudi** : curry de légumes (potimarron, courgettes, pois chiches) au lait de coco, riz basmati.
-- **Vendredi** : pâtes carbonara express, salade verte, salade de fruits frais en dessert.
+| Jour | Plat principal | Temps d'assemblage |
+|---|---|---|
+| **Lundi** | Pâtes complètes au curry de pois chiches et épinards, salade verte | 10 min |
+| **Mardi** | Bowl asiatique au poulet rôti, riz, légumes vapeur, sauce soja-gingembre | 12 min |
+| **Mercredi** | Quiche aux courgettes et fromage de chèvre, salade composée tomates-pois chiches | 8 min |
+| **Jeudi** | Curry de légumes (potimarron, courgettes, pois chiches) au lait de coco, riz basmati | 15 min |
+| **Vendredi** | Pâtes carbonara express, salade verte, salade de fruits frais en dessert | 18 min |
 
-Toutes ces recettes utilisent des bases préparées à l'avance pendant la session du dimanche, et chaque soir on assemble et on réchauffe en moins de quinze minutes. L'organisation hebdomadaire permet aussi de varier les goûts d'un soir à l'autre tout en utilisant les mêmes briques de départ.
+Toutes ces recettes utilisent des bases préparées à l'avance pendant la **session du dimanche**, et chaque soir on assemble et on réchauffe en moins de quinze minutes. L'organisation hebdomadaire permet aussi de varier les goûts d'un soir à l'autre tout en utilisant les mêmes briques de départ.
+
+{{< figure src="/images/cluster-bc/semaine-planning.jpg" alt="Planning et liste de courses sur un agenda papier pour préparer le batchcooking de la semaine" caption="Un planning écrit la veille fait gagner 15 minutes en magasin et évite les achats impulsifs." >}}
 
 ## Liste de courses et préparation des bases
 

@@ -406,6 +406,76 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .rc-arrow:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 @media (max-width: 760px) { .rc-arrow { display: none; } .rc-slide { flex-basis: 260px; } }
 
+/* ===== Encart "En bref" et autres callouts éditoriaux ===== */
+.article-content .callout-brief, .article-content blockquote.brief {
+  background: linear-gradient(135deg, rgba(93,118,110,0.08), rgba(39,72,62,0.04));
+  border-left: 4px solid var(--primary);
+  border-radius: 14px;
+  padding: 22px 28px;
+  margin: 28px 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  position: relative;
+}
+.article-content .callout-brief::before {
+  content: "EN BREF";
+  display: block;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.article-content .callout-brief p { margin: 0 0 8px; line-height: 1.65; }
+.article-content .callout-brief p:last-child { margin-bottom: 0; }
+.article-content .callout-brief ul { margin: 6px 0 0 1.1rem; line-height: 1.55; }
+.article-content .callout-brief li { margin-bottom: 4px; }
+
+/* Images inline dans le contenu */
+.article-content figure {
+  margin: 32px 0;
+  text-align: center;
+}
+.article-content figure img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+.article-content figure figcaption {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Tableaux contenu */
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  font-size: 0.95rem;
+  background: var(--white, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.article-content table thead { background: var(--primary); color: #fff; }
+.article-content table th { padding: 14px 16px; text-align: left; font-family: var(--font-ui); font-weight: 600; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.article-content table td { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.article-content table tbody tr:last-child td { border-bottom: 0; }
+.article-content table tbody tr:nth-child(even) { background: var(--background-alt, #F9F7F5); }
+.article-content table strong { color: var(--primary); }
+@media (max-width: 640px) {
+  .article-content table { font-size: 0.85rem; }
+  .article-content table th, .article-content table td { padding: 8px 10px; }
+}
+
 /* ===== Hero image article (single.html) ===== */
 .article-hero { max-width: 1100px; margin: 0 auto 32px; padding: 0 16px; }
 .article-hero img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 18px; box-shadow: var(--shadow); display: block; }
