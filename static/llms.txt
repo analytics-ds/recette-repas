@@ -1,26 +1,54 @@
 # Recette & Repas
 
-> Des recettes de cuisine faciles et des conseils pour cuisiner au quotidien.
+> Blog de cuisine francaise animé par un ancien chef. Recettes testées, idées de repas faciles et conseils de cuisine pour le quotidien, du déjeuner rapide au repas du dimanche en famille.
 
 ## A propos
 
-Recette & Repas est un blog de cuisine animé par un ancien chef. Il propose des recettes accessibles, testées, et des conseils pratiques pour cuisiner mieux au quotidien.
+Recette & Repas est un blog culinaire qui propose des recettes accessibles, testées en cuisine avant publication, et des conseils pratiques pour mieux cuisiner au quotidien. Chaque recette précise le temps de préparation, le temps de cuisson, la difficulté, le nombre de portions et les valeurs nutritionnelles principales.
 
-## Contenu principal
+L'auteur, Julien Marchand, est un ancien chef de cuisine qui partage ses techniques et astuces pour reproduire les plats à la maison sans matériel compliqué.
 
-- Entrées : idées d'entrées faciles et gourmandes, froides ou chaudes.
-- Plats : recettes de plats principaux du quotidien aux repas du dimanche.
-- Desserts : gâteaux, tartes et douceurs maison simples et inratables.
-- Cuisine du monde : recettes venues d'ailleurs à refaire chez soi.
-- Conseils et astuces : techniques et conseils de chef pour gagner du temps et limiter le gaspillage.
+## Categories
 
-## Articles recents
+- Entrées : https://recette-repas.com/recettes/entrees/ - salades, soupes, veloutés, verrines et bouchées
+- Plats : https://recette-repas.com/recettes/plats/ - plats principaux, mijotés, tartes salées, gratins
+- Desserts : https://recette-repas.com/recettes/desserts/ - gâteaux, tartes, mousses, crèmes, douceurs maison
+- Cuisine du monde : https://recette-repas.com/recettes/cuisine-monde/ - cuisine italienne, asiatique, latine, orientale
+- Conseils et astuces : https://recette-repas.com/recettes/conseils-astuces/ - techniques, organisation, conservation
+- Batch cooking : https://recette-repas.com/recettes/batch-cooking/ - recettes à préparer à l'avance pour la semaine
 
-Aucun article publié pour le moment. Le blog est en cours de lancement.
+## Recettes publiées
+
+### Plats
+- Bœuf bourguignon : https://recette-repas.com/recettes/boeuf-bourguignon/
+- Hachis parmentier : https://recette-repas.com/recettes/hachis-parmentier/
+- Pâtes à la carbonara à la française : https://recette-repas.com/recettes/pate-carbonara-francaise/
+
+### Entrées
+- Velouté de potiron : https://recette-repas.com/recettes/veloute-potiron/
+- Soupe à l'oignon gratinée : https://recette-repas.com/recettes/soupe-oignon-gratinee/
+
+### Desserts
+- Tarte aux pommes : https://recette-repas.com/recettes/tarte-pommes/
+- Mousse au chocolat : https://recette-repas.com/recettes/mousse-chocolat/
+
+### Cuisine du monde
+- Curry de poulet au lait de coco : https://recette-repas.com/recettes/curry-poulet/
+- Lasagnes à la bolognaise : https://recette-repas.com/recettes/lasagnes-bolognaise/
+
+### Batch cooking
+- Chili con carne : https://recette-repas.com/recettes/chili-con-carne/
+- Soupe minestrone : https://recette-repas.com/recettes/soupe-minestrone/
+
+## Auteur
+
+Julien Marchand, ancien chef de cuisine.
 
 ## Informations techniques
 
 - Generateur : Hugo
 - Hebergement : GitHub Pages
-- Sitemap : https://analyticsds.github.io/recette-repas/sitemap.xml
-- RSS : https://analyticsds.github.io/recette-repas/index.xml
+- Sitemap XML : https://recette-repas.com/sitemap.xml
+- Plan du site HTML : https://recette-repas.com/plan-du-site/
+- RSS : https://recette-repas.com/index.xml
+- Contact : https://recette-repas.com/contact/

@@ -6,7 +6,7 @@ url: "/recettes/plats/"
 aliases: ["/categories/plats/"]
 image: "images/categories/plats.jpg"
 weight: 2
-description: "Des recettes de plats principaux faciles à réussir, du quotidien aux repas du dimanche."
+description: "Trouvez une idée plat pour chaque repas : recettes de plats principaux faciles, mijotés du dimanche, plats rapides du quotidien et idées créatives pour toute la famille."
 subthemes_title: "Recettes de plats pour toutes les envies"
 subthemes_intro: "Du quotidien express aux mijotés du dimanche, retrouvez nos idées de plats principaux organisées par style de cuisine et par temps de préparation."
 subthemes:

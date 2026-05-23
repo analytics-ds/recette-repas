@@ -6,7 +6,7 @@ url: "/recettes/desserts/"
 aliases: ["/categories/desserts/"]
 image: "images/categories/desserts.jpg"
 weight: 3
-description: "Gâteaux, tartes et douceurs maison : des recettes de desserts simples et inratables."
+description: "Trouvez une idée dessert maison facile : gâteaux moelleux, tartes aux fruits, mousses au chocolat, crèmes, clafoutis et douceurs express, à réussir sans matériel de pâtissier."
 subthemes_title: "Des desserts maison pour toutes les envies"
 subthemes_intro: "Du dessert chocolaté ultra gourmand à la tarte aux fruits de saison, en passant par les douceurs express : retrouvez nos recettes triées par envie et par temps de préparation."
 subthemes:

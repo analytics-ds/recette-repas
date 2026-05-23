@@ -6,7 +6,7 @@ url: "/recettes/entrees/"
 aliases: ["/categories/entrees/"]
 image: "images/categories/entrees.jpg"
 weight: 1
-description: "Nos idées d'entrées faciles et gourmandes, froides ou chaudes, pour bien commencer le repas."
+description: "Trouvez une idée entrée pour tous vos repas : salades, soupes, verrines, bouchées feuilletées, entrées froides ou chaudes, faciles à préparer et adaptées à chaque saison."
 subthemes_title: "Des idées d'entrées pour tous les repas"
 subthemes_intro: "Salades fraîches, veloutés réconfortants, terrines à partager : nos entrées s'adaptent à toutes les occasions, du dîner improvisé au repas de fête."
 subthemes:

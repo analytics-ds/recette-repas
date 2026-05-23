@@ -1,6 +1,8 @@
 <!-- Canonical -->
 <link rel="canonical" href="{{ .Permalink }}">
 
+{{ $ogImg := "" }}
+{{ with .Params.image }}{{ $ogImg = . | absURL }}{{ else }}{{ $ogImg = "images/home/hero.jpg" | absURL }}{{ end }}
 <!-- Open Graph -->
 <meta property="og:title" content="{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
@@ -8,6 +10,10 @@
 <meta property="og:url" content="{{ .Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:locale" content="{{ .Site.LanguageCode | default "fr_FR" }}">
+<meta property="og:image" content="{{ $ogImg }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
 {{ if .IsPage }}
 {{ with .Params.author }}<meta property="article:author" content="{{ . }}">{{ end }}
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
@@ -20,6 +26,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+<meta name="twitter:image" content="{{ $ogImg }}">
+<meta name="twitter:image:alt" content="{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}">
 
 <!-- JSON-LD Schema.org : BlogPosting (articles standards uniquement ; les recettes fournissent leur propre schema Recipe) -->
 {{ if and .IsPage (eq .Section "recettes") (ne .Layout "recette") }}
@@ -84,6 +92,73 @@
     ]
 }
 </script>
+{{ else if or (eq .Kind "term") (and (eq .Kind "section") (eq .Section "recettes")) }}
+
+<!-- JSON-LD Schema.org : CollectionPage + ItemList (pages categories) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "{{ .Permalink }}#collection",
+    "url": "{{ .Permalink }}",
+    "name": "{{ with .Params.seo_title }}{{ . }}{{ else }}{{ $.Title }}{{ end }}",
+    "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
+    "inLanguage": "fr-FR",
+    "isPartOf": { "@id": "{{ .Site.BaseURL }}#website" },
+    "about": { "@id": "{{ .Site.BaseURL }}#organization" },
+    "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "{{ $ogImg }}"
+    },
+    "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": {{ len .Pages }},
+        "itemListElement": [
+            {{ range $i, $p := .Pages.ByDate.Reverse }}{{ if $i }},{{ end }}
+            {
+                "@type": "ListItem",
+                "position": {{ add $i 1 }},
+                "url": "{{ $p.Permalink }}",
+                "name": "{{ $p.Title }}"
+            }
+            {{ end }}
+        ]
+    }
+}
+</script>
+
+<!-- JSON-LD WebSite + Organization references pour categories -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "{{ .Site.BaseURL }}#website",
+            "name": "{{ .Site.Title }}",
+            "url": "{{ .Site.BaseURL }}",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "{{ .Site.BaseURL }}#organization" }
+        },
+        {
+            "@type": "Organization",
+            "@id": "{{ .Site.BaseURL }}#organization",
+            "name": "Recette & Repas",
+            "url": "{{ .Site.BaseURL }}",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ "images/logo-mark.png" | absURL }}"
+            },
+            "founder": {
+                "@type": "Person",
+                "name": "{{ .Site.Params.author_name }}",
+                "jobTitle": "{{ .Site.Params.author_job_title }}"
+            }
+        }
+    ]
+}
+</script>
+
 {{ else if .IsHome }}
 
 <!-- JSON-LD Schema.org : WebSite (accueil) -->
