@@ -1,5 +1,7 @@
 ---
 title: "Batch cooking"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Recette batch cooking : préparer ses repas à l'avance"
 h1: "Recette batch cooking : cuisiner pour toute la semaine"
 url: "/recettes/batch-cooking/"

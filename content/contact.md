@@ -1,5 +1,7 @@
 ---
 title: "Contact"
+date: 2026-05-22
+lastmod: 2026-05-23
 description: "Contactez Recette & Repas pour une question, une suggestion de recette ou une collaboration."
 ---
 

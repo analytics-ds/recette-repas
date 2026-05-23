@@ -1,5 +1,7 @@
 ---
 title: "Entrées"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Idée entrée : recettes faciles, froides ou chaudes"
 h1: "Idée entrée : nos recettes d'entrées faciles et gourmandes"
 url: "/recettes/entrees/"

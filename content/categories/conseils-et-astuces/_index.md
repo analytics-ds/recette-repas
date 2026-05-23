@@ -1,5 +1,7 @@
 ---
 title: "Conseils et astuces"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Astuce cuisine : conseils pour mieux cuisiner au quotidien"
 h1: "Astuce cuisine : tous nos conseils d'un ancien chef"
 url: "/recettes/conseils-astuces/"

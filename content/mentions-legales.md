@@ -1,5 +1,7 @@
 ---
 title: "Mentions légales"
+date: 2026-05-22
+lastmod: 2026-05-23
 description: "Mentions légales du site Recette & Repas : éditeur, directeur de la publication et hébergeur."
 ---
 

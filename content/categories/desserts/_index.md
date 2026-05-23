@@ -1,5 +1,7 @@
 ---
 title: "Desserts"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Idée dessert : recettes maison faciles à réussir"
 h1: "Idée dessert : toutes nos recettes de desserts maison"
 url: "/recettes/desserts/"

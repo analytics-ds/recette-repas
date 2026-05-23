@@ -1,5 +1,7 @@
 ---
 title: "Plats"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Idée plat : recettes faciles pour le repas du soir"
 h1: "Idée plat : nos recettes de plats principaux faciles"
 url: "/recettes/plats/"

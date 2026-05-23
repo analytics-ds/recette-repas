@@ -1,5 +1,7 @@
 ---
 title: "Cuisine du monde"
+date: 2026-05-22
+lastmod: 2026-05-23
 seo_title: "Recette cuisine du monde : voyager par les saveurs"
 h1: "Recette cuisine du monde : tour culinaire en 50 idées"
 url: "/recettes/cuisine-monde/"

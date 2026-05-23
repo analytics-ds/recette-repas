@@ -1,5 +1,7 @@
 ---
 title: "À propos"
+date: 2026-05-22
+lastmod: 2026-05-23
 description: "Recette & Repas, le blog de cuisine d'un ancien chef qui partage ses recettes et ses conseils du quotidien."
 ---
 

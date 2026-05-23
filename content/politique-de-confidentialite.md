@@ -1,5 +1,7 @@
 ---
 title: "Politique de confidentialité"
+date: 2026-05-22
+lastmod: 2026-05-23
 description: "Politique de confidentialité de Recette & Repas : données collectées, finalités, durée de conservation et vos droits."
 ---
 
