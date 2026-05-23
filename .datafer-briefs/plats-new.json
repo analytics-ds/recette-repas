@@ -1,0 +1,271 @@
+{
+  "id": "1000004d-1e66-4d22-9879-e24cb30d7202",
+  "status": "ready",
+  "keyword": "id\u00e9e plat",
+  "country": "fr",
+  "score": 0,
+  "volume": 462,
+  "position": null,
+  "editorHtml": "",
+  "targetTerms": [
+    {
+      "term": "pr\u00e9parer",
+      "avgCount": 3,
+      "presence": 80
+    },
+    {
+      "term": "cuisine",
+      "avgCount": 7,
+      "presence": 80
+    },
+    {
+      "term": "toutes",
+      "avgCount": 3,
+      "presence": 80
+    },
+    {
+      "term": "pommes de terre",
+      "avgCount": 3,
+      "presence": 70
+    },
+    {
+      "term": "pour repas",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "tarte",
+      "avgCount": 3,
+      "presence": 70
+    },
+    {
+      "term": "gourmande",
+      "avgCount": 5,
+      "presence": 70
+    },
+    {
+      "term": "courgettes",
+      "avgCount": 3,
+      "presence": 70
+    },
+    {
+      "term": "dessert",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "famille",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "fromage",
+      "avgCount": 4,
+      "presence": 70
+    },
+    {
+      "term": "\u00e9pices",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "base",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "facile rapide",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "envie",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "minutes",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "complets",
+      "avgCount": 4,
+      "presence": 60
+    },
+    {
+      "term": "hiver",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "saveurs",
+      "avgCount": 3,
+      "presence": 70
+    },
+    {
+      "term": "r\u00e9confortant",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "b\u0153uf",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "blanquette",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "d\u00e9couvrez",
+      "avgCount": 1,
+      "presence": 50
+    },
+    {
+      "term": "saut\u00e9",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "jambon",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "recettes faciles",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "vert",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "adaptent",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "veau",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "maison",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "coups",
+      "avgCount": 1,
+      "presence": 50
+    },
+    {
+      "term": "simples rapides",
+      "avgCount": 1,
+      "presence": 40
+    },
+    {
+      "term": "plat principal",
+      "avgCount": 6,
+      "presence": 30
+    },
+    {
+      "term": "fondant",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "allez",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "lasagnes",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "saumon fum\u00e9",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "ch\u00e8vre",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "saison",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "curry",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "parfait",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "plats rapides",
+      "avgCount": 3,
+      "presence": 30
+    },
+    {
+      "term": "parfum\u00e9e",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "pizza",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "gnocchis",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "recettes de cuisine",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "jours",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "principal",
+      "avgCount": 7,
+      "presence": 30
+    },
+    {
+      "term": "sp\u00e9cialit\u00e9s",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "traditionnelle",
+      "avgCount": 2,
+      "presence": 60
+    }
+  ],
+  "targetWordCount": 1109,
+  "competitors": {
+    "avg": 48,
+    "best": 67,
+    "bestUrl": "https://www.enviedebienmanger.fr/idees-recettes/recettes-plat",
+    "count": 10
+  },
+  "createdAt": "2026-05-23T11:07:32.000Z",
+  "updatedAt": "2026-05-23T11:09:02.000Z"
+}

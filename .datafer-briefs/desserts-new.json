@@ -1,0 +1,271 @@
+{
+  "id": "ad0ac858-757d-48cd-901a-0de00cb4c47f",
+  "status": "ready",
+  "keyword": "id\u00e9e dessert",
+  "country": "fr",
+  "score": 0,
+  "volume": 2100,
+  "position": null,
+  "editorHtml": "",
+  "targetTerms": [
+    {
+      "term": "g\u00e2teau",
+      "avgCount": 8,
+      "presence": 80
+    },
+    {
+      "term": "chocolat",
+      "avgCount": 8,
+      "presence": 80
+    },
+    {
+      "term": "cr\u00e8me",
+      "avgCount": 3,
+      "presence": 80
+    },
+    {
+      "term": "pommes",
+      "avgCount": 5,
+      "presence": 80
+    },
+    {
+      "term": "facile",
+      "avgCount": 10,
+      "presence": 80
+    },
+    {
+      "term": "dessert facile",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "p\u00e2te",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "biscuits",
+      "avgCount": 3,
+      "presence": 70
+    },
+    {
+      "term": "g\u00e2teau au chocolat",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "rapide",
+      "avgCount": 9,
+      "presence": 70
+    },
+    {
+      "term": "fondant",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "cake",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "gourmand",
+      "avgCount": 4,
+      "presence": 60
+    },
+    {
+      "term": "recettes de desserts",
+      "avgCount": 1,
+      "presence": 40
+    },
+    {
+      "term": "muffins",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "fraises",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "d\u00e9licieux",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "oeufs",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "clafoutis",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "cr\u00eapes",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "parfait",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "flan",
+      "avgCount": 5,
+      "presence": 60
+    },
+    {
+      "term": "mousse",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "crumble",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "recette facile",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "beurre",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "original",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "mangue",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "miel",
+      "avgCount": 1,
+      "presence": 50
+    },
+    {
+      "term": "mousse au chocolat",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "minutes",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "tarte aux pommes",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "p\u00eaches",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "l\u00e9ger",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "quand",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "comment",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "rhubarbe",
+      "avgCount": 4,
+      "presence": 60
+    },
+    {
+      "term": "amandes",
+      "avgCount": 1,
+      "presence": 50
+    },
+    {
+      "term": "moins",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "verrines",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "citron",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "no\u00ebl",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "astuce",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "poires",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "gluten",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "d\u00e9couvrez",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "noir",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "cuisson",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "noisettes",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "chocolat noir",
+      "avgCount": 1,
+      "presence": 40
+    }
+  ],
+  "targetWordCount": 766,
+  "competitors": {
+    "avg": 52,
+    "best": 73,
+    "bestUrl": "https://fr.pinterest.com/laura_richert/id%C3%A9e-dessert/",
+    "count": 10
+  },
+  "createdAt": "2026-05-23T11:07:32.000Z",
+  "updatedAt": "2026-05-23T11:08:56.000Z"
+}

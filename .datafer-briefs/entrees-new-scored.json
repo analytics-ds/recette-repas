@@ -1,0 +1,127 @@
+{
+  "id": "1e3aff11-44ce-4d34-a973-96ed1381ab42",
+  "score": 72,
+  "breakdown": {
+    "total": 72,
+    "rawTotal": 72,
+    "competitorMedian": 0,
+    "seoTotal": 74,
+    "geoTotal": 53,
+    "keyword": {
+      "score": 10,
+      "max": 15,
+      "details": {
+        "count": 8,
+        "density": 1.09,
+        "softCoverage": "100%",
+        "exactBonus": 3
+      }
+    },
+    "nlpCoverage": {
+      "score": 26,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 6,
+        "essentialsTotal": 6,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 26,
+        "importantsTotal": 29,
+        "importantsCoverage": 90,
+        "importantsScore": 9,
+        "used": 32,
+        "total": 35,
+        "coverage": 96
+      }
+    },
+    "contentLength": {
+      "score": 7,
+      "max": 7,
+      "details": {
+        "wc": 1463,
+        "target": 1375
+      }
+    },
+    "headings": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 14,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 7,
+      "max": 13,
+      "details": {
+        "distribution": "3/4 exact, 1/4 soft"
+      }
+    },
+    "structure": {
+      "score": 1,
+      "max": 6,
+      "details": {
+        "paragraphs": 59,
+        "ratio": 2.19
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 36
+      }
+    },
+    "images": {
+      "score": 2,
+      "max": 4,
+      "details": {
+        "count": 12,
+        "target": 29
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 53,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "statistics": {
+        "ok": false,
+        "score": 13,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 50,
+    "best": 76,
+    "bestUrl": "https://www.marieclaire.fr/cuisine/entrees-pas-cheres,1222509.asp",
+    "count": 10
+  }
+}

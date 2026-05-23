@@ -1,5 +1,6 @@
 ---
 title: "Desserts"
+h1: "Idée dessert : toutes nos recettes de desserts maison"
 url: "/recettes/desserts/"
 aliases: ["/categories/desserts/"]
 image: "images/categories/desserts.jpg"
@@ -47,7 +48,7 @@ faq:
 outro: |
   ## Idée recette dessert : nos meilleures sélections maison
 
-  Le dessert, c'est la touche finale qui fait plaisir à tout le monde et qui termine le repas sur une note gourmande. Trouver la bonne idée recette dessert dépend du moment, du temps disponible et de l'envie du jour. Nos recettes sont pensées pour être réussies même sans matériel de pâtissier, avec des ingrédients simples du placard et des étapes claires. Gâteau moelleux au yaourt, tarte aux pommes croustillante, mousse au chocolat aérienne, tiramisu express aux fruits rouges, clafoutis aux cerises, crumble pommes-poires, cake au citron : autant d'idées faciles à réaliser pour se faire plaisir au quotidien. Une bonne idée recette dessert ne demande ni technique compliquée ni matériel pro, simplement un peu d'envie et de bons ingrédients.
+  Le dessert, c'est la touche finale qui fait plaisir à tout le monde et qui termine le repas sur une note gourmande. Trouver la bonne idée dessert dépend du moment, du temps disponible et de l'envie du jour. Nos recettes sont pensées pour être réussies même sans matériel de pâtissier, avec des ingrédients simples du placard et des étapes claires. Gâteau moelleux au yaourt, tarte aux pommes croustillante, mousse au chocolat aérienne, tiramisu express aux fruits rouges, clafoutis aux cerises, crumble pommes-poires, cake au citron : autant d'idées faciles à réaliser pour se faire plaisir au quotidien. Une bonne idée dessert ne demande ni technique compliquée ni matériel pro, simplement un peu d'envie et de bons ingrédients.
 
   ## Desserts au chocolat, le grand classique
 
@@ -61,9 +62,13 @@ outro: |
 
   Quand on a peu de temps, certains desserts se réalisent en moins de quinze minutes et sont prêts à servir après une courte cuisson. La salade de fruits frais, la mousse au chocolat express, le crumble minute, le tiramisu rapide sans œufs ou le gâteau au yaourt sont autant d'idées faciles à improviser. Pour gagner du temps, on peut aussi préparer le dessert la veille : la plupart des entremets et des mousses gagnent même en saveur après une nuit au frais.
 
-  ## Trouver une idée recette dessert pour chaque occasion
+  ## Petites idées dessert pour finir en douceur
 
-  Que vous cherchiez une idée recette dessert pour clôturer un repas du dimanche, un dessert express pour ce soir ou une recette plus originale pour un anniversaire, notre collection de recettes de desserts couvre toutes les envies. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon le moment et le niveau de gourmandise visé. La meilleure idée recette dessert, c'est souvent celle qu'on a déjà testée et qu'on sait réussir : on garde ses classiques sous la main et on explore une nouveauté de temps en temps pour se renouveler.
+  Pour une idée dessert gourmand mais plus léger, pensez aux verrines : verrine de mousse au chocolat, panna cotta aux fruits, parfait à la vanille, crème brûlée parfumée à la pistache. Les biscuits maison (sablés au beurre, cookies au chocolat, madeleines, financiers) sont parfaits pour accompagner un café ou un thé en fin de repas. Côté gâteaux individuels, les muffins aux fruits rouges, les fondants au chocolat ou les petits cakes au citron font toujours plaisir. Et selon la saison, on n'oublie pas la rhubarbe au printemps, les fraises et les pêches en été, le flan pâtissier maison à servir bien froid.
+
+  ## Trouver une idée dessert pour chaque occasion
+
+  Que vous cherchiez une idée dessert pour clôturer un repas du dimanche, un dessert express pour ce soir ou une recette plus originale pour un anniversaire, notre collection de recettes de desserts couvre toutes les envies. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon le moment et le niveau de gourmandise visé. La meilleure idée dessert, c'est souvent celle qu'on a déjà testée et qu'on sait réussir : on garde ses classiques sous la main et on explore une nouveauté de temps en temps pour se renouveler.
 ---
 
 Le dessert, c'est la touche finale qui fait plaisir à tout le monde. Retrouvez nos recettes de desserts faciles, des grands classiques de la pâtisserie française aux douceurs rapides à préparer avec ce que l'on a dans les placards.

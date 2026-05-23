@@ -10,7 +10,7 @@
       {{ with $blog }}<span>/</span><a href="{{ .RelPermalink }}">Recettes</a>{{ end }}
       <span>/</span><span>{{ .Title }}</span>
     </nav>
-    <h1>{{ .Title }}</h1>
+    <h1>{{ with .Params.h1 }}{{ . }}{{ else }}{{ $.Title }}{{ end }}</h1>
     {{ if .Content }}
     <div class="cat-hero-intro">{{ .Content }}</div>
     {{ else }}{{ with .Description }}<p class="cat-hero-intro">{{ . }}</p>{{ end }}{{ end }}

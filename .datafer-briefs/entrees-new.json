@@ -1,0 +1,271 @@
+{
+  "id": "1e3aff11-44ce-4d34-a973-96ed1381ab42",
+  "status": "ready",
+  "keyword": "id\u00e9e entr\u00e9e",
+  "country": "fr",
+  "score": 0,
+  "volume": 1700,
+  "position": null,
+  "editorHtml": "",
+  "targetTerms": [
+    {
+      "term": "salade",
+      "avgCount": 15,
+      "presence": 80
+    },
+    {
+      "term": "l\u00e9gumes",
+      "avgCount": 7,
+      "presence": 80
+    },
+    {
+      "term": "entr\u00e9e froide",
+      "avgCount": 1,
+      "presence": 50
+    },
+    {
+      "term": "simple",
+      "avgCount": 7,
+      "presence": 70
+    },
+    {
+      "term": "froide",
+      "avgCount": 4,
+      "presence": 70
+    },
+    {
+      "term": "originale",
+      "avgCount": 6,
+      "presence": 60
+    },
+    {
+      "term": "oeufs",
+      "avgCount": 8,
+      "presence": 70
+    },
+    {
+      "term": "pommes",
+      "avgCount": 6,
+      "presence": 70
+    },
+    {
+      "term": "ap\u00e9ritif",
+      "avgCount": 5,
+      "presence": 60
+    },
+    {
+      "term": "pr\u00e9parer",
+      "avgCount": 12,
+      "presence": 60
+    },
+    {
+      "term": "soupe",
+      "avgCount": 10,
+      "presence": 60
+    },
+    {
+      "term": "courgettes",
+      "avgCount": 6,
+      "presence": 60
+    },
+    {
+      "term": "maison",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "ap\u00e9ro",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "fromage",
+      "avgCount": 7,
+      "presence": 60
+    },
+    {
+      "term": "connexes entr\u00e9e",
+      "avgCount": 1,
+      "presence": 30
+    },
+    {
+      "term": "toute",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "tarte",
+      "avgCount": 7,
+      "presence": 50
+    },
+    {
+      "term": "gourmande",
+      "avgCount": 8,
+      "presence": 50
+    },
+    {
+      "term": "int\u00e9r\u00eats connexes entr\u00e9e",
+      "avgCount": 1,
+      "presence": 30
+    },
+    {
+      "term": "chaude",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "feuillet\u00e9s",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "no\u00ebl",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "recette facile",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "terre",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "petits",
+      "avgCount": 9,
+      "presence": 50
+    },
+    {
+      "term": "thon",
+      "avgCount": 7,
+      "presence": 50
+    },
+    {
+      "term": "velout\u00e9",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "verts",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "saumon fum\u00e9",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "plat",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "moment",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "avocat",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "ch\u00e8vre",
+      "avgCount": 10,
+      "presence": 50
+    },
+    {
+      "term": "gaspacho",
+      "avgCount": 6,
+      "presence": 50
+    },
+    {
+      "term": "facile rapide",
+      "avgCount": 6,
+      "presence": 30
+    },
+    {
+      "term": "int\u00e9r\u00eats",
+      "avgCount": 13,
+      "presence": 30
+    },
+    {
+      "term": "saine",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "\u00e9pingle int\u00e9r\u00eats",
+      "avgCount": 13,
+      "presence": 30
+    },
+    {
+      "term": "farcis",
+      "avgCount": 6,
+      "presence": 40
+    },
+    {
+      "term": "fra\u00eecheur",
+      "avgCount": 6,
+      "presence": 30
+    },
+    {
+      "term": "savoir",
+      "avgCount": 15,
+      "presence": 30
+    },
+    {
+      "term": "meilleures",
+      "avgCount": 2,
+      "presence": 30
+    },
+    {
+      "term": "\u00e9pingle int\u00e9r\u00eats connexes",
+      "avgCount": 13,
+      "presence": 30
+    },
+    {
+      "term": "int\u00e9r\u00eats connexes",
+      "avgCount": 13,
+      "presence": 30
+    },
+    {
+      "term": "healthy",
+      "avgCount": 7,
+      "presence": 30
+    },
+    {
+      "term": "connexes",
+      "avgCount": 13,
+      "presence": 30
+    },
+    {
+      "term": "\u00e9pingle",
+      "avgCount": 15,
+      "presence": 30
+    },
+    {
+      "term": "ch\u00e8vre frais",
+      "avgCount": 5,
+      "presence": 30
+    },
+    {
+      "term": "savoir sur \u00e9pingle",
+      "avgCount": 15,
+      "presence": 30
+    }
+  ],
+  "targetWordCount": 1375,
+  "competitors": {
+    "avg": 50,
+    "best": 76,
+    "bestUrl": "https://www.marieclaire.fr/cuisine/entrees-pas-cheres,1222509.asp",
+    "count": 10
+  },
+  "createdAt": "2026-05-23T11:07:32.000Z",
+  "updatedAt": "2026-05-23T11:08:27.000Z"
+}

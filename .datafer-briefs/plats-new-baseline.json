@@ -1,0 +1,127 @@
+{
+  "id": "1000004d-1e66-4d22-9879-e24cb30d7202",
+  "score": 71,
+  "breakdown": {
+    "total": 71,
+    "rawTotal": 71,
+    "competitorMedian": 0,
+    "seoTotal": 73,
+    "geoTotal": 47,
+    "keyword": {
+      "score": 10,
+      "max": 15,
+      "details": {
+        "count": 8,
+        "density": 1.01,
+        "softCoverage": "100%",
+        "exactBonus": 3
+      }
+    },
+    "nlpCoverage": {
+      "score": 25,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 11,
+        "essentialsTotal": 11,
+        "essentialsCoverage": 100,
+        "essentialsScore": 17,
+        "importantsUsed": 21,
+        "importantsTotal": 28,
+        "importantsCoverage": 75,
+        "importantsScore": 8,
+        "used": 32,
+        "total": 39,
+        "coverage": 91
+      }
+    },
+    "contentLength": {
+      "score": 5,
+      "max": 7,
+      "details": {
+        "wc": 1578,
+        "target": 1109
+      }
+    },
+    "headings": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 15,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 7,
+      "max": 13,
+      "details": {
+        "distribution": "4/4 exact, 0/4 soft"
+      }
+    },
+    "structure": {
+      "score": 3,
+      "max": 6,
+      "details": {
+        "paragraphs": 63,
+        "ratio": 1.8
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 35
+      }
+    },
+    "images": {
+      "score": 2,
+      "max": 4,
+      "details": {
+        "count": 14,
+        "target": 30
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 47,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "statistics": {
+        "ok": false,
+        "score": 7,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 48,
+    "best": 67,
+    "bestUrl": "https://www.enviedebienmanger.fr/idees-recettes/recettes-plat",
+    "count": 10
+  }
+}

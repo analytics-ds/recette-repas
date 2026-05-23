@@ -1,0 +1,127 @@
+{
+  "id": "ad0ac858-757d-48cd-901a-0de00cb4c47f",
+  "score": 67,
+  "breakdown": {
+    "total": 67,
+    "rawTotal": 67,
+    "competitorMedian": 0,
+    "seoTotal": 68,
+    "geoTotal": 60,
+    "keyword": {
+      "score": 14,
+      "max": 15,
+      "details": {
+        "count": 6,
+        "density": 0.8,
+        "softCoverage": "100%",
+        "exactBonus": 7
+      }
+    },
+    "nlpCoverage": {
+      "score": 20,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 8,
+        "essentialsTotal": 9,
+        "essentialsCoverage": 89,
+        "essentialsScore": 15,
+        "importantsUsed": 17,
+        "importantsTotal": 31,
+        "importantsCoverage": 55,
+        "importantsScore": 5,
+        "used": 25,
+        "total": 40,
+        "coverage": 76
+      }
+    },
+    "contentLength": {
+      "score": 5,
+      "max": 7,
+      "details": {
+        "wc": 1505,
+        "target": 766
+      }
+    },
+    "headings": {
+      "score": 11,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 14,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 4,
+      "max": 13,
+      "details": {
+        "distribution": "2/4 exact, 0/4 soft"
+      }
+    },
+    "structure": {
+      "score": 2,
+      "max": 6,
+      "details": {
+        "paragraphs": 58,
+        "ratio": 2.32
+      }
+    },
+    "quality": {
+      "score": 3,
+      "max": 5,
+      "details": {
+        "diversity": 34
+      }
+    },
+    "images": {
+      "score": 2,
+      "max": 4,
+      "details": {
+        "count": 12,
+        "target": 20
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 60,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      },
+      "statistics": {
+        "ok": true,
+        "score": 20,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 52,
+    "best": 73,
+    "bestUrl": "https://fr.pinterest.com/laura_richert/id%C3%A9e-dessert/",
+    "count": 10
+  }
+}

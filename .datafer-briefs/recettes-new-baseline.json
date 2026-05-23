@@ -1,0 +1,127 @@
+{
+  "id": "bf60e994-4f01-48aa-8c00-08174b37aa65",
+  "score": 38,
+  "breakdown": {
+    "total": 38,
+    "rawTotal": 38,
+    "competitorMedian": 0,
+    "seoTotal": 40,
+    "geoTotal": 13,
+    "keyword": {
+      "score": 7,
+      "max": 15,
+      "details": {
+        "count": 0,
+        "density": 0,
+        "softCoverage": "100%",
+        "exactBonus": 0
+      }
+    },
+    "nlpCoverage": {
+      "score": 11,
+      "max": 27,
+      "details": {
+        "essentialsUsed": 5,
+        "essentialsTotal": 11,
+        "essentialsCoverage": 45,
+        "essentialsScore": 8,
+        "importantsUsed": 8,
+        "importantsTotal": 28,
+        "importantsCoverage": 29,
+        "importantsScore": 3,
+        "used": 13,
+        "total": 39,
+        "coverage": 39
+      }
+    },
+    "contentLength": {
+      "score": 2,
+      "max": 7,
+      "details": {
+        "wc": 499,
+        "target": 1298
+      }
+    },
+    "headings": {
+      "score": 7,
+      "max": 13,
+      "details": {
+        "h1": 1,
+        "h2": 12,
+        "h3": 0,
+        "h1HasKw": false
+      }
+    },
+    "placement": {
+      "score": 3,
+      "max": 13,
+      "details": {
+        "distribution": "0/4 exact, 1/4 soft"
+      }
+    },
+    "structure": {
+      "score": 1,
+      "max": 6,
+      "details": {
+        "paragraphs": 28,
+        "ratio": 0.6
+      }
+    },
+    "quality": {
+      "score": 4,
+      "max": 5,
+      "details": {
+        "diversity": 47
+      }
+    },
+    "images": {
+      "score": 1,
+      "max": 4,
+      "details": {
+        "count": 11,
+        "target": 30
+      }
+    },
+    "semantic": {
+      "score": 0,
+      "max": 0,
+      "details": {
+        "paragraphsScored": 0
+      }
+    },
+    "geo": {
+      "total": 13,
+      "table": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "bulletList": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "quickSummary": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "faq": {
+        "ok": false,
+        "score": 0,
+        "max": 20
+      },
+      "statistics": {
+        "ok": false,
+        "score": 13,
+        "max": 20
+      }
+    }
+  },
+  "competitors": {
+    "avg": 52,
+    "best": 74,
+    "bestUrl": "https://www.enviedebienmanger.fr/idees-recettes/recettes-repas-du-soir",
+    "count": 10
+  }
+}

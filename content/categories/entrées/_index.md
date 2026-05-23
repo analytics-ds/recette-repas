@@ -1,5 +1,6 @@
 ---
 title: "Entrées"
+h1: "Idée entrée : nos recettes d'entrées faciles et gourmandes"
 url: "/recettes/entrees/"
 aliases: ["/categories/entrees/"]
 image: "images/categories/entrees.jpg"
@@ -45,9 +46,9 @@ faq:
   - q: "Comment marier l'entrée avec le reste du repas ?"
     a: "L'idée est de construire un repas équilibré : une entrée légère avant un plat riche, ou inversement. On évite de répéter un ingrédient phare (par exemple pas de saumon en entrée puis en plat) et on alterne les textures et les températures."
 outro: |
-  ## Toutes nos idées d'entrées pour le repas
+  ## Idée entrée : toutes nos suggestions pour démarrer le repas
 
-  Une entrée réussie donne le ton du repas, ouvre l'appétit sans saturer et met en valeur les saveurs du plat principal qui suit. Pour bien la choisir, on tient compte du moment de l'année, du type de repas et du temps disponible en cuisine. Salades composées, veloutés et soupes, tartines gourmandes, verrines, bouchées feuilletées : la palette d'idées est large et permet d'adapter chaque entrée à l'occasion.
+  Une bonne idée entrée donne le ton du repas, ouvre l'appétit sans saturer et met en valeur les saveurs du plat principal qui suit. Pour trouver l'idée entrée qui colle au moment, on tient compte du type de repas, du temps disponible en cuisine et de la saison. Salades composées simples, veloutés et soupes, tartines gourmandes, verrines à l'avocat ou au thon, bouchées feuilletées pour l'apéro : la palette d'idées est large et permet d'adapter chaque entrée à l'occasion. Une idée entrée originale, c'est aussi l'occasion de varier des classiques et de surprendre vos invités.
 
   ## Entrées froides pour les beaux jours
 
@@ -61,9 +62,9 @@ outro: |
 
   Pour savoir quelle quantité prévoir par personne, comptez entre 80 et 120 grammes pour une salade composée, 25 à 30 centilitres pour une soupe ou un velouté, deux à trois pièces pour les verrines ou les bouchées. L'idée est d'ouvrir le repas sans couper l'appétit pour la suite. Si votre plat principal est riche, choisissez une entrée plus légère type salade ou velouté. Si vous prévoyez un plat léger, vous pouvez vous lâcher sur une entrée plus consistante. La sauce qui accompagne l'entrée doit aussi être pensée pour ne pas faire doublon avec celle du plat.
 
-  ## Toutes nos recettes d'entrées faciles
+  ## Trouver une idée entrée pour chaque occasion
 
-  Que vous cherchiez une idée d'entrée pour un dîner improvisé entre amis, un repas de famille ou un grand repas de fête, notre collection regroupe des recettes simples, des classiques revisités et quelques idées originales. Chaque entrée détaille le temps de préparation, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon l'occasion et le temps dont vous disposez.
+  Que vous cherchiez une idée entrée pour un dîner improvisé entre amis, un repas de famille ou un grand repas de fête, notre collection regroupe des recettes simples, des classiques revisités et quelques idées originales. Pour un apéritif rapide, on mise sur des feuilletés, des verrines à l'avocat ou des bouchées au thon. Pour une entrée plus consistante en hiver, on choisit une soupe ou un velouté chaud. En été, le gaspacho de tomates, la salade de pommes de terre ou un tartare de saumon font merveille. Chaque idée entrée détaille le temps de préparation, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir selon l'occasion et le temps dont vous disposez.
 ---
 
 Pour bien commencer un repas, rien de tel qu'une entrée simple et gourmande. Découvrez nos recettes d'entrées froides et chaudes, légères ou plus généreuses, faciles à réaliser même quand on manque de temps.

@@ -1,0 +1,271 @@
+{
+  "id": "bf60e994-4f01-48aa-8c00-08174b37aa65",
+  "status": "ready",
+  "keyword": "id\u00e9e repas",
+  "country": "fr",
+  "score": 0,
+  "volume": 7333,
+  "position": null,
+  "editorHtml": "",
+  "targetTerms": [
+    {
+      "term": "p\u00e2tes",
+      "avgCount": 7,
+      "presence": 80
+    },
+    {
+      "term": "poulet",
+      "avgCount": 7,
+      "presence": 80
+    },
+    {
+      "term": "l\u00e9gumes",
+      "avgCount": 6,
+      "presence": 70
+    },
+    {
+      "term": "salade",
+      "avgCount": 10,
+      "presence": 70
+    },
+    {
+      "term": "soir",
+      "avgCount": 6,
+      "presence": 70
+    },
+    {
+      "term": "r\u00f4ti",
+      "avgCount": 4,
+      "presence": 70
+    },
+    {
+      "term": "tomates",
+      "avgCount": 7,
+      "presence": 70
+    },
+    {
+      "term": "frais",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "\u0153ufs",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "pommes",
+      "avgCount": 5,
+      "presence": 60
+    },
+    {
+      "term": "moins",
+      "avgCount": 2,
+      "presence": 70
+    },
+    {
+      "term": "saumon",
+      "avgCount": 4,
+      "presence": 70
+    },
+    {
+      "term": "famille",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "fra\u00eeche",
+      "avgCount": 3,
+      "presence": 60
+    },
+    {
+      "term": "sauce",
+      "avgCount": 7,
+      "presence": 60
+    },
+    {
+      "term": "express",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "fum\u00e9",
+      "avgCount": 2,
+      "presence": 60
+    },
+    {
+      "term": "tarte",
+      "avgCount": 7,
+      "presence": 50
+    },
+    {
+      "term": "courgettes",
+      "avgCount": 5,
+      "presence": 50
+    },
+    {
+      "term": "cake",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "recettes faciles",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "d\u00e9couvrez",
+      "avgCount": 17,
+      "presence": 50
+    },
+    {
+      "term": "saut\u00e9",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "spaghettis",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "po\u00eale",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "mozzarella",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "fromage",
+      "avgCount": 12,
+      "presence": 50
+    },
+    {
+      "term": "veau",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "gratin",
+      "avgCount": 12,
+      "presence": 50
+    },
+    {
+      "term": "porc",
+      "avgCount": 3,
+      "presence": 50
+    },
+    {
+      "term": "pizza",
+      "avgCount": 6,
+      "presence": 40
+    },
+    {
+      "term": "comt\u00e9",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "jambon",
+      "avgCount": 4,
+      "presence": 50
+    },
+    {
+      "term": "poivrons",
+      "avgCount": 2,
+      "presence": 50
+    },
+    {
+      "term": "omelette",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "sal\u00e9es",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "pommes de terre",
+      "avgCount": 5,
+      "presence": 40
+    },
+    {
+      "term": "amis",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "d\u00e9couvrez recette",
+      "avgCount": 23,
+      "presence": 30
+    },
+    {
+      "term": "fondant",
+      "avgCount": 10,
+      "presence": 50
+    },
+    {
+      "term": "ricotta",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "pois",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "hiver",
+      "avgCount": 3,
+      "presence": 40
+    },
+    {
+      "term": "\u00e9pices",
+      "avgCount": 3,
+      "presence": 30
+    },
+    {
+      "term": "feta",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "farcies",
+      "avgCount": 2,
+      "presence": 40
+    },
+    {
+      "term": "classique",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "thon",
+      "avgCount": 4,
+      "presence": 40
+    },
+    {
+      "term": "pesto",
+      "avgCount": 6,
+      "presence": 30
+    },
+    {
+      "term": "familial",
+      "avgCount": 5,
+      "presence": 30
+    }
+  ],
+  "targetWordCount": 1298,
+  "competitors": {
+    "avg": 52,
+    "best": 74,
+    "bestUrl": "https://www.enviedebienmanger.fr/idees-recettes/recettes-repas-du-soir",
+    "count": 10
+  },
+  "createdAt": "2026-05-23T10:55:56.000Z",
+  "updatedAt": "2026-05-23T10:56:20.000Z"
+}

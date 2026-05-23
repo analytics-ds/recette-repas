@@ -1,5 +1,6 @@
 ---
 title: "Plats"
+h1: "Idée plat : nos recettes de plats principaux faciles"
 url: "/recettes/plats/"
 aliases: ["/categories/plats/"]
 image: "images/categories/plats.jpg"
@@ -47,7 +48,7 @@ faq:
 outro: |
   ## Idée recette plat : nos meilleures suggestions
 
-  Le plat principal, c'est le moment central du repas, celui qui rassemble la famille autour de la table et qui donne le ton à toute la soirée. Pour trouver une idée recette plat qui plaît à tous, on regarde d'abord le temps que l'on a devant soi. Pour les soirs de semaine, on privilégie des recettes simples à préparer en moins de trente minutes : un sauté de bœuf aux légumes, une tarte salée au chèvre et aux courgettes, des pâtes à la carbonara, un curry de poulet au lait de coco. Toutes ces idées se cuisinent avec des ingrédients faciles à trouver et donnent un résultat gourmand sans passer une heure derrière les fourneaux. Une bonne idée recette plat ne demande ni matériel de chef ni produits compliqués, simplement quelques bons réflexes en cuisine.
+  Le plat principal, c'est le moment central du repas, celui qui rassemble la famille autour de la table et qui donne le ton à toute la soirée. Pour trouver une idée plat qui plaît à tous, on regarde d'abord le temps que l'on a devant soi. Pour les soirs de semaine, on privilégie des recettes simples à préparer en moins de trente minutes : un sauté de bœuf aux légumes, une tarte salée au chèvre et aux courgettes, des pâtes à la carbonara, un curry de poulet au lait de coco. Toutes ces idées se cuisinent avec des ingrédients faciles à trouver et donnent un résultat gourmand sans passer une heure derrière les fourneaux. Une bonne idée plat ne demande ni matériel de chef ni produits compliqués, simplement quelques bons réflexes en cuisine.
 
   ## Plats du dimanche et mijotés traditionnels
 
@@ -61,9 +62,9 @@ outro: |
 
   Côté équilibre alimentaire, alterner les sources de protéines reste la meilleure approche. Une semaine type avec deux plats à base de viande, deux à base de poisson, un végétarien et deux plats complets de type quiche, gratin ou tarte salée couvre largement les besoins de toute la famille sans tomber dans la routine. Adapter les portions selon l'âge et l'activité de chacun, ajuster le sel et les épices au goût, accompagner d'une salade verte fraîche : ces petits réflexes font toute la différence entre un plat correct et un plat vraiment réussi.
 
-  ## Trouver une idée recette plat pour chaque occasion
+  ## Trouver une idée plat pour chaque occasion
 
-  Que vous cherchiez une idée recette plat rapide pour ce soir, un mijoté familial pour le dimanche ou une recette plus originale pour recevoir, notre collection couvre tous les besoins du quotidien. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir en un coup d'œil et de cuisiner sans stress. Pour trouver l'idée recette plat parfaite, partez du temps disponible, du nombre de convives et des ingrédients en stock dans le frigo : tout le reste en découle naturellement.
+  Que vous cherchiez une idée plat rapide pour ce soir, un mijoté familial pour le dimanche ou une recette plus originale pour recevoir, notre collection couvre tous les besoins du quotidien. Chaque recette détaille le temps de préparation, le temps de cuisson, la difficulté et les valeurs nutritionnelles, pour vous permettre de choisir en un coup d'œil et de cuisiner sans stress. Pour trouver l'idée plat parfaite, partez du temps disponible, du nombre de convives et des ingrédients en stock dans le frigo : tout le reste en découle naturellement.
 ---
 
 Le plat principal, c'est le cœur du repas. Retrouvez ici nos recettes de plats faciles et réconfortants, pensées pour être réussies sans stress : des classiques de la cuisine française aux idées plus rapides pour les soirs pressés.
