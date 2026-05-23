@@ -1,5 +1,6 @@
 ---
 title: "Batchcooking d'automne"
+is_guide: true
 slug: "batchcooking-automne"
 date: 2026-05-23
 lastmod: 2026-05-23

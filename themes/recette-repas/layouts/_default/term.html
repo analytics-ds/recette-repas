@@ -14,15 +14,17 @@
     {{ if .Content }}
     <div class="cat-hero-intro">{{ .Content }}</div>
     {{ else }}{{ with .Description }}<p class="cat-hero-intro">{{ . }}</p>{{ end }}{{ end }}
-    <span class="cat-hero-count">{{ len .Pages }} {{ if gt (len .Pages) 1 }}recettes{{ else }}recette{{ end }}</span>
+    {{ $recipes := where .Pages "Params.is_guide" "!=" true }}
+    <span class="cat-hero-count">{{ len $recipes }} {{ if gt (len $recipes) 1 }}recettes{{ else }}recette{{ end }}</span>
   </div>
 </section>
 
 <section class="hub-content">
   <div class="container">
-    {{ if .Pages }}
+    {{ $items := where .Pages "Params.is_guide" "!=" true }}
+    {{ if $items }}
     <div class="hub-grid">
-      {{ range .Pages.ByDate.Reverse }}
+      {{ range $items.ByDate.Reverse }}
       {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
       {{ $kcal := "" }}{{ range .Params.nutrition }}{{ if and (eq .label "Énergie") (eq .unit "kcal") }}{{ $kcal = .portion }}{{ end }}{{ end }}
       {{ $rc := .Params.rating_count }}

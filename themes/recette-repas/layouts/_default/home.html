@@ -61,7 +61,7 @@
       </div>
       <div class="rr-recipes">
         {{/* Recettes reelles, les plus recentes, plafonnees au nombre de slots de la home (4) */}}
-        {{ range first 4 (where .Site.RegularPages "Section" "recettes").ByDate.Reverse }}
+        {{ range first 4 (where (where .Site.RegularPages "Section" "recettes") "Params.is_guide" "!=" true).ByDate.Reverse }}
         {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
         {{ $rc := .Params.rating_count }}
         <a href="{{ .RelPermalink }}" class="rr-recipe" data-reveal>

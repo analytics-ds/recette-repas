@@ -1,5 +1,6 @@
 ---
 title: "Batchcooking pour la semaine"
+is_guide: true
 slug: "batchcooking-semaine"
 date: 2026-05-23
 lastmod: 2026-05-23

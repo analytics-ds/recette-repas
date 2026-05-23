@@ -1,5 +1,6 @@
 ---
 title: "Batchcooking pour bébé"
+is_guide: true
 slug: "batchcooking-bebe"
 date: 2026-05-23
 lastmod: 2026-05-23
