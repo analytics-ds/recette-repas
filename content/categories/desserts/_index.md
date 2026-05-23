@@ -1,5 +1,6 @@
 ---
 title: "Desserts"
+seo_title: "Idée dessert : recettes maison faciles à réussir"
 h1: "Idée dessert : toutes nos recettes de desserts maison"
 url: "/recettes/desserts/"
 aliases: ["/categories/desserts/"]

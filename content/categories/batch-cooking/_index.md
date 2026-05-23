@@ -1,5 +1,7 @@
 ---
 title: "Batch cooking"
+seo_title: "Recette batch cooking : préparer ses repas à l'avance"
+h1: "Recette batch cooking : cuisiner pour toute la semaine"
 url: "/recettes/batch-cooking/"
 aliases: ["/categories/batch-cooking/"]
 image: "images/categories/batch-cooking.jpg"

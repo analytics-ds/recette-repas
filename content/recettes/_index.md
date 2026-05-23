@@ -1,5 +1,6 @@
 ---
 title: "Toutes nos recettes"
+seo_title: "Idée repas : recettes faciles pour le soir et le dimanche"
 h1: "Idée repas : toutes nos idées de recettes faciles"
 description: "Toutes nos idées repas faciles : plats, entrées, desserts, cuisine du monde et conseils, à cuisiner pour le soir, le déjeuner ou le repas du dimanche."
 aliases: ["/blog/", "/categories/"]

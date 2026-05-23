@@ -1,5 +1,7 @@
 ---
 title: "Cuisine du monde"
+seo_title: "Recette cuisine du monde : voyager par les saveurs"
+h1: "Recette cuisine du monde : tour culinaire en 50 idées"
 url: "/recettes/cuisine-monde/"
 aliases: ["/categories/cuisine-monde/", "/categories/cuisine-du-monde/"]
 image: "images/categories/cuisine-monde.jpg"

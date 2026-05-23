@@ -1,5 +1,6 @@
 ---
 title: "Entrées"
+seo_title: "Idée entrée : recettes faciles, froides ou chaudes"
 h1: "Idée entrée : nos recettes d'entrées faciles et gourmandes"
 url: "/recettes/entrees/"
 aliases: ["/categories/entrees/"]

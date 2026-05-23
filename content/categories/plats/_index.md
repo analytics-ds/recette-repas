@@ -1,5 +1,6 @@
 ---
 title: "Plats"
+seo_title: "Idée plat : recettes faciles pour le repas du soir"
 h1: "Idée plat : nos recettes de plats principaux faciles"
 url: "/recettes/plats/"
 aliases: ["/categories/plats/"]

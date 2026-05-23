@@ -1,5 +1,7 @@
 ---
 title: "Conseils et astuces"
+seo_title: "Astuce cuisine : conseils pour mieux cuisiner au quotidien"
+h1: "Astuce cuisine : tous nos conseils d'un ancien chef"
 url: "/recettes/conseils-astuces/"
 aliases: ["/categories/conseils-astuces/", "/categories/conseils-et-astuces/"]
 image: "images/categories/conseils-astuces.jpg"
