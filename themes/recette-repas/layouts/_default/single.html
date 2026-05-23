@@ -32,6 +32,13 @@
         </div>
     </header>
 
+    {{ with .Params.image }}
+    <figure class="article-hero">
+        <img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default $.Title }}" width="1200" height="675" loading="eager">
+        {{ with $.Params.image_caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+
     <div class="article-content">
         <div class="container container-narrow">
             {{ .Content }}

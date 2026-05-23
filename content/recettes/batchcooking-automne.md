@@ -8,7 +8,8 @@ h1: "Batchcooking automne : cuisiner les saveurs de saison"
 description: "Le batchcooking d'automne pour la semaine : recettes de saison aux courges, champignons, poireaux et patates douces, gratins, soupes et conservation des plats."
 categories: ["Batch cooking"]
 tags: ["automne", "saison", "courge", "potimarron", "soupes"]
-image: "images/categories/batch-cooking.jpg"
+image: "images/cluster-bc/automne.jpg"
+image_alt: "Légumes d'automne (courges, potimarrons, champignons) à préparer en batchcooking"
 author: "Julien Marchand"
 faq:
   - q: "Quels légumes privilégier pour un batchcooking d'automne ?"
@@ -73,3 +74,10 @@ Côté congélation, on profite de l'automne pour congeler les surplus : portion
 L'automne est la saison où le batchcooking prend tout son sens. Les jours raccourcissent, on rentre plus tôt à la nuit, l'envie de cuisiner après une journée de travail diminue. C'est aussi la saison où l'on cherche du réconfort en cuisine : soupes chaudes, gratins fondants, plats mijotés qui parfument toute la maison. Préparer ces plats en une seule session le dimanche, c'est s'assurer de manger maison toute la semaine, sans céder à la fatigue ni au surgelé. Et les saveurs d'automne, doucement infusées au repos, gagnent même en intensité au fil des jours.
 
 Le batchcooking d'automne, c'est aussi une vraie satisfaction de cuisiner avec des produits frais de saison. On accompagne le rythme de la nature, on profite des meilleurs prix au marché, on découvre ou redécouvre des légumes parfois oubliés. Une session de quelques heures le dimanche, et toute une semaine de plaisir à table.
+
+## Pour aller plus loin
+
+- Pour la méthode complète sur cinq dîners, notre guide [batchcooking pour la semaine](/recettes/batchcooking-semaine/) détaille un menu type avec liste de courses et déroulé minuté.
+- Si vous cuisinez au robot, notre guide [batchcooking au Thermomix](/recettes/batchcooking-thermomix/) explique comment optimiser la session avec un TM6 ou équivalent.
+- Pour planifier toute l'année sans réfléchir, notre [sélection de livres de batch cooking](/recettes/livre-batchcooking/) propose des ouvrages saisonniers complets.
+- Et pour explorer l'ensemble des recettes batchcooking, le [hub batchcooking](/recettes/batch-cooking/) regroupe tout le cluster.

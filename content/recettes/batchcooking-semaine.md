@@ -8,7 +8,8 @@ h1: "Batchcooking semaine : préparer 5 jours de repas en 2h"
 description: "Le guide du batchcooking pour la semaine : menu type sur 5 jours, liste de courses, recettes faciles (légumes, pâtes, salades, curry, soupes) et organisation pas à pas."
 categories: ["Batch cooking"]
 tags: ["batchcooking", "organisation", "menu semaine", "meal prep"]
-image: "images/categories/batch-cooking.jpg"
+image: "images/cluster-bc/semaine.jpg"
+image_alt: "Plats préparés à l'avance dans des contenants en verre pour le batchcooking de la semaine"
 author: "Julien Marchand"
 faq:
   - q: "Combien de temps prévoir pour un batchcooking semaine ?"
@@ -21,7 +22,7 @@ faq:
     a: "L'astuce, c'est de préparer des bases neutres (céréales, légumes rôtis, protéines) et de les décliner avec des sauces et assaisonnements différents chaque soir. Un même riz cuit devient un bowl asiatique avec sauce soja un soir, une salade méditerranéenne avec feta et tomates un autre, un curry crémeux le lendemain."
 ---
 
-Le batchcooking semaine, c'est l'art de cuisiner une seule fois pour préparer cinq dîners d'avance. Le principe : on consacre deux heures le dimanche à préparer les bases (céréales, légumes rôtis, sauces, protéines), puis on assemble en quinze minutes chaque soir de la semaine. Résultat : on mange mieux, on dépense moins en plats préparés, et on retrouve du temps libre en rentrant du travail.
+Le [batchcooking](/recettes/batch-cooking/) semaine, c'est l'art de cuisiner une seule fois pour préparer cinq dîners d'avance. Le principe : on consacre deux heures le dimanche à préparer les bases (céréales, légumes rôtis, sauces, protéines), puis on assemble en quinze minutes chaque soir de la semaine. Résultat : on mange mieux, on dépense moins en plats préparés, et on retrouve du temps libre en rentrant du travail.
 
 ## Pourquoi le batchcooking change la semaine
 
@@ -75,3 +76,10 @@ Avec quelques sauces préparées en avance (vinaigrette, sauce yaourt, sauce soj
 ## Le batchcooking semaine en pratique
 
 Si vous démarrez le batchcooking, commencez petit : trois dîners préparés d'avance la première semaine, et montez progressivement à cinq quand vous serez à l'aise. Notez ce qui a marché et ce qui n'a pas marché, ajustez les quantités la semaine suivante. Au bout d'un mois, vous aurez votre déroulé personnel et votre session du dimanche tournera en un peu plus d'une heure trente. Le batchcooking, c'est aussi une méthode qui s'affine avec la pratique.
+
+## Pour aller plus loin
+
+- Si vous cuisinez au robot, notre guide [batchcooking Thermomix](/recettes/batchcooking-thermomix/) détaille un déroulé optimisé avec les programmes du TM6.
+- Pour adapter la méthode aux légumes de saison, retrouvez nos idées de [batchcooking d'automne](/recettes/batchcooking-automne/) avec courges, champignons et patates douces.
+- Pour structurer toute votre année, notre sélection de [livres de batch cooking](/recettes/livre-batchcooking/) recense les meilleurs ouvrages avec planning hebdomadaire.
+- Et pour explorer toutes nos recettes batchcooking, parcourez le [hub batchcooking](/recettes/batch-cooking/) qui regroupe l'ensemble du cluster.

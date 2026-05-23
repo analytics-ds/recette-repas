@@ -76,6 +76,10 @@ outro: |
   ## Toutes nos recettes batch cooking
 
   Notre collection de recettes batch cooking couvre les mijotés à réchauffer, les soupes à congeler, les gratins du dimanche, les céréales et légumes prêts à assembler, et les sauces maison pour pimper les bols de la semaine. Chaque recette précise les durées de conservation, le mode de réchauffage recommandé et les déclinaisons possibles, pour vous permettre de construire vos propres menus selon vos goûts.
+
+  ## Nos guides batchcooking par thème
+
+  Pour aller plus loin, retrouvez nos guides dédiés à chaque déclinaison du batchcooking. Le guide [batchcooking pour la semaine](/recettes/batchcooking-semaine/) propose un menu type complet sur cinq dîners avec liste de courses et déroulé minuté. Notre guide [batchcooking au Thermomix](/recettes/batchcooking-thermomix/) explique comment optimiser la session quand on cuisine au robot. Le guide [batchcooking pour bébé](/recettes/batchcooking-bebe/) couvre la diversification alimentaire avec des petits plats maison adaptés à chaque âge. Pour les recettes de saison, notre guide [batchcooking d'automne](/recettes/batchcooking-automne/) met en avant les courges, champignons et patates douces. Et pour choisir un ouvrage qui vous suivra toute l'année, notre [sélection de livres de batch cooking](/recettes/livre-batchcooking/) recense les meilleures références du marché.
 ---
 
 Cuisiner une fois pour toute la semaine, c'est possible. Découvrez nos idées de batch cooking : des recettes qui se préparent à l'avance, se conservent et se réchauffent sans perdre en saveur, pour manger maison tous les jours sans y passer des heures.

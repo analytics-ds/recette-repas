@@ -8,7 +8,8 @@ h1: "Batchcooking bébé : préparer la semaine de petits plats maison"
 description: "Le batchcooking pour bébé pas à pas : menus de diversification alimentaire, recettes maison équilibrées, conservation, besoins par âge, exemple de planning sur la semaine."
 categories: ["Batch cooking"]
 tags: ["bébé", "diversification", "purée", "famille", "maison"]
-image: "images/categories/batch-cooking.jpg"
+image: "images/cluster-bc/bebe.jpg"
+image_alt: "Parent qui donne une cuillère de purée à bébé pendant la diversification alimentaire"
 author: "Julien Marchand"
 faq:
   - q: "À partir de quel âge peut-on faire du batchcooking pour bébé ?"
@@ -65,3 +66,10 @@ Les règles de conservation sont plus strictes pour bébé que pour la famille. 
 Pour varier les saveurs et les textures, voici quelques idées simples. Velouté carotte-coriandre, purée patate douce-cumin, mouliné poulet-courgettes-riz, soupe lentilles corail-épinards, semoule légumes et œuf, dahl bébé aux carottes, purée butternut-poire, tagliatelles à la sauce tomate maison sans sel ajouté. La variété, c'est aussi la clé pour habituer bébé à un large éventail de goûts dès le début.
 
 Une bonne pratique : préparer toujours deux fois plus que nécessaire et congeler la moitié, ce qui crée progressivement un stock de petits plats prêts à dégeler en cas de coup dur. Au bout de deux mois de pratique, on a un congélateur bien rempli avec une grande variété de saveurs, et le batch cooking bébé devient une routine fluide et plaisante.
+
+## Pour aller plus loin
+
+- Pour cuisiner en parallèle les repas adultes de la semaine, voir notre guide [batchcooking pour la semaine](/recettes/batchcooking-semaine/) avec menu complet sur cinq dîners.
+- Si vous avez un robot multifonction, notre guide [batchcooking au Thermomix](/recettes/batchcooking-thermomix/) explique comment l'utiliser pour préparer purées bébé et plats famille dans la même session.
+- Pour suivre un programme structuré toute l'année, notre [sélection de livres de batch cooking](/recettes/livre-batchcooking/) inclut plusieurs titres spécialisés enfants et famille.
+- Et pour explorer toutes nos idées batchcooking, le [hub batchcooking](/recettes/batch-cooking/) regroupe l'ensemble du cluster.

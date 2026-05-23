@@ -8,7 +8,8 @@ h1: "Livre batch cooking : quels ouvrages choisir pour démarrer"
 description: "Notre sélection des meilleurs livres de batch cooking : guides débutants, ouvrages saisonniers, livres spécialisés Thermomix et Cookeo, et conseils pour bien choisir selon votre profil."
 categories: ["Batch cooking"]
 tags: ["livre", "guide", "lecture", "organisation"]
-image: "images/categories/batch-cooking.jpg"
+image: "images/cluster-bc/livre.jpg"
+image_alt: "Livre de cuisine ouvert dans une cuisine pour choisir un livre de batch cooking"
 author: "Julien Marchand"
 faq:
   - q: "Quel livre de batch cooking choisir pour débuter ?"
@@ -80,3 +81,10 @@ Côté budget, les économies sont aussi tangibles. Une famille qui passe au bat
 Un dernier conseil : ne dépendez pas exclusivement d'un livre. Le meilleur batch cooking, c'est celui qui mêle des recettes du livre que vous aimez et vos propres classiques familiaux. Tenez un cahier ou un fichier numérique avec les recettes qui marchent, les durées exactes, les ajustements de portions, les retours du conjoint et des enfants. Au bout de quelques mois, vous aurez votre propre recueil personnel de recettes batch cooking, complémentaire au livre acheté. C'est le passage de l'utilisateur de méthode à l'autonomie complète en cuisine.
 
 Au final, un bon livre de batch cooking est une porte d'entrée, pas une bible. Il accompagne le démarrage, donne les bases méthodologiques et fournit un répertoire initial. Mais la vraie maîtrise vient avec la pratique, mois après mois, en testant, ajustant et adaptant à votre quotidien et à votre famille.
+
+## Pour aller plus loin
+
+- Avant d'acheter un livre, testez la méthode avec notre guide [batchcooking pour la semaine](/recettes/batchcooking-semaine/) qui propose un menu type complet sur cinq dîners.
+- Pour les utilisateurs de robot, notre guide [batchcooking au Thermomix](/recettes/batchcooking-thermomix/) détaille un déroulé spécifique adapté aux programmes du TM6.
+- Pour les jeunes parents, notre guide [batchcooking pour bébé](/recettes/batchcooking-bebe/) couvre la diversification alimentaire pas à pas.
+- Et pour explorer l'ensemble des recettes et idées, le [hub batchcooking](/recettes/batch-cooking/) regroupe tout le cluster.

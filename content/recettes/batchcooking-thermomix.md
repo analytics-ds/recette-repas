@@ -8,7 +8,8 @@ h1: "Batchcooking Thermomix : préparer toute la semaine grâce au TM6"
 description: "Le batchcooking au Thermomix : organisation pas à pas, idées de recettes (soupes, sauces, plats, desserts), liste de courses optimisée et gain de temps pour la semaine."
 categories: ["Batch cooking"]
 tags: ["thermomix", "batchcooking", "TM6", "organisation", "meal prep"]
-image: "images/home/mealprep.jpg"
+image: "images/cluster-bc/thermomix.jpg"
+image_alt: "Robot de cuisine en train de cuire pour une session de batchcooking au Thermomix"
 author: "Julien Marchand"
 faq:
   - q: "Le Thermomix change-t-il vraiment la donne pour le batchcooking ?"
@@ -66,3 +67,10 @@ Côté déclinaisons, une sauce tomate maison se transforme en base de pizza le 
 Premier conseil : commencer simple. Pour les premières sessions, viser trois préparations seulement et augmenter progressivement à cinq ou six une fois le tempo trouvé. Deuxième conseil : préchauffer le four en début de session, pour qu'il soit prêt quand vient le moment d'enfourner la quiche ou le gratin. Troisième conseil : nettoyer le bol entre chaque préparation avec un cycle de pré-lavage rapide (mode 3 minutes à 60°C avec un peu d'eau et de liquide vaisselle), ce qui évite de mélanger les goûts.
 
 Quatrième conseil : tenir un cahier ou une note téléphone avec ses recettes batchcooking préférées et les durées exactes au Thermomix. Au bout de quelques semaines, vous aurez votre playlist personnelle de plats qui marchent à coup sûr. Et un bon batchcooking Thermomix, c'est ce qui transforme votre dimanche en moment plaisir et le reste de la semaine en sérénité.
+
+## Pour aller plus loin
+
+- Pour un menu type semaine sans focus sur le robot, retrouvez notre guide [batchcooking pour la semaine](/recettes/batchcooking-semaine/) avec menu complet et liste de courses.
+- Pour préparer les petits plats de bébé en parallèle de la session adulte, voir notre guide [batchcooking pour bébé](/recettes/batchcooking-bebe/) adapté à la diversification alimentaire.
+- Pour des idées de recettes calibrées au Thermomix sur toute l'année, notre [sélection de livres de batch cooking](/recettes/livre-batchcooking/) propose plusieurs titres spécialisés robot.
+- Et pour explorer l'ensemble du cluster, le [hub batchcooking](/recettes/batch-cooking/) regroupe toutes nos recettes.
