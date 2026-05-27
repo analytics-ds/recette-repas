@@ -88,11 +88,11 @@ articles:
     volume: 590
     kd: 16
     scheduled_date: "2026-06-02"  # mardi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-02"
+    published_url: "https://recette-repas.com/recettes/conserver-gousses-vanille/"
     error: null
 
   - kw: "comment conserver des pommes de terre épluchées"
@@ -100,11 +100,11 @@ articles:
     volume: 480
     kd: 27
     scheduled_date: "2026-06-05"  # vendredi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-05"
+    published_url: "https://recette-repas.com/recettes/conserver-pommes-de-terre-epluchees/"
     error: null
 
   # Semaine 8-14 juin 2026
@@ -114,11 +114,11 @@ articles:
     volume: 390
     kd: 15
     scheduled_date: "2026-06-09"  # mardi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-09"
+    published_url: "https://recette-repas.com/recettes/remplacer-creme-fraiche-fromage-blanc/"
     error: null
 
   - kw: "pourquoi mon gâteau au yaourt ne gonfle pas"
@@ -126,11 +126,11 @@ articles:
     volume: 260
     kd: 15
     scheduled_date: "2026-06-12"  # vendredi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-12"
+    published_url: "https://recette-repas.com/recettes/gateau-yaourt-ne-gonfle-pas/"
     error: null
 
   # Semaine 15-21 juin 2026
@@ -140,11 +140,11 @@ articles:
     volume: 210
     kd: 25
     scheduled_date: "2026-06-16"  # mardi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-16"
+    published_url: "https://recette-repas.com/recettes/remplacer-farine-maizena/"
     error: null
 
   - kw: "remplacer levure chimique par bicarbonate"
@@ -152,11 +152,11 @@ articles:
     volume: 210
     kd: 16
     scheduled_date: "2026-06-19"  # vendredi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-19"
+    published_url: "https://recette-repas.com/recettes/remplacer-levure-bicarbonate/"
     error: null
 
   # Semaine 22-28 juin 2026
@@ -166,11 +166,11 @@ articles:
     volume: 170
     kd: 33
     scheduled_date: "2026-06-23"  # mardi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-23"
+    published_url: "https://recette-repas.com/recettes/conserver-cake-fait-maison/"
     error: null
 
   - kw: "pourquoi ma mousse au chocolat est liquide"
@@ -178,11 +178,11 @@ articles:
     volume: 170
     kd: 25
     scheduled_date: "2026-06-26"  # vendredi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-26"
+    published_url: "https://recette-repas.com/recettes/mousse-chocolat-liquide/"
     error: null
 
   # Semaine 29 juin - 5 juillet 2026
@@ -192,11 +192,11 @@ articles:
     volume: 140
     kd: 17
     scheduled_date: "2026-06-30"  # mardi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-06-30"
+    published_url: "https://recette-repas.com/recettes/remplacer-sucre-sucre-glace/"
     error: null
 
   - kw: "equivalent cuillere a soupe en ml"
@@ -204,9 +204,9 @@ articles:
     volume: 110
     kd: 23
     scheduled_date: "2026-07-03"  # vendredi
-    status: todo
+    status: done
     brief_id: null
     datafer_score: null
-    published_date: null
-    published_url: null
+    published_date: "2026-07-03"
+    published_url: "https://recette-repas.com/recettes/equivalent-cuillere-soupe-ml/"
     error: null

@@ -4,6 +4,11 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    # Rebuild tous les jours à 02:00 UTC (04:00 Paris été / 03:00 hiver)
+    # Permet de révéler les articles dont la date frontmatter arrive
+    # (Hugo buildFuture: false les cache jusqu'à leur date)
+    - cron: "0 2 * * *"
 
 permissions:
   contents: read
