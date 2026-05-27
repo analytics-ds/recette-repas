@@ -9,7 +9,7 @@ h1: "Comment faire cuire des asperges blanches : guide complet d'un ancien chef"
 description: "Toutes les techniques pour faire cuire des asperges blanches : eau bouillante salée, vapeur, poêle, four. Temps de cuisson, astuces d'épluchage et accompagnements de chef."
 categories: ["Conseils et astuces"]
 tags: ["asperges blanches", "cuisson", "légumes de saison", "technique", "printemps"]
-image: "images/categories/conseils-astuces.jpg"
+image: "images/recettes/cuire-asperges-blanches.jpg"
 image_alt: "Asperges blanches fraîches épluchées prêtes à être cuites"
 author: "Julien Marchand"
 faq:
@@ -132,6 +132,8 @@ Si on en a cuit en quantité, les **restes** d'asperges blanches se recyclent ad
 
 Quelques erreurs reviennent souvent et plombent même une recette bien pensée. La **première**, mal éplucher : si la peau n'est pas entièrement retirée, l'asperge garde sa fibrosité et son amertume à la cuisson. On épluche toujours en partant de la pointe vers le bas, sur toute la longueur. La **deuxième**, ne pas assez saler l'eau de cuisson : avec moins de 8 g de sel par litre, les asperges restent fades en surface tout en s'imprégnant d'eau, qui les rend aqueuses. **Saler comme la mer** n'est pas une expression vide, c'est une règle technique. La **troisième**, oublier d'arrêter la cuisson dans l'eau glacée si on ne sert pas immédiatement : sans choc thermique, les asperges continuent à cuire dans leur propre chaleur et ramollissent. La **quatrième**, jeter les épluchures : un **fond d'asperge** se prépare en 30 minutes en faisant frémir les pelures et bouts de tiges avec un peu d'eau, un oignon et du sel. C'est la base parfaite pour un risotto aux asperges ou une soupe.
 
-À retenir : pour réussir la cuisson des asperges blanches, on choisit des **asperges fraîches**, on **éplucher** soigneusement, on cuit dans une **eau bouillante salée** ou à la vapeur, on **vérifie la cuisson** à la pointe du couteau, et on arrête le feu au bon moment. Avec ces réflexes, les asperges blanches deviennent un grand classique de la cuisine de printemps, accessible et toujours impressionnant à servir.
+## À retenir
+
+Pour réussir la cuisson des asperges blanches, on choisit des **asperges fraîches**, on **éplucher** soigneusement, on cuit dans une **eau bouillante salée** ou à la vapeur, on **vérifie la cuisson** à la pointe du couteau, et on arrête le feu au bon moment. Avec ces réflexes, les asperges blanches deviennent un grand classique de la cuisine de printemps, accessible et toujours impressionnant à servir.
 
 Pour aller plus loin, retrouvez nos [autres techniques de cuisson légumes](/recettes/conseils-astuces/), nos [recettes de saison](/recettes/) et nos **astuces** de **conservation** des aliments **frais** dans la rubrique conseils.

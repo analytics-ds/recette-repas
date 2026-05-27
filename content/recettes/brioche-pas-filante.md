@@ -9,7 +9,7 @@ h1: "Pourquoi ma brioche n'est pas filante : diagnostic d'un ancien chef"
 description: "Brioche compacte, dense, qui ne file pas : les 7 causes principales et comment obtenir enfin une brioche moelleuse, aérée et filante comme chez le boulanger."
 categories: ["Conseils et astuces"]
 tags: ["brioche", "pâtisserie", "boulangerie", "filante", "problème", "diagnostic"]
-image: "images/categories/conseils-astuces.jpg"
+image: "images/recettes/brioche-pas-filante.jpg"
 image_alt: "Brioche dorée tranchée laissant apparaître une mie filante et aérée"
 author: "Julien Marchand"
 faq:
@@ -131,6 +131,8 @@ Pour identifier rapidement la cause de votre échec, faites le **diagnostic** su
 
 **Si la brioche s'affaisse en sortant du four** : cuisson trop courte (cause 7) ou pousse trop importante avant cuisson. Cuisez 5 à 10 minutes de plus.
 
-À retenir : la **filante** d'une brioche est le résultat d'une chaîne de **bonnes** pratiques, du choix de la farine à la cuisson finale. Aucune étape ne se rattrape sur la suivante, mais en identifiant la **méthode** ou l'ingrédient en cause, on corrige vite et la fournée suivante est presque toujours réussie. Les meilleurs **boulangers** ratent eux aussi régulièrement leurs brioches en début d'apprentissage, c'est en multipliant les essais et en analysant chaque échec qu'on **comprend** comment **obtenir** la mie filante parfaite.
+## À retenir
+
+La **filante** d'une brioche est le résultat d'une chaîne de **bonnes** pratiques, du choix de la farine à la cuisson finale. Aucune étape ne se rattrape sur la suivante, mais en identifiant la **méthode** ou l'ingrédient en cause, on corrige vite et la fournée suivante est presque toujours réussie. Les meilleurs **boulangers** ratent eux aussi régulièrement leurs brioches en début d'apprentissage, c'est en multipliant les essais et en analysant chaque échec qu'on **comprend** comment **obtenir** la mie filante parfaite.
 
 Pour aller plus loin, jetez un œil à nos [autres techniques de pâtisserie maison](/recettes/conseils-astuces/), nos **conseils** pour réussir d'autres recettes en boulangerie, et la rubrique [recettes de viennoiseries](/recettes/) pour vos prochaines fournées du dimanche.

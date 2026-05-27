@@ -9,8 +9,8 @@ h1: "Remplacer le vin blanc par du vinaigre de cidre en cuisine"
 description: "Comment remplacer le vin blanc par du vinaigre de cidre dans une recette : dosage, plats adaptés, astuces de chef pour conserver acidité et profondeur sans alcool."
 categories: ["Conseils et astuces"]
 tags: ["substitution", "vin blanc", "vinaigre de cidre", "sans alcool", "astuces"]
-image: "images/categories/conseils-astuces.jpg"
-image_alt: "Bouteille de vinaigre de cidre à côté d'une bouteille de vin blanc"
+image: "images/recettes/remplacer-vin-blanc-vinaigre-cidre.jpg"
+image_alt: "Vinaigre de cidre et pommes, alternative au vin blanc en cuisine"
 author: "Julien Marchand"
 faq:
   - q: "Quel dosage utiliser pour remplacer le vin blanc par du vinaigre de cidre ?"
@@ -75,6 +75,8 @@ Il existe aussi des cas où le **vinaigre de cidre apporte plus** que le vin bla
 
 Trois petits réflexes font la différence quand on remplace le vin blanc par du vinaigre de cidre. D'abord, on **choisit un vinaigre de cidre de qualité**, idéalement bio et non pasteurisé, qui apporte des arômes plus complexes qu'un vinaigre de cidre industriel basique. Le vinaigre de cidre artisanal coûte deux à trois euros de plus mais transforme vraiment le résultat, c'est l'équivalent d'un vin blanc correct plutôt que d'une piquette. Ensuite, on **ajoute un sucre lent** dans les sauces : une demi cuillère à café de miel, de sucre roux ou de sirop d'érable arrondit la sauce et compense l'absence de la rondeur naturelle du vin. Cette astuce est particulièrement utile dans les recettes mijotées longues. Enfin, on **goûte en cours de cuisson** plus souvent qu'avec du vin blanc : le vinaigre étant plus volatile aromatiquement, son équilibre évolue à la cuisson, et il vaut mieux ajuster trois fois plutôt que de devoir rattraper une sauce trop acide en fin de service.
 
-À retenir : cette substitution est l'une des plus simples et des plus utiles en cuisine au quotidien, à condition de bien diluer, de doser à la cuillère et pas au verre, et de choisir ses recettes. Une fois ces réflexes acquis, on cuisine **sans alcool** sans rien perdre en saveur, et on découvre même parfois des accords plus intéressants que la version originale au vin blanc.
+## À retenir
+
+Cette substitution est l'une des plus simples et des plus utiles en cuisine au quotidien, à condition de bien **diluer** (1 cuillère à soupe de vinaigre pour 80 ml de bouillon), de **doser à la cuillère** et pas au verre, et de **choisir ses recettes** (oui pour déglaçages et marinades, non pour risotto et moules marinières). Une fois ces réflexes acquis, on cuisine **sans alcool** sans rien perdre en saveur, et on découvre même parfois des accords plus intéressants que la version originale au vin blanc. Comptez 3 minutes de plus en préparation, 30 % d'économie sur l'ingrédient, et 100 % de la saveur préservée.
 
 Pour aller plus loin, jetez un œil à nos [conseils sur la conservation des aliments](/recettes/conseils-astuces/) pour ne plus rien gâcher en cuisine, et à la rubrique [recettes au poulet](/recettes/curry-poulet/) qui se prêtent particulièrement bien à cette substitution.
