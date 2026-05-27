@@ -16,13 +16,15 @@ Ce repo ne contient pas de site. Il contient les **instructions et templates** p
 
 ### Utilisation courante
 
-- `/create-article` : creer un nouvel article de blog (choix parmi plusieurs types : article standard, comparatif). Push automatiquement sur GitHub si le repo est configure
-- `/seo-setup` : generer ou mettre a jour les fichiers SEO techniques de base (robots.txt, llms.txt, sitemap, structured data)
-- `/seo` : mode interactif pour modifier/ajouter des elements SEO (meta tags, JSON-LD, audit on-page, etc.)
-- `/serve` : lancer le serveur Hugo en local (previsualisation sur `http://localhost:1313/`)
-- `/share` : lancer Hugo + ngrok pour partager le site via un lien public (accessible par n'importe qui)
-- `/github-setup` : creer un repo GitHub, push le code et activer GitHub Pages (mise en ligne du site)
-- `/github-deploy` : push les modifications vers GitHub et declencher le deploiement
+- `/create-article` : créer un nouvel article de blog (choix parmi plusieurs types : article standard, comparatif). Push automatiquement sur GitHub si le repo est configuré
+- `/create-article-auto` : **publication automatique** d'un article evergreen SEO depuis la roadmap `roadmap.yaml`. Full auto, aucun input humain. Conçue pour être déclenchée par une routine planifiée (2x/semaine via `/schedule`, mardi + vendredi 3h Paris). Modèle Sonnet 4.6 forcé en CCR cloud
+- `/create-article-seo` : **production batch locale** d'articles evergreen SEO depuis la roadmap. Tourne sur le Mac de Pierre (Opus 4.7, fetch concurrents réel, maillage cross-batch). 3 modes : (A) suivre la roadmap.yaml du blog, (B) roadmap externe, (C) KW à la demande
+- `/seo-setup` : générer ou mettre à jour les fichiers SEO techniques de base
+- `/seo` : mode interactif pour modifier/ajouter des éléments SEO
+- `/serve` : lancer le serveur Hugo en local
+- `/share` : lancer Hugo + ngrok (partage public)
+- `/github-setup` : créer un repo GitHub + activer GitHub Pages
+- `/github-deploy` : push et déployer sur GitHub Pages
 
 ## Structure du repo
 
@@ -85,11 +87,64 @@ Ce repo ne contient pas de site. Il contient les **instructions et templates** p
 
 ## Suivi des publications (MEMORY.md)
 
-Le fichier `MEMORY.md` a la racine trace tous les articles publies, classes par semaine. Il est mis a jour automatiquement par `/create-article`.
+Le fichier `MEMORY.md` à la racine trace tous les articles publiés, classés par semaine. Il est mis à jour automatiquement par les skills `/create-article`, `/create-article-auto` et `/create-article-seo`.
 
-**Limite de publication : 4 articles par semaine maximum.** Avant chaque creation d'article, le systeme verifie le quota. Si 4 articles sont deja publies dans la semaine en cours, l'utilisateur est averti.
+**Repère indicatif : 4 articles par semaine maximum** pour les skills interactives (warning soft à 4+, jamais de blocage).
 
-Cette limite sert a eviter la publication en masse et a maintenir un rythme de publication regulier, ce qui est meilleur pour le SEO.
+Comportement par skill :
+- `/create-article` (création manuelle interactive) : warning soft à 4+
+- `/create-article-seo` (batch local Opus) : warning soft à 4+
+- `/create-article-auto` (routine cron 2x/semaine) : **la règle ne s'applique pas**, publie systématiquement l'entrée éligible de la roadmap
+
+**Cadence cible : 2 publications par semaine** (mardi + vendredi 3h Paris), gérée par `/create-article-auto` via roadmap.
+
+## Publications evergreen automatiques
+
+En plus des articles créés à la main via `/create-article`, ce blog publie automatiquement des articles evergreen SEO depuis `roadmap.yaml`. Deux skills coexistent.
+
+### Méthode 1 : CCR cloud auto (`/create-article-auto`)
+
+- **Exécution** : sandbox cloud Anthropic (CCR), déclenchée par une routine `/schedule` (cron 2x/semaine, mardi + vendredi 3h Paris)
+- **Modèle** : Sonnet 4.6 forcé (Opus 4.7 a un bug Stream idle timeout en CCR)
+- **Fetch concurrents** : bloqué par le sandbox, analyse limitée aux métadonnées SerpAPI (titles + snippets + PAA)
+- **Maillage cross-batch** : non (1 article à la fois)
+- **Publication** : push immédiat → en ligne tout de suite
+- **Cas d'usage** : tient la cadence sans intervention humaine
+- **Scoring Datafer** : optionnel via `DATAFER_API_KEY`
+
+### Méthode 2 : batch local + GitHub Actions cron (`/create-article-seo`)
+
+- **Exécution** : Mac de Pierre (local), Opus 4.7 sans contrainte
+- **Modèle** : Opus 4.7 (qualité max, pas de bug timeout)
+- **Fetch concurrents** : marche normalement (WebFetch), analyse SERP avec lecture des 3-5 pages concurrentes
+- **Maillage cross-batch** : oui (les articles produits dans une même batch se citent entre eux)
+- **3 modes** : (A) roadmap blog, (B) roadmap externe, (C) KW à la demande
+- **3 stratégies de scheduling** : garder dates source / cascade remapping / prochain slot dispo
+- **Scoring Datafer** : oui, avec re-rédaction si score < competitors.best
+- **Cas d'usage** : production en lot mensuelle, qualité max
+
+### Roadmap éditoriale
+
+Fichier : `roadmap.yaml` à la racine du blog. Format documenté dans `.claude/templates/roadmap-template.yaml`.
+
+Chaque entrée = 1 article à publier. Champs éditables par l'humain :
+- `kw` (obligatoire) : mot-clé SEO principal
+- `category` (obligatoire) : doit matcher une catégorie définie dans `hugo.toml`
+- `scheduled_date` (obligatoire) : date à partir de laquelle l'agent peut publier (YYYY-MM-DD)
+- `status` : `todo` | `done` | `failed`
+- `volume`, `kd` (informatifs, ignorés par l'agent)
+
+Champs remplis par l'agent : `brief_id`, `datafer_score`, `published_date`, `published_url`, `error`.
+
+### Comment ajouter / modifier une entrée
+
+- **Ajouter** : copier un bloc existant, remplir `kw` + `category` + `scheduled_date`, garder `status: todo`.
+- **Reporter** : modifier `scheduled_date`.
+- **Débloquer un `failed`** : corriger la cause, repasser `status: todo`, vider `error`.
+
+### Cron `/schedule`
+
+La routine `/schedule` lance `/create-article-auto` 2x/semaine (mardi + vendredi 3h Paris). Si la routine n'est pas encore configurée, lancer manuellement `/create-article-auto` pour publier l'entrée éligible suivante.
 
 ## Regles generales
 

@@ -77,13 +77,17 @@ articles:
     published_url: "https://recette-repas.com/recettes/conserver-menthe-fraiche/"
     error: null
 
-  # === Semaine 1-7 juin 2026 ===
+  # === Cadence 2/semaine : mardi + vendredi ===
+  # Inspirée de meilleur-transport. KW triés par volume décroissant pour publier
+  # les plus juteux en premier.
+
+  # Semaine 1-7 juin 2026
 
   - kw: "comment conserver des gousses de vanille"
     category: "Conseils et astuces"
     volume: 590
     kd: 16
-    scheduled_date: "2026-06-02"
+    scheduled_date: "2026-06-02"  # mardi
     status: todo
     brief_id: null
     datafer_score: null
@@ -95,7 +99,7 @@ articles:
     category: "Conseils et astuces"
     volume: 480
     kd: 27
-    scheduled_date: "2026-06-04"
+    scheduled_date: "2026-06-05"  # vendredi
     status: todo
     brief_id: null
     datafer_score: null
@@ -103,11 +107,13 @@ articles:
     published_url: null
     error: null
 
+  # Semaine 8-14 juin 2026
+
   - kw: "remplacer crème fraîche par fromage blanc"
     category: "Conseils et astuces"
     volume: 390
     kd: 15
-    scheduled_date: "2026-06-06"
+    scheduled_date: "2026-06-09"  # mardi
     status: todo
     brief_id: null
     datafer_score: null
@@ -119,7 +125,7 @@ articles:
     category: "Conseils et astuces"
     volume: 260
     kd: 15
-    scheduled_date: "2026-06-07"
+    scheduled_date: "2026-06-12"  # vendredi
     status: todo
     brief_id: null
     datafer_score: null
@@ -127,13 +133,13 @@ articles:
     published_url: null
     error: null
 
-  # === Semaine 8-14 juin 2026 ===
+  # Semaine 15-21 juin 2026
 
   - kw: "remplacer la farine par de la maizena"
     category: "Conseils et astuces"
     volume: 210
     kd: 25
-    scheduled_date: "2026-06-09"
+    scheduled_date: "2026-06-16"  # mardi
     status: todo
     brief_id: null
     datafer_score: null
@@ -145,7 +151,7 @@ articles:
     category: "Conseils et astuces"
     volume: 210
     kd: 16
-    scheduled_date: "2026-06-11"
+    scheduled_date: "2026-06-19"  # vendredi
     status: todo
     brief_id: null
     datafer_score: null
@@ -153,11 +159,13 @@ articles:
     published_url: null
     error: null
 
+  # Semaine 22-28 juin 2026
+
   - kw: "comment conserver un cake fait maison"
     category: "Conseils et astuces"
     volume: 170
     kd: 33
-    scheduled_date: "2026-06-13"
+    scheduled_date: "2026-06-23"  # mardi
     status: todo
     brief_id: null
     datafer_score: null
@@ -169,7 +177,7 @@ articles:
     category: "Conseils et astuces"
     volume: 170
     kd: 25
-    scheduled_date: "2026-06-14"
+    scheduled_date: "2026-06-26"  # vendredi
     status: todo
     brief_id: null
     datafer_score: null
@@ -177,13 +185,13 @@ articles:
     published_url: null
     error: null
 
-  # === Semaine 15-21 juin 2026 ===
+  # Semaine 29 juin - 5 juillet 2026
 
   - kw: "remplacer sucre par sucre glace"
     category: "Conseils et astuces"
     volume: 140
     kd: 17
-    scheduled_date: "2026-06-16"
+    scheduled_date: "2026-06-30"  # mardi
     status: todo
     brief_id: null
     datafer_score: null
@@ -195,7 +203,7 @@ articles:
     category: "Conseils et astuces"
     volume: 110
     kd: 23
-    scheduled_date: "2026-06-18"
+    scheduled_date: "2026-07-03"  # vendredi
     status: todo
     brief_id: null
     datafer_score: null
