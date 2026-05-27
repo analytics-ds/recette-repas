@@ -1,0 +1,204 @@
+# Roadmap éditoriale evergreen — recette-repas.com
+#
+# Format inspiré de meilleur-transport. Adapté au PBN recette-repas :
+# - PBN FR uniquement (pas de version EN)
+# - Articles dans content/recettes/ (pas blog/)
+# - Catégories : "Conseils et astuces", "Plats", "Desserts", "Entrées", "Cuisine du monde", "Batch cooking"
+#
+# Cadence cible : 4 articles / semaine maximum (cf MEMORY.md)
+#
+# Skills disponibles dans ce repo :
+# - /create-article : création manuelle interactive (basique)
+# - Les skills create-article-auto et create-article-seo de meilleur-transport
+#   ne sont PAS encore copiées ici. Workflow actuel = manuel via brief Datafer.
+#
+# CHAMPS
+# ------
+# kw              (obligatoire) Mot-clé principal SEO ciblé en FR
+# category        (obligatoire) Catégorie Hugo : "Conseils et astuces" prioritaire
+# volume          (informatif)  Volume FR Semrush
+# kd              (informatif)  Keyword Difficulty Semrush
+# scheduled_date  (obligatoire) Date à partir de laquelle l'agent peut publier (YYYY-MM-DD)
+# status          todo | done | failed
+# brief_id        ID brief Datafer une fois créé
+# datafer_score   Score final post-publication
+# published_date  Date réelle de publication
+# published_url   URL de l'article live
+# error           Message d'erreur si failed
+
+articles:
+  # === Semaine 25-31 mai 2026 (4/4) — publiés ===
+
+  - kw: "comment faire cuire des asperges blanches"
+    category: "Conseils et astuces"
+    volume: 320
+    kd: 11
+    scheduled_date: "2026-05-27"
+    status: done
+    brief_id: "34c6f9b4-0d8a-4c8c-ad7a-a1102fd82ad3"
+    datafer_score: 74
+    published_date: "2026-05-27"
+    published_url: "https://recette-repas.com/recettes/cuire-asperges-blanches/"
+    error: null
+
+  - kw: "remplacer vin blanc par vinaigre de cidre"
+    category: "Conseils et astuces"
+    volume: 110
+    kd: 8
+    scheduled_date: "2026-05-27"
+    status: done
+    brief_id: "a3b6c574-20e1-415a-ab21-126abf1d7003"
+    datafer_score: 74
+    published_date: "2026-05-27"
+    published_url: "https://recette-repas.com/recettes/remplacer-vin-blanc-vinaigre-cidre/"
+    error: null
+
+  - kw: "pourquoi ma brioche n'est pas filante"
+    category: "Conseils et astuces"
+    volume: 140
+    kd: 8
+    scheduled_date: "2026-05-27"
+    status: done
+    brief_id: "0df2f23e-7822-4eb0-8bb6-1f6822c84b55"
+    datafer_score: 83
+    published_date: "2026-05-27"
+    published_url: "https://recette-repas.com/recettes/brioche-pas-filante/"
+    error: null
+
+  - kw: "comment conserver de la menthe fraîche"
+    category: "Conseils et astuces"
+    volume: 720
+    kd: 20
+    scheduled_date: "2026-05-27"
+    status: done
+    brief_id: "621b4621-544a-4a2f-bdb0-8fd2b2c772e2"
+    datafer_score: 75
+    published_date: "2026-05-27"
+    published_url: "https://recette-repas.com/recettes/conserver-menthe-fraiche/"
+    error: null
+
+  # === Semaine 1-7 juin 2026 ===
+
+  - kw: "comment conserver des gousses de vanille"
+    category: "Conseils et astuces"
+    volume: 590
+    kd: 16
+    scheduled_date: "2026-06-02"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver des pommes de terre épluchées"
+    category: "Conseils et astuces"
+    volume: 480
+    kd: 27
+    scheduled_date: "2026-06-04"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "remplacer crème fraîche par fromage blanc"
+    category: "Conseils et astuces"
+    volume: 390
+    kd: 15
+    scheduled_date: "2026-06-06"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "pourquoi mon gâteau au yaourt ne gonfle pas"
+    category: "Conseils et astuces"
+    volume: 260
+    kd: 15
+    scheduled_date: "2026-06-07"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  # === Semaine 8-14 juin 2026 ===
+
+  - kw: "remplacer la farine par de la maizena"
+    category: "Conseils et astuces"
+    volume: 210
+    kd: 25
+    scheduled_date: "2026-06-09"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "remplacer levure chimique par bicarbonate"
+    category: "Conseils et astuces"
+    volume: 210
+    kd: 16
+    scheduled_date: "2026-06-11"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver un cake fait maison"
+    category: "Conseils et astuces"
+    volume: 170
+    kd: 33
+    scheduled_date: "2026-06-13"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "pourquoi ma mousse au chocolat est liquide"
+    category: "Conseils et astuces"
+    volume: 170
+    kd: 25
+    scheduled_date: "2026-06-14"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  # === Semaine 15-21 juin 2026 ===
+
+  - kw: "remplacer sucre par sucre glace"
+    category: "Conseils et astuces"
+    volume: 140
+    kd: 17
+    scheduled_date: "2026-06-16"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "equivalent cuillere a soupe en ml"
+    category: "Conseils et astuces"
+    volume: 110
+    kd: 23
+    scheduled_date: "2026-06-18"
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
