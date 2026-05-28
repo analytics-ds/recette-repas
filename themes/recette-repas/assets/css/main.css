@@ -716,6 +716,14 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 400; color: var(
 .hub-card-meta span:not(:last-child)::after { content: "·"; margin-left: 10px; color: var(--line); }
 .hub-card-meta span:last-child { font-weight: 600; color: var(--ink); }
 
+.hub-pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 40px; font-family: var(--font-ui); flex-wrap: wrap; }
+.hub-pagination-prev, .hub-pagination-next, .hub-pagination-num { display: inline-flex; align-items: center; justify-content: center; min-width: 38px; height: 38px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--white); color: var(--ink); font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: background .15s, border-color .15s, color .15s; }
+.hub-pagination-prev:hover, .hub-pagination-next:hover, .hub-pagination-num:hover { background: var(--mint); border-color: var(--primary); color: var(--primary); }
+.hub-pagination-num.is-current { background: var(--primary); border-color: var(--primary); color: var(--white); pointer-events: none; }
+.hub-pagination-prev.is-disabled, .hub-pagination-next.is-disabled { color: var(--text-light); background: var(--bg-alt); cursor: default; pointer-events: none; opacity: .55; }
+.hub-pagination-pages { list-style: none; display: flex; gap: 6px; padding: 0; margin: 0; }
+@media (max-width: 640px) { .hub-pagination { gap: 6px; } .hub-pagination-prev, .hub-pagination-next { padding: 0 10px; font-size: 0.82rem; } .hub-pagination-num { min-width: 34px; height: 34px; font-size: 0.85rem; } }
+
 .hub-outro { padding: 8px 0 56px; background: var(--white); }
 .hub-outro h2 { font-size: 1.5rem; margin: 28px 0 12px; }
 .hub-outro h3 { font-size: 1.2rem; margin: 22px 0 10px; }

@@ -25,9 +25,11 @@
 <section class="hub-content">
   <div class="container">
     {{ $items := cond $isGuideHub (where .Pages "Params.is_guide" "==" true) (where .Pages "Params.is_guide" "!=" true) }}
+    {{ $sorted := $items.ByDate.Reverse }}
+    {{ $paginator := .Paginate $sorted 12 }}
     {{ if $items }}
     <div class="hub-grid">
-      {{ range $items.ByDate.Reverse }}
+      {{ range $paginator.Pages }}
       {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
       {{ $kcal := "" }}{{ range .Params.nutrition }}{{ if and (eq .label "Énergie") (eq .unit "kcal") }}{{ $kcal = .portion }}{{ end }}{{ end }}
       {{ $rc := .Params.rating_count }}
@@ -55,6 +57,31 @@
       </a>
       {{ end }}
     </div>
+    {{ if gt $paginator.TotalPages 1 }}
+    <nav class="hub-pagination" aria-label="Pagination">
+      {{ with $paginator.Prev }}
+      <a class="hub-pagination-prev" href="{{ .URL }}" rel="prev">‹ Précédent</a>
+      {{ else }}
+      <span class="hub-pagination-prev is-disabled" aria-disabled="true">‹ Précédent</span>
+      {{ end }}
+      <ul class="hub-pagination-pages">
+        {{ range $paginator.Pagers }}
+        <li>
+          {{ if eq . $paginator }}
+          <span class="hub-pagination-num is-current" aria-current="page">{{ .PageNumber }}</span>
+          {{ else }}
+          <a class="hub-pagination-num" href="{{ .URL }}">{{ .PageNumber }}</a>
+          {{ end }}
+        </li>
+        {{ end }}
+      </ul>
+      {{ with $paginator.Next }}
+      <a class="hub-pagination-next" href="{{ .URL }}" rel="next">Suivant ›</a>
+      {{ else }}
+      <span class="hub-pagination-next is-disabled" aria-disabled="true">Suivant ›</span>
+      {{ end }}
+    </nav>
+    {{ end }}
     {{ else }}
     {{ if $isGuideHub }}
     <p class="list-empty">Les premiers conseils arrivent très bientôt. Revenez vite pour découvrir nos astuces de cuisine.</p>
