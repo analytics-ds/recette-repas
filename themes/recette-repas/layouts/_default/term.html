@@ -1,6 +1,9 @@
 {{ define "main" }}
 {{ $blog := site.GetPage "/recettes" }}
 {{ $heroImg := .Params.image | default "images/home/hero.jpg" }}
+{{ $isGuideHub := eq .Params.guides_hub true }}
+{{ $noun := cond $isGuideHub "conseil" "recette" }}
+{{ $nounPlural := cond $isGuideHub "conseils" "recettes" }}
 
 <section class="cat-hero" style="background-image: url('{{ $heroImg | relURL }}');">
   <div class="cat-hero-overlay"></div>
@@ -14,20 +17,21 @@
     {{ if .Content }}
     <div class="cat-hero-intro">{{ .Content }}</div>
     {{ else }}{{ with .Description }}<p class="cat-hero-intro">{{ . }}</p>{{ end }}{{ end }}
-    {{ $recipes := where .Pages "Params.is_guide" "!=" true }}
-    <span class="cat-hero-count">{{ len $recipes }} {{ if gt (len $recipes) 1 }}recettes{{ else }}recette{{ end }}</span>
+    {{ $items := cond $isGuideHub (where .Pages "Params.is_guide" "==" true) (where .Pages "Params.is_guide" "!=" true) }}
+    <span class="cat-hero-count">{{ len $items }} {{ if gt (len $items) 1 }}{{ $nounPlural }}{{ else }}{{ $noun }}{{ end }}</span>
   </div>
 </section>
 
 <section class="hub-content">
   <div class="container">
-    {{ $items := where .Pages "Params.is_guide" "!=" true }}
+    {{ $items := cond $isGuideHub (where .Pages "Params.is_guide" "==" true) (where .Pages "Params.is_guide" "!=" true) }}
     {{ if $items }}
     <div class="hub-grid">
       {{ range $items.ByDate.Reverse }}
       {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
       {{ $kcal := "" }}{{ range .Params.nutrition }}{{ if and (eq .label "Énergie") (eq .unit "kcal") }}{{ $kcal = .portion }}{{ end }}{{ end }}
       {{ $rc := .Params.rating_count }}
+      {{ $isGuide := eq .Params.is_guide true }}
       <a class="hub-card" href="{{ .RelPermalink }}">
         <div class="hub-card-media">
           <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
@@ -35,22 +39,28 @@
         </div>
         <div class="hub-card-body">
           <h2 class="hub-card-title">{{ .Title }}</h2>
-          {{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $rc }})</span></div>{{ end }}
+          {{ if not $isGuide }}{{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $rc }})</span></div>{{ end }}{{ end }}
           {{ with .Description }}<p class="hub-card-desc">{{ . | truncate 90 }}</p>{{ end }}
           {{ with .Params.tags }}
           <div class="hub-card-tags">{{ range first 3 . }}<span>{{ . }}</span>{{ end }}</div>
           {{ end }}
+          {{ if not $isGuide }}
           <div class="hub-card-meta">
             {{ if $total }}<span>{{ $total }} min</span>{{ end }}
             {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
             {{ with $kcal }}<span>{{ . }} kcal</span>{{ end }}
           </div>
+          {{ end }}
         </div>
       </a>
       {{ end }}
     </div>
     {{ else }}
+    {{ if $isGuideHub }}
+    <p class="list-empty">Les premiers conseils arrivent très bientôt. Revenez vite pour découvrir nos astuces de cuisine.</p>
+    {{ else }}
     <p class="list-empty">Les premières recettes arrivent très bientôt. Revenez vite pour découvrir nos idées de recettes faciles.</p>
+    {{ end }}
     {{ end }}
   </div>
 </section>
@@ -89,8 +99,9 @@
 {{ end }}
 
 {{/* ===== Section Essentiels (top 3 best-rated, des 1 recette) ===== */}}
-{{ if ge (len .Pages) 1 }}
-{{ $best := first 3 (.Pages.ByParam "rating").Reverse }}
+{{ $essentialsSource := cond $isGuideHub (where .Pages "Params.is_guide" "==" true) (where .Pages "Params.is_guide" "!=" true) }}
+{{ if ge (len $essentialsSource) 1 }}
+{{ $best := cond $isGuideHub (first 3 $essentialsSource.ByDate.Reverse) (first 3 ($essentialsSource.ByParam "rating").Reverse) }}
 {{ $n := len $best }}
 {{ $gridClass := "" }}
 {{ if eq $n 1 }}{{ $gridClass = " has-one" }}{{ else if eq $n 2 }}{{ $gridClass = " has-two" }}{{ end }}
@@ -98,10 +109,15 @@
   <div class="container">
     <div class="cat-section-head">
       <h2>Les essentiels {{ .Title | lower }}</h2>
+      {{ if $isGuideHub }}
+      <p>Notre sélection des conseils à lire en priorité dans cette catégorie.</p>
+      {{ else }}
       <p>Notre sélection des recettes les mieux notées de cette catégorie, à essayer en priorité.</p>
+      {{ end }}
     </div>
     <div class="cat-essentiels-grid{{ $gridClass }}">
       {{ range $best }}
+      {{ $isGuide := eq .Params.is_guide true }}
       {{ $total := add (int .Params.prep_min) (int .Params.cook_min) }}
       <a class="cat-feature" href="{{ .RelPermalink }}">
         <div class="cat-feature-media">
@@ -109,13 +125,15 @@
         </div>
         <div class="cat-feature-body">
           <h3>{{ .Title }}</h3>
-          {{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $.Params.rating_count }})</span></div>{{ end }}
+          {{ if not $isGuide }}{{ with .Params.rating }}<div class="rc-rating">{{ partial "stars.html" . }} <span>{{ . }} ({{ $.Params.rating_count }})</span></div>{{ end }}{{ end }}
           {{ with .Description }}<p>{{ . | truncate 140 }}</p>{{ end }}
+          {{ if not $isGuide }}
           <div class="cat-feature-meta">
             {{ if $total }}<span>{{ $total }} min</span>{{ end }}
             {{ with .Params.difficulty }}<span>{{ . }}</span>{{ end }}
           </div>
-          <span class="cat-feature-cta">Voir la recette →</span>
+          {{ end }}
+          <span class="cat-feature-cta">{{ if $isGuide }}Lire l'article →{{ else }}Voir la recette →{{ end }}</span>
         </div>
       </a>
       {{ end }}
@@ -170,13 +188,16 @@
     </div>
     <div class="cat-related-grid">
       {{ range $otherTerms }}
+      {{ $tIsGuideHub := eq .Params.guides_hub true }}
+      {{ $tItems := cond $tIsGuideHub (where .Pages "Params.is_guide" "==" true) (where .Pages "Params.is_guide" "!=" true) }}
+      {{ $tNoun := cond $tIsGuideHub "conseil" "recette" }}
       <a class="cat-related-card" href="{{ .RelPermalink }}">
         <div class="cat-related-media">
           <img src="{{ with .Params.image }}{{ . | relURL }}{{ else }}{{ "images/home/dish-1.jpg" | relURL }}{{ end }}" alt="{{ .Title }}" loading="lazy">
         </div>
         <div class="cat-related-body">
           <h3>{{ .Title }}</h3>
-          <span class="cat-related-count">{{ len .Pages }} recette{{ if gt (len .Pages) 1 }}s{{ end }}</span>
+          <span class="cat-related-count">{{ len $tItems }} {{ $tNoun }}{{ if gt (len $tItems) 1 }}s{{ end }}</span>
         </div>
       </a>
       {{ end }}

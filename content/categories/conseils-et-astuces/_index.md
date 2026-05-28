@@ -8,6 +8,7 @@ url: "/recettes/conseils-astuces/"
 aliases: ["/categories/conseils-astuces/", "/categories/conseils-et-astuces/"]
 image: "images/categories/conseils-astuces.jpg"
 weight: 5
+guides_hub: true
 description: "Les conseils de cuisine d'un ancien chef pour gagner du temps, mieux cuisiner et limiter le gaspillage."
 subthemes_title: "Tous nos conseils pour mieux cuisiner au quotidien"
 subthemes_intro: "Astuces d'organisation, conservation des aliments, techniques de chef à reproduire à la maison : nos conseils pratiques pour gagner du temps et cuisiner avec plus de plaisir."
