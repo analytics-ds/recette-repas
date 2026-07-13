@@ -1,306 +1,309 @@
-# Skill : Créer un article evergreen SEO (full auto) — recette-repas
+# Skill : Creer un article evergreen SEO (full auto)
 
-Cette skill produit **automatiquement** un article evergreen SEO (pas GEO) à partir d'un mot-clé pris dans la roadmap éditoriale du blog `recette-repas`. **PBN FR uniquement**, pas de version EN. Aucun input humain. Aucun point d'arrêt. Publication directe sur GitHub.
+Cette skill produit **automatiquement** un article evergreen SEO (pas GEO), bilingue FR + EN, a partir d'un mot-cle pris dans la roadmap editoriale du blog. Aucun input humain. Aucun point d'arret. Publication directe sur GitHub.
 
-Elle est destinée à être déclenchée par une routine planifiée (mardi + vendredi à 3h du mat via `/schedule`). Elle peut aussi être lancée manuellement pour tester.
+Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 3h du mat via `/schedule`). Elle peut aussi etre lancee manuellement pour tester.
 
 ## Quand l'utiliser
 
-- Déclenchement automatique via routine planifiée (cron distant CCR).
-- Déclenchement manuel : `/create-article-auto` dans le contexte du blog `recette-repas`.
+- Declenchement automatique via routine planifiee (cron distant).
+- Declenchement manuel : `/create-article-auto` dans le contexte d'un blog du reseau PBN GEO datashake.
 
-## Pré-requis dans le blog
+## Pre-requis dans le blog
 
-- `roadmap.yaml` existe à la racine et contient au moins une entrée `status: todo`.
-- `hugo.toml` configuré avec FR comme langue unique.
-- `content/recettes/` existe.
-- Remote git `origin` configuré (`analytics-ds/recette-repas`), accès push.
-- Clé SerpAPI dans `SERPAPI_API_KEY` OU MCP `mcp__serpapi__search` dispo.
-- Clé Datafer dans `DATAFER_API_KEY` (`dfk_...`) si on veut optimiser le score via l'API (étape 7.5 optionnelle).
+- `roadmap.yaml` existe et contient au moins une entree `status: todo`.
+- `hugo.toml` configure avec la langue principale + la langue EN.
+- `data/authors.yaml` present (systeme d'auteurs partage).
+- `content/blog/` existe (peut etre vide pour un premier article).
+- Remote git `origin` configure, acces push.
+- Outil `WebSearch` disponible (recommande, execute cote serveur donc non soumis aux restrictions reseau du sandbox). S'il est absent, la skill degrade en mode "kw seul" sans echouer.
 
 ## Philosophie : full auto, pas de human in the loop
 
-Aucune question à l'utilisateur. Toutes les décisions sont prises par l'agent à partir de :
-- Le mot-clé de la roadmap
-- L'analyse SERP automatique
-- Le contexte du site (CLAUDE.md, hugo.toml, articles déjà publiés)
+Aucune question a l'utilisateur. Toutes les decisions sont prises par l'agent a partir de :
+- Le mot-cle de la roadmap
+- L'analyse du sujet via `WebSearch` (ou le kw seul si WebSearch indispo)
+- Le contexte du site (CLAUDE.md du blog, authors.yaml, hugo.toml)
+- Les articles deja publies (scan `content/blog/`)
 
-Si une étape bloque (SerpAPI indispo, image introuvable, build Hugo échoue, push rejeté), l'agent **n'insiste pas** : il marque l'entrée `status: failed` dans la roadmap avec le message d'erreur, commit la roadmap, et sort proprement en exit code non-zero.
+Si une etape bloque (image introuvable, build Hugo echoue, push rejete apres rebase), l'agent **n'insiste pas** : il marque l'entree `status: failed` dans la roadmap avec le message d'erreur, commit le roadmap, et sort proprement en exit code non-zero. **Exception : l'indisponibilite de WebSearch n'est PAS un motif d'echec** (voir Etape 1), on continue en mode degrade.
 
-## Pas de quota hebdomadaire (règle exemptée)
+## Pas de quota hebdomadaire (regle exemptee)
 
-Cette skill **ignore complètement** la règle indicative "4 articles par semaine" mentionnée dans le `CLAUDE.md`. Cette règle s'applique uniquement aux skills interactives.
+Cette skill **ignore completement** la regle indicative "4 articles par semaine" mentionnee dans le `CLAUDE.md` du blog. Elle s'applique uniquement aux skills interactives (`/create-article-geo`, `/create-article-seo`).
 
-`/create-article-auto` est faite pour tourner en routine cron (mardi/vendredi 3h Paris) et doit publier l'entrée éligible de la roadmap **sans aucune vérification de quota**. Ne pas lire le `MEMORY.md` pour compter les publications de la semaine. Publier point.
+`/create-article-auto` est faite pour tourner en routine cron (mardi/vendredi 3h Paris) et doit publier l'entree eligible de la roadmap **sans aucune verification de quota**. Ne pas lire le `MEMORY.md` pour compter les publications de la semaine. Ne pas afficher de warning. Publier point.
 
-Le seul critère d'éligibilité est défini à l'Étape 0 : `status == todo` ET `scheduled_date <= today`.
+Le seul critere d'eligibilite est defini a l'Etape 0 : `status == todo` et `scheduled_date <= today`.
 
-## Étape 0 — Sélection de l'entrée roadmap
+## Difference avec /create-article-geo
 
-1. `cd` vers la racine du blog (la skill est lancée depuis ce contexte).
+| Element | `/create-article-geo` | `/create-article-auto` |
+|---|---|---|
+| Interactivite | Oui, plusieurs points d'arret | Non, full auto |
+| Type d'article | Standard OU geo-comparatif (GEO) | Standard uniquement (SEO pur) |
+| Mots-cles | Prompt GEO + query fan-out | Mot-cle SEO simple |
+| FAQ | Toujours (3+) | Seulement si le sujet s'y prete (questions vues en recherche) |
+| "En bref" numerote | Oui (GEO) | Non |
+| Source KW | Demande a l'utilisateur | Lit `roadmap.yaml` |
+| Analyse concurrents | Manuelle ou absente | Automatique via `WebSearch` (titres + snippets), sans SerpAPI |
+| Validation | Humaine a chaque etape | Aucune |
+
+## Etape 0 — Selection de l'entree roadmap
+
+1. `cd` vers la racine du blog (la skill est lancee depuis ce contexte).
 2. Pull du remote :
    ```bash
    git pull --rebase origin main
    ```
-   Si échec : abort avec log clair.
+   Si echec : abort avec log clair.
 3. Lire `roadmap.yaml`.
-4. Filtrer les entrées :
+4. Filtrer les entrees :
    - `status == todo`
    - `scheduled_date <= today` (YYYY-MM-DD)
-5. Trier par `scheduled_date` croissante. Prendre la première.
-6. Si aucune entrée éligible : logger "Aucune entrée roadmap éligible aujourd'hui" et exit 0 (pas d'erreur).
+5. Trier par `scheduled_date` croissante. Prendre la premiere.
+6. Si aucune entree eligible : logger "Aucune entree roadmap eligible aujourd'hui" et exit 0 (pas d'erreur, juste rien a faire).
 
-L'entrée sélectionnée fournit : `kw`, `category`, `scheduled_date`.
+L'entree selectionnee fournit : `kw`, `category`, `scheduled_date`.
 
-## Étape 1 — Analyse SERP automatique
+## Etape 1 — Analyse du sujet via WebSearch (sans SerpAPI)
 
-### 1.1 Requête SerpAPI
+Cette skill **n'utilise plus SerpAPI**. L'analyse du paysage concurrentiel se fait avec l'outil natif `WebSearch`, execute cote serveur Anthropic (donc non soumis au proxy d'egress reseau du sandbox cloud). Aucune cle API, aucun curl externe.
 
-**Mode A - MCP** : si `mcp__serpapi__search` disponible, appeler avec `q=<kw>`, `engine=google`, `hl=fr`, `gl=fr`, `num=10`, `location=France`.
+### 1.1 Recherche WebSearch
 
-**Mode B - curl direct** :
-```bash
-QUERY_ENC=$(python3 -c "import urllib.parse,sys; print(urllib.parse.quote(sys.argv[1]))" "$KW")
-curl -s "https://serpapi.com/search.json?q=${QUERY_ENC}&engine=google&hl=fr&gl=fr&num=10&location=France&api_key=${SERPAPI_API_KEY}" > /tmp/serp.json
-```
+1. Lancer un `WebSearch` sur le `kw` de la roadmap (formule en francais).
+2. Optionnel selon le sujet : 1 a 2 recherches complementaires pour elargir le champ, par exemple `"<kw> avis"`, `"comparatif <kw>"`, `"meilleur <kw>"` ou `"<kw> guide"`. Se limiter a 3 WebSearch maximum par article.
+3. Recuperer de chaque resultat : **titre, URL, extrait (snippet)**. Ce sont les seules donnees exploitees.
 
-Si `SERPAPI_API_KEY` absente ET MCP indispo : marquer failed avec `error: "SerpAPI indispo"` et abort.
+**Repli si WebSearch est indisponible dans l'environnement** : NE PAS marquer `failed`. Continuer en **mode degrade** : l'analyse se fait uniquement a partir du `kw`, de la `category` et du contexte editorial du blog (CLAUDE.md). L'article est quand meme produit et publie. Noter "WebSearch indispo, mode degrade" dans le log.
 
-### 1.2 Extraction données
+### 1.2 Ne pas ouvrir les pages concurrentes
 
-Extraire de SerpAPI :
-- `organic_results[0..9]` : `title`, `link`, `snippet`
-- `related_questions` (People Also Ask) si présents
-- `related_searches` si présents
+Ne **PAS** utiliser `WebFetch` sur les URLs concurrentes : dans le sandbox cloud les domaines commerciaux sont bloques par la politique reseau (403/503). L'analyse se fait uniquement sur les **titres et snippets** renvoyes par `WebSearch`.
 
-**Ne PAS tenter de fetch les URLs concurrentes** (sandbox cloud les bloque).
+### 1.3 Synthese auto (aucun output humain, juste des variables internes)
 
-### 1.3 Synthèse auto
+L'agent determine a partir des resultats WebSearch (ou du `kw` seul en mode degrade) :
+- **Intention de recherche** : inferee du pattern recurrent des titres du top des resultats (informationnelle, transactionnelle, comparative, etc.)
+- **Angles concurrents** : sous-themes qui reviennent dans les titres et snippets (ex: prix, comparatif, avis, guide, duree de vie...)
+- **Champ semantique** : mots recurrents dans les titres et snippets
+- **FAQ pertinente ?** : vrai si les resultats font ressortir des questions recurrentes (formulations interrogatives dans les titres/snippets, "comment", "pourquoi", "quel", "combien"...). En mode degrade : juger selon la nature du sujet.
+- **Longueur cible** : 1500-2000 mots par defaut (cible raisonnable pour un article evergreen qualitatif)
+- **Tableau pertinent ?** : vrai par defaut pour les requetes a intention comparative (mots "meilleur", "top", "vs", "ou", "comparatif" dans le kw ou les titres), false sinon
+- **Si FAQ pertinente** : construire 4-6 questions a partir des themes/questions vus dans les resultats, retirer les doublons, reformuler (pas de copie mot pour mot)
 
-- **Intention de recherche** : informationnelle par défaut sur ce PBN (questions cuisine)
-- **Angles concurrents** : sous-thèmes récurrents dans titles + snippets
-- **Champ sémantique** : mots récurrents
-- **FAQ pertinente ?** : vrai si `related_questions` présents
-- **Longueur cible** : 2500-3500 mots (PBN cuisine, articles bien étoffés)
-- **Tableau pertinent ?** : vrai si KW contient "comment", "combien", "quel", ou si les titles concurrents montrent des comparaisons
-- **Questions FAQ** : 4-6 questions construites à partir des `related_questions`, reformulées (pas de copie mot pour mot)
+## Etape 2 — Title et meta description (regles pixel inline)
 
-## Étape 2 — Title, meta description, h1
+Pas d'appel aux skills `/tech-title` ni `/tech-meta-description`. Regles appliquees directement :
 
-### Title (SEO)
-- Contient le `kw` en premier tiers
-- Max 60 caractères
-- Format cible : `[Kw] : [angle] | Recette & Repas`
-- 1 seule option, choix direct
+### Title
+- Contient le `kw` en premier tiers de la balise si possible
+- Max 60 caracteres (proxy safe pour 580px en Arial SERP Google)
+- Format cible : `[Kw] : [angle] | [Nom du site]`
+- Le nom du site vient du `hugo.toml` (`title` global)
+- **Une seule option, choix direct** (pas de 3 options comme en interactif)
 
 ### Meta description
-- Max 155 caractères
+- Max 155 caracteres (proxy safe pour 920px en Arial SERP)
 - Contient le `kw`
-- Phrase descriptive factuelle, pas de CTA agressif
+- Formule : phrase descriptive factuelle, pas de call-to-action agressif
+- 1 phrase, pas de liste, pas de suspense
 
-### H1
-- Contient le `kw` en début
-- Plus engageant que le SEO title (peut être plus long)
-- Format : `[Kw avec verbe action] : [angle complémentaire]`
-- Le H1 est rendu par Hugo depuis le frontmatter `h1:`, pas dans le body
+## Etape 3 — Structure Hn auto
 
-## Étape 3 — Structure Hn auto
+### Regles
+- 1 H1 contenant `kw`. Le H1 est genere par Hugo a partir du `title` frontmatter, **pas dans le body**.
+- 4 a 7 H2 construits a partir des patterns recurrents identifies a l'etape 1.3. Privilegier les sujets presents chez 3+ concurrents en priorite, puis les 2+, puis combler avec des sujets uniques a fort potentiel.
+- 1 a 2 H2 "valeur ajoutee" basee sur l'angle editorial du blog (lu dans `CLAUDE.md` section "Contexte du site" ou section editoriale).
+- Si FAQ pertinente : dernier H2 = "Questions frequentes" avec les questions selectionnees a l'etape 1.3, en accordeon `<details><summary>`.
+- H3 : 1 a 3 par H2, optionnels, utilises pour les sous-aspects ou les tableaux.
 
-- **1 H1** (depuis frontmatter, contient `kw`)
-- **5 à 8 H2** construits à partir des patterns récurrents (étape 1.3)
-- **1 H2 "À retenir"** obligatoire en fin (avant FAQ) — **important pour le score Datafer GEO quickSummary**
-- **1 H2 "Questions fréquentes"** si FAQ pertinente, en H3 finissant par "?"
-- **H3** : 1 à 3 par H2, optionnels
-- Pas de H2 vague type "Introduction"/"Conclusion"
-- Pas de `&`, pas de tiret cadratin/demi-cadratin
+### Contraintes
+- Les H2 doivent etre **explicites et auto-suffisants** (lisibles hors contexte).
+- Pas de H2 vague ("Introduction", "Conclusion" tels quels — les reformuler).
+- Pas de caractere `&` dans les H2/H3.
+- Pas de tiret cadratin (—) ni demi-cadratin (–).
 
-## Étape 4 — Auteur (auteur unique)
+## Etape 4 — Selection auto de l'auteur
 
-Auteur unique du blog : **Julien Marchand** (placeholder en attendant le vrai chef).
+Identique a la logique de `/create-article-geo` etape 1.3 :
 
-Dans le frontmatter : `author: "Julien Marchand"`. Pas de système `data/authors.yaml` sur ce PBN.
+1. Lire `data/authors.yaml`.
+2. Pour chaque auteur, compter les matches entre ses `topics`/`expertise` et le `kw` + la `category` de la roadmap.
+3. Selectionner l'auteur au score le plus haut.
+4. En cas d'egalite ou de score nul : auteur principal du site defini dans CLAUDE.md.
 
-## Étape 5 — Image hero auto
+Injecter l'ID-slug dans le frontmatter (`author: [id]`). Meme ID pour FR et EN.
 
+## Etape 5 — Image hero auto
+
+Appeler le script existant :
 ```bash
-bash .claude/scripts/fetch-image.sh "<kw traduit en anglais>" "<slug>" "static/images/recettes"
+bash .claude/scripts/fetch-image.sh "<kw traduit en anglais>" "<slug-fr>" "static/images/blog"
 ```
 
-- Si exit non-zero : retenter une fois avec query plus générique (`category` traduite en anglais).
-- Si 2e échec : marquer `failed` "image fetch failed" et abort.
-- Frontmatter : `image: "images/recettes/<slug>.jpg"`, `image_alt: "<alt FR>"`.
+- La query image est le `kw` traduit en anglais (Openverse est majoritairement indexe en anglais).
+- Si le script renvoie un code non-zero, retenter **une seule fois** avec une query plus generique (la `category` traduite en anglais).
+- Si 2e echec : **ne pas marquer `failed`**. Continuer la publication sans image hero (champs `image`, `imageAlt`, `imageCredit` omis du frontmatter ou laisses vides). L'absence d'image n'est pas une raison d'avorter : l'article est publie, le site fonctionne sans hero.
+- Recuperer les 3 sorties du script (chemin, alt, credit) pour le frontmatter **uniquement si le script a reussi**.
 
-## Étape 6 — Maillage interne auto
+## Etape 6 — Maillage interne auto
 
-1. Lister tous les `.md` dans `content/recettes/` (sauf `_index.md`).
-2. Lire le frontmatter de chacun : `title`, slug, `categories`, `tags`.
-3. Scorer par proximité (catégorie identique = +3, tags partagés = +1/tag, mots communs entre KW = +2).
-4. Garder les 3 à 5 meilleurs scores.
-5. Ancre = mot-clé principal de l'article cible.
-6. Positionner les liens contextuellement dans le body. Au moins **3 liens internes obligatoires** (règle CLAUDE.md du blog).
+1. Lister tous les `.md` dans `content/blog/` (articles FR uniquement pour cette passe).
+2. Lire le frontmatter de chacun : `title`, `kw` (via slug), `categories`, `tags`.
+3. Scorer chaque article par proximite avec le nouveau (categorie identique = +3, tags partages = +1 par tag, mots communs entre kw = +2).
+4. Garder les 3 a 5 meilleurs scores.
+5. Preparer les ancres : chaque ancre contient le mot-cle principal de l'article cible (extrait du slug, reformule en langue naturelle).
+6. Positionner les liens de maniere contextuelle dans le body (etape 7) : un par section, pas de bloc "Voir aussi" en fin d'article.
 
-Si le blog a moins de 3 articles : faire au mieux (2 liens, 1 lien, ou aucun pour le tout premier). Ne pas bloquer.
+**Maillage intra-langue uniquement** : version FR mail vers `/blog/*`, version EN mail vers `/en/blog/*`.
 
-## Étape 7 — Rédaction FR complète
+Si le blog a moins de 3 articles FR publies : faire au mieux avec ce qui existe (2 liens, 1 lien, ou aucun pour le tout premier article). Ne pas bloquer.
 
-Produire le fichier `content/recettes/[slug].md`.
+## Etape 7 — Redaction FR complete
 
-### Frontmatter type (recette-repas)
+Produire le fichier `content/blog/[slug-fr].md`.
+
+### Frontmatter
 ```yaml
 ---
-title: "[Title SEO]"
-is_guide: true
-slug: "[slug-kebab-sans-accents]"
-date: 2026-05-27
-lastmod: 2026-05-27
-seo_title: "[Title SEO max 60 car]"
-h1: "[H1 plus engageant]"
+title: "[Title]"
+translationKey: "[slug-generique-identique-FR-et-EN]"
+date: "[YYYY-MM-DD]"
+lastmod: "[YYYY-MM-DD]"
 description: "[Meta description <= 155 car]"
-categories: ["[Catégorie hugo.toml]"]
+categories: ["[Categorie FR]"]
 tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
-image: "images/recettes/[slug].jpg"
-image_alt: "[Alt FR, max 125 car]"
-author: "Julien Marchand"
-faq:
-  - q: "[Q1] ?"
-    a: "[R1, 3-5 phrases]"
-  - q: "[Q2] ?"
-    a: "[R2]"
-  # 4 à 6 questions au total
+author: "[id-slug]"
+image: "/images/blog/[slug].webp"
+imageAlt: "[Description FR, max 125 car]"
+imageCredit: "[Credit retourne par fetch-image.sh]"
+faq:  # UNIQUEMENT si FAQ pertinente (voir etape 1.3)
+  - question: "[Q1]"
+    answer: "[R1, 3-5 phrases]"
+  - question: "[Q2]"
+    answer: "[R2, 2-4 phrases]"
+readingTime: true
 ---
 ```
-
-**Important sur la FAQ** : sur ce PBN, la FAQ est dans le frontmatter (format `q:` / `a:`), pas dans le body. Le layout Hugo `single.html` la rend en JSON-LD + bloc visible en bas d'article.
 
 ### Body
-- Premier paragraphe : KW exact + intro
-- Callout-brief en intro avec liste à puces 4-5 items :
-  ```html
-  <div class="callout-brief">
+- Premier paragraphe : contient le `kw` naturellement, pose le contexte.
+- Respecter la structure Hn de l'etape 3. Aucune section ajoutee, aucune supprimee.
+- Longueur cible : moyenne des concurrents +/- 10% (ex: si moyenne = 1600 mots, viser 1440-1760).
+- Densite `kw` naturelle : 1-2%.
+- Variations et synonymes du `kw` dans les H2.
+- Mots-cles en **gras** quand pertinent.
+- Au moins 1 tableau si l'etape 1.3 a note "tableau pertinent".
+- Liens internes inseres contextuellement (etape 6).
+- Ton impersonnel (pas de je/tu/nous/vous) sauf indication contraire dans le CLAUDE.md du blog.
+- Paragraphes aeres, 3-5 phrases max.
+- Pas de separateur horizontal (`---`). Pas de tiret cadratin (—) ni demi-cadratin (–).
+- Si FAQ pertinente : dernier H2 "Questions frequentes" avec `<details><summary>` accordeon. Les Q/R du body correspondent strictement a celles du frontmatter.
 
-  - **Point 1** : ...
-  - **Point 2** : ...
-  - **Point 3** : ...
+## Etape 8 — Redaction EN (traduction directe)
 
-  </div>
-  ```
-- Respecter la structure Hn de l'étape 3
-- Longueur cible : 2500-3500 mots
-- Densité KW exact : 1-2 % (compter avec : `grep -oc "[kw]" body`)
-- KW exact réparti sur au moins 3 des 4 quarts du texte
-- Mots-clés en **gras** quand pertinent
-- Au moins 1 **tableau markdown** avec données chiffrées (très important pour score Datafer GEO + sémantique)
-- 3+ liens internes contextuels (étape 6)
-- 3+ données chiffrées avec unités (min, °C, g, ml, %, jours...) pour score GEO statistics
-- Ton impersonnel (pas de je/tu/nous/vous)
-- Paragraphes 40-140 mots
-- Pas de `&`, pas de séparateur horizontal `---`, pas de tiret cadratin/demi-cadratin
-- **H2 "À retenir" obligatoire** en fin d'article avant FAQ (débloque GEO quickSummary +20pts Datafer)
+Produire le fichier `content/en/blog/[slug-en].md`.
 
-## Étape 7.5 — Scoring Datafer (optionnel mais recommandé)
+- Meme `translationKey` que la version FR (obligatoire pour le hreflang et le language switcher Hugo).
+- Traduction **directe** du contenu FR (pas de recherche KW EN extensive, c'est une trad fidele du contenu + du title/meta).
+- Adaptation legere : slug EN traduit (pas translitteration), `categories` et `tags` en EN (mapping defini dans CLAUDE.md du blog), `imageAlt` traduit.
+- `image` et `imageCredit` identiques au FR.
+- Meme `author` que FR (les libelles jobTitle/role/bio sont bilingues dans authors.yaml).
+- FAQ frontmatter et body traduits en EN aussi.
 
-Si `DATAFER_API_KEY` disponible :
+## Etape 9 — Build Hugo et verification
 
 ```bash
-# 1. Convertir md -> html enrichi (H1 + FAQ rendue)
-python3 /tmp/md_to_html_datafer.py content/recettes/[slug].md /tmp/article.html
-
-# 2. Créer brief Datafer
-curl -X POST "https://datafer.analytics-e0d.workers.dev/api/v1/briefs" \
-  -H "Authorization: Bearer ${DATAFER_API_KEY}" \
-  -H "Content-Type: application/json" \
-  -H "User-Agent: Mozilla/5.0" \
-  -d '{"keyword": "[kw]", "country": "fr"}'
-
-# 3. Poll jusqu'à ready (3-90s)
-
-# 4. POST le contenu pour scorer
-curl -X POST "https://datafer.analytics-e0d.workers.dev/api/v1/briefs/{id}/content" \
-  -H "Authorization: Bearer ${DATAFER_API_KEY}" \
-  -H "Content-Type: application/json" \
-  -d "{\"editorHtml\": \"$(cat /tmp/article.html | jq -Rsa .)\"}"
+hugo
 ```
 
-Récupérer `score` et `competitors.best`. Logger le score. Si score < best : log warning mais on continue (on ne re-rédige pas en auto).
+- Si exit code non-zero : marquer `failed` avec log de l'erreur, abort.
+- Si OK : noter le nombre de pages generees.
 
-Si pas de `DATAFER_API_KEY` : skip silencieusement.
-
-## Étape 8 — Build Hugo
-
-```bash
-hugo --gc --minify
-```
-
-- Si exit non-zero : marquer `failed` avec log d'erreur, abort.
-- Si OK : noter le nombre de pages générées.
-
-## Étape 9 — Update roadmap et MEMORY.md
+## Etape 10 — Update roadmap et MEMORY.md
 
 ### Roadmap
-Mettre à jour l'entrée traitée :
+Mettre a jour l'entree traitee dans `roadmap.yaml` :
 ```yaml
   status: done
-  brief_id: "[id si Datafer utilisé, sinon null]"
-  datafer_score: [score si Datafer, sinon null]
   published_date: "[YYYY-MM-DD]"
-  published_url: "https://recette-repas.com/recettes/[slug]/"
+  published_url_fr: "[baseURL]/blog/[slug-fr]/"
+  published_url_en: "[baseURL]/en/blog/[slug-en]/"
   error: null
 ```
 
 ### MEMORY.md
 Ajouter une ligne dans la section de la semaine en cours :
 ```
-- **YYYY-MM-DD** — [Titre](content/recettes/[slug].md) — KW : `[kw]` (vol [X], KD [Y], Datafer [score]/100) | auto
+- YYYY-MM-DD | [Titre FR] (FR+EN) | [Categorie] | auto
 ```
 
-Le suffixe `| auto` distingue les articles générés par cette skill.
+Le suffixe `auto` distingue les articles generes par cette skill des articles produits a la main via `/create-article-geo`.
 
-## Étape 10 — Commit et push
+## Etape 11 — Commit et push
 
 ```bash
 git add -A
-git commit -m "Auto: [kw]"
+git commit -m "Auto: publication evergreen - [Titre FR]"
 git pull --rebase origin main
 git push origin main
 ```
 
-En cas de rejet du push après rebase : retenter jusqu'à 3 fois. Si toujours KO : marquer failed "push rejected 3x", commit du roadmap local, exit non-zero.
+En cas de rejet du push apres rebase : retenter jusqu'a 3 fois (pull --rebase + push). Si toujours KO au bout de 3 tentatives : marquer failed avec erreur "push rejected 3x", commit du roadmap local, exit non-zero.
 
-## Gestion des échecs (transversal)
+## Gestion des echecs (transversal)
 
-À n'importe quelle étape, si un blocage survient :
-1. Loger le message d'erreur précis (étape + cause).
-2. Mettre à jour l'entrée roadmap :
+A **n'importe quelle etape**, si un blocage survient :
+1. Loger le message d'erreur precis (etape + cause).
+2. Mettre a jour l'entree de roadmap :
    ```yaml
      status: failed
-     error: "[étape] [message]"
+     error: "[etape] [message d'erreur]"
    ```
-3. Si des fichiers article ont été partiellement écrits : les supprimer (revenir à l'état pre-skill).
-4. Commit uniquement le `roadmap.yaml` mis à jour, message `Auto: roadmap update (failed)`.
+3. Si des fichiers article ont ete partiellement ecrits : les supprimer (revenir a l'etat pre-skill) pour ne pas laisser de brouillon dans `content/`.
+4. Commit uniquement le `roadmap.yaml` mis a jour, avec message `Auto: roadmap update (failed)`.
 5. Push.
 6. Exit non-zero.
 
-L'entrée `failed` n'est **pas retentée automatiquement**. L'humain corrige et la repasse en `todo`.
+L'entree `failed` n'est **pas retentee automatiquement** par les lancements suivants de la skill (elle reste en status `failed`). Damien passe manuellement la corriger et la repasser en `todo`.
 
 ## Format de `roadmap.yaml`
 
-Voir `.claude/templates/roadmap-template.yaml`. Champs spécifiques à recette-repas :
+Voir le fichier `.claude/templates/roadmap-template.yaml` pour le squelette commente.
 
+Structure attendue :
 ```yaml
 articles:
   - kw: "mot cle principal"
-    category: "Conseils et astuces"   # ou autre catégorie hugo.toml
-    volume: 720                       # informatif
-    kd: 20                            # informatif
-    scheduled_date: "2026-06-02"
+    category: "Categorie du blog"
+    volume: 1200        # informatif, ignore par l'agent
+    kd: 35              # informatif, ignore par l'agent
+    scheduled_date: "2026-04-28"
     status: todo
-    brief_id: null                    # rempli si Datafer utilisé
-    datafer_score: null
     published_date: null
-    published_url: null
+    published_url_fr: null
+    published_url_en: null
     error: null
 ```
 
+Les champs editables par l'humain :
+- `kw`, `category`, `scheduled_date` (obligatoires)
+- `volume`, `kd` (informatifs, aident l'humain a prioriser, **ignores par l'agent** — il ne s'en sert pas pour decider quoi que ce soit)
+- `status` (pour repasser un `failed` en `todo` apres correction)
+
+Les champs remplis par l'agent : `published_date`, `published_url_fr`, `published_url_en`, `error`, et bascule `status` vers `done` ou `failed`.
+
 ## Logs
 
-Tout le déroulement dans `/tmp/create-article-auto-[YYYY-MM-DD-HHMM].log`. Conserver les 30 derniers logs (rotation).
+Tout le deroulement de la skill est ecrit dans `/tmp/create-article-auto-[YYYY-MM-DD-HHMM].log` :
+- Mot-cle traite
+- URLs concurrents, nombre de mots moyen
+- Auteur selectionne et raison
+- Image recuperee (chemin, credit)
+- Nombre de liens internes places
+- Temps total
+- Exit code
+
+Creer le dossier `/tmp/` si absent. Conserver les 30 derniers logs (rotation).
