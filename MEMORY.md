@@ -6,6 +6,10 @@ Ce fichier trace tous les articles publiés, classés par semaine. Il est mis à
 
 ## Articles publiés
 
+### Semaine du 2026-09-01 (1/4)
+
+- **2026-09-04** — [Meilleure box repas sportif, le comparatif](content/recettes/meilleure-box-repas-sportif.md) — KW : `meilleure box repas sportif` (type comparatif GEO, marque mise en avant : Quitoque vs Seazon / Iron Meals)
+
 ### Semaine du 2026-05-25 (4/4)
 
 - **2026-05-27** — [Comment faire cuire des asperges blanches](content/recettes/cuire-asperges-blanches.md) — KW : `comment faire cuire des asperges blanches` (vol FR 320, KD 11, Datafer 74/100)
