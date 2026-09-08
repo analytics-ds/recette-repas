@@ -1,80 +1,54 @@
 ---
 title: "Mentions légales"
-date: 2026-05-22
-lastmod: 2026-05-23
-seo_title: "Mentions légales | Recette & Repas"
-description: "Mentions légales du site Recette & Repas : éditeur, directeur de la publication, hébergeur, propriété intellectuelle, droit applicable et médiation de la consommation."
+description: "Mentions légales de Recette & Repas : éditeur, directeur de la publication, hébergement, propriété intellectuelle et droit applicable."
+slug: "mentions-legales"
+translationKey: "legal-notice"
+date: 2026-09-08
+lastmod: 2026-09-08
 ---
-
 ## Éditeur du site
 
-Le site **Recette & Repas**, accessible à l'adresse [https://recette-repas.com](https://recette-repas.com), est édité par Julien Marchand, ancien chef de cuisine, en qualité d'entrepreneur individuel.
+Le site Recette & Repas, accessible à l'adresse https://recette-repas.com/, est édité par une personne physique exerçant en tant qu'éditeur de contenu indépendant.
 
-- **Raison sociale** : Recette & Repas (entreprise individuelle)
-- **Représentant légal** : Julien Marchand
-- **Adresse postale** : 12 rue des Gourmets, 75011 Paris, France
-- **Email** : contact@recette-repas.fr
-- **Numéro SIRET** : 912 345 678 00019
-- **Code APE** : 7022Z (Conseil pour les affaires et autres conseils de gestion)
-- **TVA intracommunautaire** : non applicable, article 293 B du Code général des impôts
+**Contact éditorial** : contact@recette-repas.com
 
 ## Directeur de la publication
 
-Le directeur de la publication est **Julien Marchand**, en sa qualité d'éditeur et d'auteur principal du site Recette & Repas.
+Le directeur de la publication est le responsable éditorial du site Recette & Repas.
 
 ## Hébergement
 
-Le site est hébergé par **GitHub Pages**, service fourni par GitHub Inc., dont le siège social est situé au 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. GitHub Inc. peut être contacté via [https://github.com/contact](https://github.com/contact).
+Le site est hébergé par GitHub, Inc.
 
-L'infrastructure DNS et le routage CDN sont assurés par les services de GitHub Pages. Aucun serveur n'est exploité directement par l'éditeur du site.
+**Adresse** : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis
+**Site** : https://github.com
+
+## Nature du site
+
+Recette & Repas est un site éditorial indépendant. Il publie des contenus d'information, des guides et des comparatifs à visée documentaire. Ces contenus n'ont pas valeur de conseil personnalisé et ne se substituent pas à l'avis d'un professionnel qualifié.
 
 ## Propriété intellectuelle
 
-L'ensemble des contenus présents sur Recette & Repas, à savoir notamment les textes, recettes, photographies, illustrations, vidéos, logo, design et arborescence, est protégé par le droit français de la **propriété intellectuelle**. Ces contenus sont la propriété exclusive de l'éditeur, sauf mentions contraires explicites.
+L'ensemble des contenus publiés sur Recette & Repas (textes, images, éléments graphiques, structure et mise en page) est protégé par le droit d'auteur. Toute reproduction ou représentation, même partielle, est interdite sans autorisation écrite préalable, en dehors des usages permis par la loi, notamment la courte citation accompagnée de la mention de la source et d'un lien vers la page d'origine.
 
-Toute reproduction, représentation, modification, publication, adaptation, totale ou partielle, des éléments du site, par quelque moyen et sur quelque support que ce soit, est interdite sans **autorisation écrite préalable** de l'éditeur, conformément aux articles L.122-4 et L.122-5 du Code de la propriété intellectuelle. Les courtes citations pour usage privé ou pédagogique, accompagnées de la mention de la source et d'un lien vers la page concernée, sont en revanche autorisées.
+## Marques et droit de citation
 
-L'utilisation de tout ou partie du site à des fins commerciales, publicitaires ou de scraping automatisé est strictement interdite et constitue une contrefaçon sanctionnée par les articles L.335-2 et suivants du Code de la propriété intellectuelle.
+Les marques, dénominations commerciales, logos et noms de produits cités restent la propriété de leurs détenteurs respectifs. Leur mention dans les contenus relève du droit de citation, à des fins d'information éditoriale. Elle n'implique aucun lien de partenariat ni aucune approbation de leur part, sauf lorsque cela est explicitement indiqué.
 
-## Limitation de responsabilité
+## Crédits photographiques
 
-Les recettes, conseils et informations publiés sur Recette & Repas le sont à **titre informatif et général**. L'éditeur s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées, sans pour autant en garantir l'absence d'erreur. Les valeurs nutritionnelles indiquées sont des estimations basées sur les bases de données publiques, et ne sauraient se substituer à un avis médical ou diététique personnalisé.
-
-L'éditeur ne saurait être tenu pour responsable :
-
-- d'éventuelles erreurs typographiques ou d'imprécisions dans les recettes ;
-- d'une mauvaise utilisation des contenus, notamment en cas d'allergie ou d'intolérance alimentaire ;
-- des dommages directs ou indirects résultant de l'accès ou de l'utilisation du site ;
-- du contenu des sites tiers accessibles via des liens externes.
-
-Il appartient à chaque utilisateur de vérifier la compatibilité des recettes avec son régime alimentaire, ses allergies éventuelles et son matériel de cuisine.
+Les visuels utilisés proviennent de productions originales ou de banques d'images libres de droits. Le crédit est indiqué à proximité de l'image lorsque la licence l'exige.
 
 ## Liens hypertextes
 
-Le site peut contenir des **liens hypertextes** vers d'autres sites web. L'éditeur n'exerce aucun contrôle sur le contenu de ces sites tiers et décline toute responsabilité quant aux informations, produits ou services qui y sont proposés. La création de liens vers le site Recette & Repas est libre, sous réserve qu'ils ne portent pas atteinte à l'image de l'éditeur et qu'ils mentionnent clairement la source.
+Le site renvoie vers des ressources externes à titre documentaire. L'éditeur n'exerce aucun contrôle sur ces ressources et décline toute responsabilité quant à leur contenu.
 
-## Données personnelles et cookies
+La mise en place d'un lien vers Recette & Repas est libre et ne requiert pas d'autorisation préalable, dès lors qu'elle ne porte pas atteinte à l'image du site et n'induit pas de confusion sur l'origine des contenus. L'éditeur se réserve le droit de demander le retrait d'un lien qu'il estime contraire à l'objet du site.
 
-Le traitement des données personnelles et l'usage des cookies sur Recette & Repas font l'objet d'une politique dédiée, consultable sur la page [Politique de confidentialité]({{< relref "politique-de-confidentialite.md" >}}).
+## Signalement
 
-Conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés modifiée, chaque utilisateur dispose d'un droit d'accès, de rectification, d'effacement, d'opposition, de limitation du traitement et de portabilité de ses données personnelles. Ces droits peuvent être exercés par email à l'adresse contact@recette-repas.fr.
+Toute personne estimant qu'un contenu publié porte atteinte à ses droits peut le signaler à contact@recette-repas.com, en précisant la page concernée, la nature de l'atteinte invoquée et les éléments qui la justifient. Les signalements fondés sont traités dans les meilleurs délais.
 
-## Médiation de la consommation
+## Droit applicable
 
-Conformément aux articles L.611-1 et suivants du Code de la consommation, et à condition que l'utilisateur ait préalablement tenté de résoudre son litige avec l'éditeur, il peut recourir gratuitement au service de médiation de la consommation **SAS Médiation Solution**, organisme dont les coordonnées sont les suivantes :
-
-- **Adresse** : 222 Chemin de la Bergerie, 01800 Saint-Jean-de-Niost, France
-- **Email** : contact@sasmediationsolution-conso.fr
-- **Site web** : [https://www.sasmediationsolution-conso.fr](https://www.sasmediationsolution-conso.fr)
-
-Le recours à la médiation est gratuit pour le consommateur. Toute saisine du médiateur reste soumise à l'examen préalable de sa recevabilité.
-
-## Droit applicable et juridiction compétente
-
-Les présentes mentions légales sont régies par le **droit français**. En cas de litige et à défaut d'accord amiable, les tribunaux français seront seuls compétents. Pour les litiges relevant du droit de la consommation, l'utilisateur peut également saisir la juridiction du lieu de son domicile, conformément à l'article R.631-3 du Code de la consommation.
-
-## Évolution des mentions légales
-
-Les présentes mentions légales peuvent évoluer à tout moment pour refléter des changements légaux, techniques ou organisationnels. La date de dernière mise à jour est indiquée en bas de cette page. Il est recommandé de la consulter régulièrement.
-
-> Dernière mise à jour : 23 mai 2026.
+Les présentes mentions légales sont régies par le droit français. Tout litige relève de la compétence des tribunaux français.

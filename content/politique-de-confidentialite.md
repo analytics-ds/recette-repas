@@ -1,130 +1,87 @@
 ---
 title: "Politique de confidentialité"
-date: 2026-05-22
-lastmod: 2026-05-23
-seo_title: "Politique de confidentialité | Recette & Repas"
-description: "Comment Recette & Repas collecte, utilise et protège vos données personnelles : RGPD, cookies, droits utilisateurs, hébergement GitHub Pages et contact du responsable de traitement."
+description: "Politique de confidentialité de Recette & Repas : données collectées, finalités, durées de conservation, cookies et droits RGPD."
+slug: "politique-de-confidentialite"
+translationKey: "privacy-policy"
+date: 2026-09-08
+lastmod: 2026-09-08
 ---
-
-## Notre engagement
-
-Recette & Repas est un site éditorial dont l'activité principale est la publication de recettes et de conseils de cuisine. Le respect de la vie privée des visiteurs est une priorité. La présente politique détaille la manière dont vos données personnelles sont collectées, utilisées et protégées lorsque vous naviguez sur le site, conformément au **Règlement général sur la protection des données (RGPD)** et à la loi Informatique et Libertés modifiée.
-
 ## Responsable du traitement
 
-Le responsable du traitement des données personnelles collectées sur Recette & Repas est :
+Le responsable du traitement des données collectées sur Recette & Repas est l'éditeur du site, joignable à l'adresse contact@recette-repas.com. Toute question relative à la protection des données peut lui être adressée directement.
 
-- **Identité** : Julien Marchand, entrepreneur individuel, éditeur du site
-- **Adresse** : 12 rue des Gourmets, 75011 Paris, France
-- **Email de contact** : contact@recette-repas.fr
+## Principe de collecte minimale
 
-Toute question relative à la protection de vos données peut être adressée à cet email.
+Recette & Repas ne recueille que les données strictement nécessaires au fonctionnement du site et au traitement des demandes reçues. Aucune donnée n'est vendue, louée ni cédée à des tiers à des fins commerciales.
 
-## Quelles données sont collectées
+## Données collectées
 
-Recette & Repas collecte un nombre limité de données personnelles, dans des cas précis et toujours pour une finalité claire.
+**Données de navigation.** Adresse IP, type et version du navigateur, système d'exploitation, pages consultées, date et durée de la visite, site de provenance. Ces données sont exploitées sous forme agrégée par les outils de mesure d'audience.
 
-### Données collectées via les formulaires de contact
+**Données de contact.** Adresse électronique, nom ou pseudonyme et contenu du message, uniquement lorsque vous écrivez volontairement à l'éditeur.
 
-Lorsque vous nous écrivez par email à contact@recette-repas.fr, les données suivantes sont traitées :
+**Journaux techniques.** Les journaux du serveur enregistrent les requêtes reçues, à des fins de sécurité et de diagnostic.
 
-- Votre **adresse email** (obligatoire pour la réponse)
-- Votre **prénom et/ou nom** si vous le mentionnez (facultatif)
-- Le **contenu de votre message**
+Aucune donnée bancaire n'est collectée. Aucune donnée sensible au sens de l'article 9 du RGPD n'est demandée, et il est recommandé de ne pas en transmettre spontanément.
 
-Ces données sont conservées pour la durée nécessaire au traitement de votre demande, et au maximum trois ans à compter de la dernière interaction, à des fins de suivi de correspondance.
+## Finalités et bases légales
 
-### Données techniques de navigation
-
-Comme tout site web, Recette & Repas collecte automatiquement certaines données techniques lors de votre visite :
-
-- **Adresse IP** (anonymisée quand possible)
-- **Type de navigateur et version**
-- **Système d'exploitation**
-- **Pages consultées et durée de la visite**
-- **Site référent** (si vous arrivez via un lien externe)
-
-Ces données sont utilisées de manière agrégée pour comprendre l'audience du blog et améliorer le contenu. Elles ne permettent pas, prises isolément, d'identifier directement un utilisateur.
-
-## Cookies utilisés
-
-Recette & Repas utilise un nombre minimal de cookies, listés ci-dessous.
-
-### Cookies strictement nécessaires
-
-Aucun cookie strictement nécessaire au fonctionnement de base du site n'est actuellement déposé. Le site fonctionne sans authentification et sans panier d'achat.
-
-### Cookies de mesure d'audience
-
-Un outil de mesure d'audience est utilisé pour comprendre la fréquentation du site et adapter les contenus en conséquence. Cet outil peut déposer un cookie pour distinguer les visiteurs uniques et calculer les statistiques de visite. La durée de vie de ce cookie est de **treize mois maximum**, conformément aux recommandations de la CNIL.
-
-Vous pouvez à tout moment refuser ces cookies via les paramètres de votre navigateur ou via le bandeau de gestion des cookies affiché lors de votre première visite.
-
-### Cookies tiers (réseaux sociaux)
-
-Certaines pages du blog peuvent contenir des boutons de partage vers Facebook, Instagram, Pinterest ou autres réseaux sociaux. Ces boutons peuvent déposer leurs propres cookies tiers lorsque vous interagissez avec eux. Recette & Repas n'a aucun contrôle sur ces cookies, qui relèvent de la politique de confidentialité des réseaux concernés.
-
-## Finalités du traitement et bases légales
-
-| Finalité | Base légale RGPD |
+| Finalité | Base légale |
 |---|---|
-| Répondre aux messages reçus via le formulaire de contact | Exécution d'une demande de l'utilisateur (art. 6.1.b RGPD) |
-| Mesurer l'audience du site et améliorer le contenu | Intérêt légitime (art. 6.1.f RGPD) |
-| Envoyer une newsletter (uniquement sur inscription explicite) | Consentement (art. 6.1.a RGPD) |
-| Conserver les commentaires laissés sur les articles | Intérêt légitime, sous réserve de droit de retrait |
+| Mesurer l'audience du site sous forme agrégée | Intérêt légitime |
+| Répondre aux messages reçus | Intérêt légitime |
+| Assurer la sécurité et la disponibilité du site | Intérêt légitime |
+| Déposer des traceurs non essentiels | Consentement |
 
-Aucune donnée personnelle n'est utilisée à des fins de profilage ou de prospection commerciale non sollicitée.
+## Destinataires
 
-## Destinataires des données
+Les données ne sont accessibles qu'à l'éditeur du site et, le cas échéant, aux prestataires techniques strictement nécessaires à son fonctionnement : hébergement, mesure d'audience, acheminement des messages. Ces prestataires n'interviennent que sur instruction et pour les seules finalités décrites ci-dessus.
 
-Les données personnelles collectées sur Recette & Repas ne sont **jamais vendues ni cédées à des tiers** à des fins commerciales. Elles peuvent être communiquées aux destinataires suivants, dans la stricte limite de leurs missions :
+## Transferts hors Union européenne
 
-- **GitHub Inc.**, hébergeur du site (États-Unis), pour la mise à disposition technique des pages.
-- **L'outil d'analyse d'audience** utilisé par le blog, dans le cadre de la mesure statistique.
-- **Les autorités administratives ou judiciaires**, sur réquisition légale.
+L'hébergement du site est assuré par un prestataire établi aux États-Unis. Les transferts de données vers ce pays sont encadrés par les mécanismes prévus par le RGPD, notamment les clauses contractuelles types adoptées par la Commission européenne.
 
-Les transferts éventuels de données hors Union européenne (notamment vers les États-Unis via GitHub) sont encadrés par les **clauses contractuelles types** validées par la Commission européenne.
+## Durées de conservation
 
-## Durée de conservation
+- Données de navigation et statistiques d'audience : 13 mois au maximum
+- Journaux techniques du serveur : 12 mois au maximum
+- Messages reçus et adresses associées : 3 ans à compter du dernier échange
 
-Les durées de conservation appliquées sont les suivantes :
+Au terme de ces durées, les données sont supprimées ou anonymisées de manière irréversible.
 
-- **Emails reçus via la page contact** : jusqu'à 3 ans après la dernière interaction.
-- **Commentaires laissés sur les articles** : durée de vie du blog, sauf demande de retrait.
-- **Données techniques de navigation** : 13 mois maximum pour les cookies de mesure d'audience, conformément aux recommandations CNIL.
-- **Adresses email de newsletter** : jusqu'à votre désinscription explicite.
+## Sécurité
+
+L'éditeur met en œuvre les mesures techniques et organisationnelles appropriées pour préserver la confidentialité et l'intégrité des données : diffusion du site en HTTPS, accès aux outils d'administration restreint et protégé, limitation du nombre de personnes habilitées.
+
+## Cookies et traceurs
+
+Le site utilise des cookies techniques nécessaires à son affichage et à sa sécurité. Ceux-ci ne requièrent pas de consentement.
+
+Des traceurs de mesure d'audience peuvent également être déposés afin de comprendre la fréquentation du site. Lorsqu'ils ne sont pas configurés en mode strictement anonyme, leur dépôt est soumis à votre consentement, recueilli lors de votre première visite et révocable à tout moment.
+
+Aucun cookie publicitaire et aucun traceur de profilage à des fins de ciblage ne sont déposés.
+
+Vous pouvez à tout moment configurer votre navigateur pour refuser les cookies, les supprimer ou être averti de leur dépôt. Ce réglage se trouve dans les préférences de confidentialité de chaque navigateur. Le refus des cookies techniques peut altérer certaines fonctionnalités du site.
 
 ## Vos droits
 
-Conformément au RGPD et à la loi française, vous disposez à tout moment des droits suivants sur vos données personnelles :
+Conformément au Règlement général sur la protection des données et à la loi Informatique et Libertés, vous disposez des droits suivants :
 
-- **Droit d'accès** : obtenir confirmation du traitement de vos données et une copie de celles-ci.
-- **Droit de rectification** : faire corriger des données inexactes ou incomplètes.
-- **Droit à l'effacement** (droit à l'oubli) : demander la suppression de vos données, dans les limites prévues par la loi.
-- **Droit à la limitation du traitement** : suspendre temporairement le traitement de vos données.
-- **Droit d'opposition** : refuser le traitement de vos données pour un motif légitime, notamment pour la prospection.
-- **Droit à la portabilité** : récupérer vos données dans un format structuré et réutilisable.
-- **Droit de retrait du consentement** : retirer à tout moment votre consentement quand celui-ci est la base légale du traitement.
-- **Droit de définir des directives post-mortem** : indiquer le sort de vos données après votre décès.
+- Droit d'accès à vos données
+- Droit de rectification des données inexactes
+- Droit à l'effacement
+- Droit à la limitation du traitement
+- Droit d'opposition au traitement
+- Droit à la portabilité des données que vous avez fournies
+- Droit de retirer votre consentement à tout moment, lorsque le traitement repose sur celui-ci
+- Droit de définir des directives relatives au sort de vos données après votre décès
 
-Pour exercer ces droits, écrivez à **contact@recette-repas.fr** en précisant votre demande. Une pièce d'identité pourra être demandée en cas de doute raisonnable sur votre identité.
+Ces droits s'exercent par simple demande adressée à contact@recette-repas.com. Une réponse vous est apportée dans un délai d'un mois. Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, 75334 Paris Cedex 07, www.cnil.fr.
 
-## Sécurité des données
+## Décision automatisée
 
-Les données collectées sont stockées sur des serveurs sécurisés, accessibles uniquement aux personnes habilitées. Les communications entre votre navigateur et le site sont **chiffrées via HTTPS**. Aucune donnée bancaire n'est collectée par le blog, qui ne propose pas de service de paiement en ligne.
+Aucune décision produisant des effets juridiques à votre égard n'est prise sur le fondement d'un traitement exclusivement automatisé.
 
-En cas de **violation de données** susceptible d'engendrer un risque pour vos droits et libertés, vous serez informé dans les meilleurs délais conformément à l'article 34 du RGPD, et la CNIL sera notifiée.
+## Mise à jour
 
-## Réclamation auprès de la CNIL
-
-Si vous estimez, après nous avoir contactés, que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés (CNIL) :
-
-- **Adresse** : CNIL, 3 Place de Fontenoy, TSA 80715, 75334 Paris Cedex 07
-- **Site web** : [https://www.cnil.fr](https://www.cnil.fr)
-- **Téléphone** : 01 53 73 22 22
-
-## Évolution de cette politique
-
-Cette politique de confidentialité peut être mise à jour pour refléter des évolutions légales, techniques ou organisationnelles. La date de dernière mise à jour est indiquée en bas de cette page. En cas de modification substantielle, une information sera diffusée sur le site.
-
-> Dernière mise à jour : 23 mai 2026.
+La présente politique peut être modifiée pour tenir compte des évolutions du site ou de la réglementation. La version en vigueur est celle publiée sur cette page.
