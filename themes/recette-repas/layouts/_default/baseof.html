@@ -25,6 +25,7 @@
     {{ end }}
     {{ $home := resources.Get "css/home.css" }}
     {{ if $home }}<link rel="stylesheet" href="{{ $home.RelPermalink }}">{{ end }}
+    {{/* pbn-legal-noindex */}}{{- if .Params.noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 </head>
 <body{{ if .IsHome }} class="is-home"{{ end }}>
     {{ partial "header.html" . }}
