@@ -1,6 +1,6 @@
 # Skill : Creer un article evergreen SEO (full auto)
 
-Cette skill produit **automatiquement** un article evergreen SEO (pas GEO), bilingue FR + EN, a partir d'un mot-cle pris dans la roadmap editoriale du blog. Aucun input humain. Aucun point d'arret. Publication directe sur GitHub.
+Cette skill produit **automatiquement** un article evergreen SEO (pas GEO), **FR uniquement** (ce blog n'a pas de version EN), a partir d'un mot-cle pris dans la roadmap editoriale du blog. Aucun input humain. Aucun point d'arret. Publication directe sur GitHub.
 
 Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 3h du mat via `/schedule`). Elle peut aussi etre lancee manuellement pour tester.
 
@@ -12,9 +12,9 @@ Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 
 ## Pre-requis dans le blog
 
 - `roadmap.yaml` existe et contient au moins une entree `status: todo`.
-- `hugo.toml` configure avec la langue principale + la langue EN.
-- `data/authors.yaml` present (systeme d'auteurs partage).
-- `content/blog/` existe (peut etre vide pour un premier article).
+- `hugo.toml` configure, langue unique FR (`[params] author`, `author_job_title`).
+- Auteur unique : "Julien Marchand" (pas de `data/authors.yaml` sur ce blog, pas de selection multi-auteur).
+- `content/recettes/` existe et contient deja des articles (structure a plat, pas de sous-dossier par type).
 - Remote git `origin` configure, acces push.
 - Cle `CRAZYSERP_API_KEY` exportee par le prompt de la routine (source SERP nominale). Outil `WebSearch` disponible en repli. Si les deux manquent, la skill degrade en mode "kw seul" sans echouer.
 
@@ -23,8 +23,8 @@ Elle est destinee a etre declenchee par une routine planifiee (ex: 2x/semaine a 
 Aucune question a l'utilisateur. Toutes les decisions sont prises par l'agent a partir de :
 - Le mot-cle de la roadmap
 - L'analyse SERP via CrazySERP (ou WebSearch en repli, ou le kw seul en mode degrade)
-- Le contexte du site (CLAUDE.md du blog, authors.yaml, hugo.toml)
-- Les articles deja publies (scan `content/blog/`)
+- Le contexte du site (CLAUDE.md du blog, hugo.toml)
+- Les articles deja publies (scan `content/recettes/`)
 
 Si une etape bloque (image introuvable, build Hugo echoue, push rejete apres rebase), l'agent **n'insiste pas** : il marque l'entree `status: failed` dans la roadmap avec le message d'erreur, commit le roadmap, et sort proprement en exit code non-zero. **Exception : l'indisponibilite de la source SERP n'est PAS un motif d'echec** (voir Etape 1), CrazySERP puis WebSearch puis mode degrade, on publie dans tous les cas.
 
@@ -252,16 +252,9 @@ Ce theme offre une porte de sortie : `{{ with .Params.seo_title }}{{ . }}{{ else
 - Pas de caractere `&` dans les H2/H3.
 - Pas de tiret cadratin (—) ni demi-cadratin (–).
 
-## Etape 4 — Selection auto de l'auteur
+## Etape 4 — Auteur
 
-Identique a la logique de `/create-article-geo` etape 1.3 :
-
-1. Lire `data/authors.yaml`.
-2. Pour chaque auteur, compter les matches entre ses `topics`/`expertise` et le `kw` + la `category` de la roadmap.
-3. Selectionner l'auteur au score le plus haut.
-4. En cas d'egalite ou de score nul : auteur principal du site defini dans CLAUDE.md.
-
-Injecter l'ID-slug dans le frontmatter (`author: [id]`). Meme ID pour FR et EN.
+Ce blog n'a qu'un seul auteur, pas de `data/authors.yaml` ni de selection par score. Injecter directement dans le frontmatter : `author: "Julien Marchand"` (valeur exacte, identique a `hugo.toml` `[params] author`).
 
 ## Etape 5 — Image hero auto
 
@@ -279,55 +272,59 @@ Injecter l'ID-slug dans le frontmatter (`author: [id]`). Meme ID pour FR et EN.
 
 
 
-Appeler le script existant :
+Appeler le script existant, avec le dossier de sortie reel de ce blog (`static/images/recettes/`, pas `static/images/blog/`) :
 ```bash
-bash .claude/scripts/fetch-image.sh "<kw traduit en anglais>" "<slug-fr>" "static/images/blog"
+bash .claude/scripts/fetch-image.sh "<kw traduit en anglais>" "<slug>" "static/images/recettes"
 ```
 
 - La query image est le `kw` traduit en anglais (les trois banques sont majoritairement indexees en anglais).
 - Si le script renvoie un code non-zero, retenter **une seule fois** avec une query plus generique (la `category` traduite en anglais).
-- Si 2e echec : **ne pas marquer `failed`**. Continuer la publication sans image hero (champs `image`, `imageAlt`, `imageCredit` omis du frontmatter ou laisses vides). L'absence d'image n'est pas une raison d'avorter : l'article est publie, le site fonctionne sans hero.
-- Recuperer les 3 sorties du script (chemin, alt, credit) pour le frontmatter **uniquement si le script a reussi**.
+- Si 2e echec : **ne pas marquer `failed`**. Continuer la publication sans image hero (champs `image`, `image_alt` omis du frontmatter ou laisses vides). L'absence d'image n'est pas une raison d'avorter : l'article est publie, le site fonctionne sans hero.
+- Recuperer le chemin et l'alt retournes par le script pour le frontmatter **uniquement si le script a reussi**. Le script imprime le chemin avec un slash de tete (`/images/recettes/<slug>.webp`) : `relURL` le resout correctement tel quel, mais pour rester coherent avec les 14 articles deja en ligne (qui ecrivent `image: "images/recettes/<slug>.jpg"` sans slash de tete), retirer ce slash de tete avant de l'ecrire en frontmatter. Si le script renvoie un credit de banque (Pexels/Unsplash), le poser dans `image_caption` (le theme affiche cette figcaption si presente) — jamais un champ `imageCredit`, qui n'existe pas sur ce theme.
 
 ## Etape 6 — Maillage interne auto
 
-1. Lister tous les `.md` dans `content/blog/` (articles FR uniquement pour cette passe).
-2. Lire le frontmatter de chacun : `title`, `kw` (via slug), `categories`, `tags`.
+1. Lister tous les `.md` dans `content/recettes/` (structure a plat, tous les articles du blog y compris les recettes elles-memes).
+2. Lire le frontmatter de chacun : `title`, `slug`, `categories`, `tags`.
 3. Scorer chaque article par proximite avec le nouveau (categorie identique = +3, tags partages = +1 par tag, mots communs entre kw = +2).
 4. Garder les 3 a 5 meilleurs scores.
-5. Preparer les ancres : chaque ancre contient le mot-cle principal de l'article cible (extrait du slug, reformule en langue naturelle).
-6. Positionner les liens de maniere contextuelle dans le body (etape 7) : un par section, pas de bloc "Voir aussi" en fin d'article.
+5. Preparer les ancres : chaque ancre contient le mot-cle principal de l'article cible (extrait du `slug`, reformule en langue naturelle).
+6. Positionner les liens de maniere contextuelle dans le body (etape 7) vers `/recettes/[slug]/` : un par section, pas de bloc "Voir aussi" en fin d'article.
 
-**Maillage intra-langue uniquement** : version FR mail vers `/blog/*`, version EN mail vers `/en/blog/*`.
+Si le blog a moins de 3 articles publies : faire au mieux avec ce qui existe (2 liens, 1 lien, ou aucun pour le tout premier article). Ne pas bloquer.
 
-Si le blog a moins de 3 articles FR publies : faire au mieux avec ce qui existe (2 liens, 1 lien, ou aucun pour le tout premier article). Ne pas bloquer.
+## Etape 7 — Redaction complete
 
-## Etape 7 — Redaction FR complete
-
-Produire le fichier `content/blog/[slug-fr].md`.
+Produire le fichier `content/recettes/[slug].md`. **Site FR uniquement, pas de version EN, pas de dossier `content/en/`.**
 
 ### Frontmatter
+
+Reprendre exactement les champs utilises par les 14 articles deja en ligne (cf `content/recettes/cuire-asperges-blanches.md` pour un exemple complet) :
+
 ```yaml
 ---
-title: "[Title]"
-translationKey: "[slug-generique-identique-FR-et-EN]"
-date: "[YYYY-MM-DD]"
-lastmod: "[YYYY-MM-DD]"
+title: "[Titre court, sert de base au H1 de secours et aux listings]"
+is_guide: true   # TOUJOURS true pour cette skill : distingue les articles "Conseils et astuces" des recettes. Sans ce champ l'article se glisse dans les listings de recettes ou il n'a rien a faire.
+slug: "[slug]"
+date: 2026-04-28
+lastmod: 2026-04-28
+seo_title: "[Title balise <title>, <= 60 caracteres, PAS de suffixe site : le theme n'en ajoute que si seo_title est absent]"
+h1: "[H1 affiche sur la page, peut etre plus long/descriptif que seo_title]"
 description: "[Meta description <= 155 car]"
-categories: ["[Categorie FR]"]
+categories: ["Conseils et astuces"]
 tags: ["tag1", "tag2", "tag3", "tag4", "tag5"]
-author: "[id-slug]"
-image: "/images/blog/[slug].webp"
-imageAlt: "[Description FR, max 125 car]"
-imageCredit: "[Credit retourne par fetch-image.sh]"
-faq:  # UNIQUEMENT si FAQ pertinente (voir etape 1.7)
-  - question: "[Q1]"
-    answer: "[R1, 3-5 phrases]"
-  - question: "[Q2]"
-    answer: "[R2, 2-4 phrases]"
-readingTime: true
+image: "images/recettes/[slug].jpg"   # ou .webp — jamais de slash de tete, jamais de prefixe static/
+image_alt: "[Description FR, max 125 car]"
+author: "Julien Marchand"
+faq:  # UNIQUEMENT si FAQ pertinente (voir etape 1.7) — cles q/a, PAS question/answer
+  - q: "[Q1]"
+    a: "[R1, 3-5 phrases]"
+  - q: "[Q2]"
+    a: "[R2, 2-4 phrases]"
 ---
 ```
+
+Pas de `translationKey`, pas de `imageCredit`, pas de `imageAlt` en camelCase, pas de `readingTime` (le theme le calcule seul via `.ReadingTime`). Si le script image renvoie un credit, le poser en `image_caption` (etape 5).
 
 ### Body
 - Premier paragraphe : contient le `kw` naturellement, pose le contexte.
@@ -341,13 +338,13 @@ readingTime: true
 - Ton impersonnel (pas de je/tu/nous/vous) sauf indication contraire dans le CLAUDE.md du blog.
 - Paragraphes aeres, 3-5 phrases max.
 - Pas de separateur horizontal (`---`). Pas de tiret cadratin (—) ni demi-cadratin (–).
-- Si FAQ pertinente : dernier H2 "Questions frequentes" avec `<details><summary>` accordeon. Les Q/R du body correspondent strictement a celles du frontmatter.
+- Si FAQ pertinente : les questions du frontmatter `faq` suffisent, le schema JSON-LD `FAQPage` est genere automatiquement par le theme depuis ce champ. **Ne pas ajouter d'accordeon `<details><summary>` dans le body** (ce theme n'en a pas), la question peut simplement redevenir un H2/H3 dans le corps si elle sert la structure.
 
 ## Etape 7bis — Controle de score Datafer (non bloquant, une seule passe)
 
 Uniquement si le mode retenu a l'etape 1.5 est `datafer`. Dans les autres modes, sauter cette etape.
 
-Le brief cree a l'etape 1 sait scorer un contenu sur les memes criteres que les concurrents. On mesure l'article **avant** de le traduire et de le publier, pour corriger une fois si besoin.
+Le brief cree a l'etape 1 sait scorer un contenu sur les memes criteres que les concurrents. On mesure l'article **avant** de le publier, pour corriger une fois si besoin.
 
 ### 7bis.1 Soumettre le contenu
 
@@ -355,7 +352,7 @@ Le brief cree a l'etape 1 sait scorer un contenu sur les memes criteres que les 
 
 ```bash
 python3 - <<'PY' > /tmp/editor.json
-# construire {"editorHtml": "..."} depuis content/fr/blog/<slug>.md
+# construire {"editorHtml": "..."} depuis content/recettes/<slug>.md
 PY
 curl -s --max-time 120 -X POST "$BASE/api/v1/briefs/$ID/content" \
   -H "Authorization: Bearer $DATAFER_API_KEY" \
@@ -371,7 +368,7 @@ De la reponse, retenir `total`, `seoTotal`, `geoTotal`, le `breakdown` par crite
 
 ### 7bis.3 Une passe d'enrichissement, jamais deux
 
-Si `total >= competitors.avg` : ne rien changer, loguer le score, passer a l'etape 8.
+Si `total >= competitors.avg` : ne rien changer, loguer le score, passer a l'etape 9.
 
 Si `total < competitors.avg` : prendre les **deux criteres du `breakdown` les plus loin de leur `max`** et corriger uniquement ceux-la, dans le contenu existant, sans casser la structure validee a l'etape 3 :
 
@@ -385,40 +382,32 @@ Puis **rescorer une seule fois** et loguer les deux scores. **On s'arrete la, qu
 
 ### 7bis.4 Ne jamais echouer sur cette etape
 
-Un `409`, un `400 editorHtml required`, un timeout ou une reponse illisible se loguent en `SCORE : non mesure` et n'empechent ni la traduction ni la publication. Cette etape est un controle qualite, pas une condition de publication.
-
-## Etape 8 — Redaction EN (traduction directe)
-
-Produire le fichier `content/en/blog/[slug-en].md`.
-
-- Meme `translationKey` que la version FR (obligatoire pour le hreflang et le language switcher Hugo).
-- Traduction **directe** du contenu FR (pas de recherche KW EN extensive, c'est une trad fidele du contenu + du title/meta).
-- Adaptation legere : slug EN traduit (pas translitteration), `categories` et `tags` en EN (mapping defini dans CLAUDE.md du blog), `imageAlt` traduit.
-- `image` et `imageCredit` identiques au FR.
-- Meme `author` que FR (les libelles jobTitle/role/bio sont bilingues dans authors.yaml).
-- FAQ frontmatter et body traduits en EN aussi.
+Un `409`, un `400 editorHtml required`, un timeout ou une reponse illisible se loguent en `SCORE : non mesure` et n'empechent pas la publication. Cette etape est un controle qualite, pas une condition de publication.
 
 ## Etape 9 — Build Hugo et verification
 
+Pas d'etape 8 : ce blog est FR uniquement, il n'y a pas de traduction a produire.
+
 ### 9.0 Installer Hugo extended (meme version que la prod)
 
-Le sandbox cloud n'a PAS Hugo pre-installe, et `apt` fournit une version trop ancienne (0.123.x) qui fait echouer le build de certains sites du reseau (ex: sites multilingues avec `locale` par langue). Avant de builder, installer la MEME version que le deploiement GitHub Actions du reseau, **Hugo extended v0.161.1** :
+Le sandbox cloud n'a PAS Hugo pre-installe, et `apt` fournit une version trop ancienne (0.123.x). Avant de builder, installer la MEME version que le deploiement GitHub Actions de **ce blog** — verifier `.github/workflows/hugo.yml`, champ `hugo_extended_..._linux-amd64.deb` (au 2026-09-18 : **Hugo extended v0.139.0**, ne pas supposer une autre version, chaque blog du reseau peut avoir la sienne) :
 
 ```bash
-wget -q -O /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.161.1/hugo_extended_0.161.1_linux-amd64.deb \
+HUGO_VERSION=$(grep -oE 'hugo_extended_[0-9.]+_linux-amd64\.deb' .github/workflows/hugo.yml | head -1 | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+wget -q -O /tmp/hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
   && (sudo dpkg -i /tmp/hugo.deb 2>/dev/null || { dpkg-deb -x /tmp/hugo.deb /tmp/hugobin && export PATH="/tmp/hugobin/usr/local/bin:$PATH"; })
-hugo version   # doit afficher v0.161.1 extended
+hugo version   # doit afficher la version lue dans hugo.yml, extended
 ```
 
-**Repli si le telechargement GitHub echoue (403 proxy / repo hors scope de la session)** : dans le sandbox cloud, l'egress proxy peut bloquer les telechargements directs depuis `github.com/gohugoio/hugo/releases` (repo hors du scope GitHub de la session, non debloquable via `add_repo` car cross-owner). Se rabattre sur le wrapper npm `hugo-extended`, qui recupere le meme binaire a l'installation et passe generalement le proxy (registry npm autorise) :
+**Repli si le telechargement GitHub echoue (403 proxy / repo hors scope de la session)** : dans le sandbox cloud, l'egress proxy peut bloquer les telechargements directs depuis `github.com/gohugoio/hugo/releases`. Se rabattre sur le wrapper npm `hugo-extended`, qui recupere le meme binaire a l'installation et passe generalement le proxy (registry npm autorise) :
 
 ```bash
-mkdir -p /tmp/hugobin-npm && cd /tmp/hugobin-npm && npm init -y >/dev/null 2>&1 && npm install hugo-extended@0.161.1
+mkdir -p /tmp/hugobin-npm && cd /tmp/hugobin-npm && npm init -y >/dev/null 2>&1 && npm install "hugo-extended@${HUGO_VERSION}"
 export PATH="/tmp/hugobin-npm/node_modules/.bin:$PATH"
-hugo version   # doit afficher v0.161.1 extended
+hugo version
 ```
 
-Si les deux methodes echouent, utiliser le `hugo` deja present, mais NE PAS se rabattre sur `apt install hugo` (version cassante). La version prod exacte est dans `.github/workflows/hugo.yml` de chaque blog (champ `hugo_extended_..._linux-amd64.deb`) : s'y referer si elle a change.
+Si les deux methodes echouent, utiliser le `hugo` deja present, mais NE PAS se rabattre sur `apt install hugo` (version cassante).
 
 ### 9.1 Build
 
@@ -429,31 +418,40 @@ hugo
 - Si exit code non-zero : marquer `failed` avec log de l'erreur, abort.
 - Si OK : noter le nombre de pages generees.
 
+### 9.2 Garde-fou obligatoire : verifier que la page existe vraiment dans `public/`
+
+**Un build qui sort en exit 0 ne prouve pas que l'article a une page.** C'est le seul garde-fou contre un article publie qui repond 404 alors que le build est vert (chemin de contenu qui ne correspond a aucune section, erreur de `slug`, page exclue par un filtre du theme). Executer systematiquement apres le build :
+
+```bash
+test -f "public/recettes/${SLUG}/index.html" || echo "PAGE MANQUANTE: public/recettes/${SLUG}/index.html"
+```
+
+Si le fichier n'existe pas, **c'est un echec**, meme si `hugo` a rendu 0 en exit code : marquer l'entree `failed` avec l'erreur `page absente de public/ apres build`, ne pas commit le contenu, suivre la procedure de la section "Gestion des echecs".
+
 ## Etape 10 — Update roadmap et MEMORY.md
 
 ### Roadmap
-Mettre a jour l'entree traitee dans `roadmap.yaml` :
+Mettre a jour l'entree traitee dans `roadmap.yaml` (champs reels du fichier, un seul `published_url`, pas de version `_en`) :
 ```yaml
   status: done
   published_date: "[YYYY-MM-DD]"
-  published_url_fr: "[baseURL]/blog/[slug-fr]/"
-  published_url_en: "[baseURL]/en/blog/[slug-en]/"
+  published_url: "https://recette-repas.com/recettes/[slug]/"
   error: null
 ```
 
 ### MEMORY.md
 Ajouter une ligne dans la section de la semaine en cours :
 ```
-- YYYY-MM-DD | [Titre FR] (FR+EN) | [Categorie] | auto | mode: [datafer|crazyserp|websearch|degrade] | score: [total]/[competitors.avg]
+- YYYY-MM-DD | [Titre] | [Categorie] | auto | mode: [datafer|crazyserp|websearch|degrade] | score: [total]/[competitors.avg]
 ```
 
-Le suffixe `auto` distingue les articles generes par cette skill des articles produits a la main via `/create-article-geo`.
+Le suffixe `auto` distingue les articles generes par cette skill des articles produits a la main via `/create-article`.
 
 ## Etape 11 — Commit et push
 
 ```bash
 git add -A
-git commit -m "Auto: publication evergreen - [Titre FR] (mode: [datafer|crazyserp|websearch|degrade], score: [total]/[avg])"
+git commit -m "Auto: publication evergreen - [Titre] (mode: [datafer|crazyserp|websearch|degrade], score: [total]/[avg])"
 git pull --rebase origin main
 git push origin main
 ```
@@ -490,8 +488,7 @@ articles:
     scheduled_date: "2026-04-28"
     status: todo
     published_date: null
-    published_url_fr: null
-    published_url_en: null
+    published_url: null
     error: null
 ```
 
@@ -500,7 +497,7 @@ Les champs editables par l'humain :
 - `volume`, `kd` (informatifs, aident l'humain a prioriser, **ignores par l'agent** — il ne s'en sert pas pour decider quoi que ce soit)
 - `status` (pour repasser un `failed` en `todo` apres correction)
 
-Les champs remplis par l'agent : `published_date`, `published_url_fr`, `published_url_en`, `error`, et bascule `status` vers `done` ou `failed`.
+Les champs remplis par l'agent : `published_date`, `published_url` (un seul, pas de version EN), `error`, et bascule `status` vers `done` ou `failed`.
 
 ## Logs
 

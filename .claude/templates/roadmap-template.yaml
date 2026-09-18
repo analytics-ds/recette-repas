@@ -1,7 +1,7 @@
 # Roadmap editoriale evergreen — skill /create-article-auto
 #
 # Ce fichier alimente la skill /create-article-auto (publication automatique
-# d'articles evergreen SEO, bilingue FR + EN).
+# d'articles evergreen SEO). Ce blog est FR uniquement, pas de version EN.
 #
 # EMPLACEMENT
 # -----------
@@ -15,9 +15,10 @@
 # A chaque execution (planifiee via /schedule ou manuelle), l'agent :
 #   1. Filtre les entrees avec status: todo et scheduled_date <= today
 #   2. Prend la plus ancienne
-#   3. Analyse la SERP sur le kw (SerpAPI via curl direct sur l'API publique ;
-#      pas de fetch des pages concurrentes, le sandbox cloud les bloque en 503)
-#   4. Genere l'article FR + EN en full auto (Sonnet 4.6 par defaut)
+#   3. Analyse la SERP sur le kw (API Corpus en source nominale, repli CrazySERP
+#      puis WebSearch ; pas de fetch des pages concurrentes, le sandbox cloud
+#      les bloque en 403/503)
+#   4. Genere l'article FR en full auto (Sonnet par defaut)
 #   5. Publie sur GitHub (push main direct, GitHub Actions deploie)
 #   6. Met a jour l'entree ci-dessous : status: done, published_date, URLs
 #
@@ -58,8 +59,7 @@
 # CHAMPS REMPLIS PAR L'AGENT (ne pas toucher sauf pour debloquer un failed)
 # -----------------------------------------------------------------------
 #   published_date    YYYY-MM-DD reel de publication
-#   published_url_fr  URL complete de la version FR
-#   published_url_en  URL complete de la version EN
+#   published_url     URL complete de l'article publie
 #   error             message d'erreur si status: failed
 #
 # AJOUT D'UNE NOUVELLE ENTREE
@@ -85,6 +85,5 @@ articles:
     scheduled_date: "2026-04-28"
     status: todo
     published_date: null
-    published_url_fr: null
-    published_url_en: null
+    published_url: null
     error: null
