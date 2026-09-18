@@ -5,12 +5,11 @@
 # - Articles dans content/recettes/ (pas blog/)
 # - Catégories : "Conseils et astuces", "Plats", "Desserts", "Entrées", "Cuisine du monde", "Batch cooking"
 #
-# Cadence cible : 4 articles / semaine maximum (cf MEMORY.md)
+# Cadence cible : 2 articles / semaine (mardi + vendredi), via la routine cloud
+# /create-article-auto. Voir MEMORY.md.
 #
-# Skills disponibles dans ce repo :
-# - /create-article : création manuelle interactive (basique)
-# - Les skills create-article-auto et create-article-seo de meilleur-transport
-#   ne sont PAS encore copiées ici. Workflow actuel = manuel via brief Datafer.
+# Skills disponibles dans ce repo : /create-article (manuel), /create-article-auto
+# (routine cloud full-auto), /create-article-seo (batch local).
 #
 # CHAMPS
 # ------
@@ -209,4 +208,726 @@ articles:
     datafer_score: null
     published_date: "2026-07-03"
     published_url: "https://recette-repas.com/recettes/equivalent-cuillere-soupe-ml/"
+    error: null
+
+  # === Lot du 2026-09-18 : 60 KW informationnels (conservation, cuisson, decongelation, anti-gaspi, decoupe) ===
+
+  - kw: "comment conserver des oeufs"
+    category: "Conseils et astuces"
+    volume: 7364
+    kd: 31
+    scheduled_date: "2026-09-18"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "conservation oeufs durs"
+    category: "Conseils et astuces"
+    volume: 7071
+    kd: 45
+    scheduled_date: "2026-09-22"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment savoir si un oeuf est bon"
+    category: "Conseils et astuces"
+    volume: 7364
+    kd: 42
+    scheduled_date: "2026-09-25"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler une courgette"
+    category: "Conseils et astuces"
+    volume: 6000
+    kd: 37
+    scheduled_date: "2026-09-29"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "congélation courgette"
+    category: "Conseils et astuces"
+    volume: 5077
+    kd: 39
+    scheduled_date: "2026-10-02"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver une pomme de terre"
+    category: "Conseils et astuces"
+    volume: 4000
+    kd: 32
+    scheduled_date: "2026-10-06"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler un chou-fleur"
+    category: "Conseils et astuces"
+    volume: 4000
+    kd: 32
+    scheduled_date: "2026-10-09"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "blanchir des haricots verts avant congélation"
+    category: "Conseils et astuces"
+    volume: 3273
+    kd: 36
+    scheduled_date: "2026-10-13"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler des haricots verts"
+    category: "Conseils et astuces"
+    volume: 2500
+    kd: 29
+    scheduled_date: "2026-10-16"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver une carotte"
+    category: "Conseils et astuces"
+    volume: 2636
+    kd: 36
+    scheduled_date: "2026-10-20"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver les fraises"
+    category: "Conseils et astuces"
+    volume: 2636
+    kd: 25
+    scheduled_date: "2026-10-23"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler des tomates"
+    category: "Conseils et astuces"
+    volume: 2182
+    kd: 35
+    scheduled_date: "2026-10-27"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "conservation mayonnaise maison"
+    category: "Conseils et astuces"
+    volume: 2200
+    kd: 26
+    scheduled_date: "2026-10-30"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "conservation des oignons"
+    category: "Conseils et astuces"
+    volume: 1900
+    kd: 20
+    scheduled_date: "2026-11-03"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "congélation aubergine"
+    category: "Conseils et astuces"
+    volume: 1900
+    kd: 32
+    scheduled_date: "2026-11-06"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver une tomate"
+    category: "Conseils et astuces"
+    volume: 1900
+    kd: 32
+    scheduled_date: "2026-11-10"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler des pommes de terre crues"
+    category: "Conseils et astuces"
+    volume: 1900
+    kd: 35
+    scheduled_date: "2026-11-13"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver un concombre"
+    category: "Conseils et astuces"
+    volume: 1600
+    kd: 36
+    scheduled_date: "2026-11-17"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler des cerises"
+    category: "Conseils et astuces"
+    volume: 1500
+    kd: 27
+    scheduled_date: "2026-11-20"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver des poireaux"
+    category: "Conseils et astuces"
+    volume: 1182
+    kd: 30
+    scheduled_date: "2026-11-24"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson oeuf mollet"
+    category: "Conseils et astuces"
+    volume: 30091
+    kd: 31
+    scheduled_date: "2026-11-27"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson lentilles vertes"
+    category: "Conseils et astuces"
+    volume: 30091
+    kd: 38
+    scheduled_date: "2026-12-01"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson rôti de porc"
+    category: "Conseils et astuces"
+    volume: 31154
+    kd: 31
+    scheduled_date: "2026-12-04"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson artichaut"
+    category: "Conseils et astuces"
+    volume: 28929
+    kd: 40
+    scheduled_date: "2026-12-08"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson rosbeef"
+    category: "Conseils et astuces"
+    volume: 13500
+    kd: 36
+    scheduled_date: "2026-12-11"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson artichaut vapeur"
+    category: "Conseils et astuces"
+    volume: 12100
+    kd: 47
+    scheduled_date: "2026-12-15"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson oeuf à la coque"
+    category: "Conseils et astuces"
+    volume: 12067
+    kd: 50
+    scheduled_date: "2026-12-18"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson lentilles corail"
+    category: "Conseils et astuces"
+    volume: 11312
+    kd: 24
+    scheduled_date: "2026-12-22"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson langoustines"
+    category: "Conseils et astuces"
+    volume: 11385
+    kd: 38
+    scheduled_date: "2026-12-25"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson riz"
+    category: "Conseils et astuces"
+    volume: 11000
+    kd: 39
+    scheduled_date: "2026-12-29"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson saucisse de toulouse"
+    category: "Conseils et astuces"
+    volume: 10083
+    kd: 38
+    scheduled_date: "2027-01-01"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson quinoa"
+    category: "Conseils et astuces"
+    volume: 10200
+    kd: 34
+    scheduled_date: "2027-01-05"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson oeuf dur"
+    category: "Conseils et astuces"
+    volume: 9706
+    kd: 44
+    scheduled_date: "2027-01-08"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson pomme de terre à l'eau"
+    category: "Conseils et astuces"
+    volume: 10056
+    kd: 24
+    scheduled_date: "2027-01-12"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson lasagnes"
+    category: "Conseils et astuces"
+    volume: 9000
+    kd: 38
+    scheduled_date: "2027-01-15"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson cuisse de poulet au four"
+    category: "Conseils et astuces"
+    volume: 7364
+    kd: 39
+    scheduled_date: "2027-01-19"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson oeuf poché"
+    category: "Conseils et astuces"
+    volume: 4100
+    kd: 36
+    scheduled_date: "2027-01-22"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "gigot d'agneau au four cuisson lente"
+    category: "Conseils et astuces"
+    volume: 4200
+    kd: 28
+    scheduled_date: "2027-01-26"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson à basse température"
+    category: "Conseils et astuces"
+    volume: 4000
+    kd: 24
+    scheduled_date: "2027-01-29"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson haricots verts"
+    category: "Conseils et astuces"
+    volume: 6800
+    kd: 24
+    scheduled_date: "2027-02-02"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment décongeler du pain"
+    category: "Conseils et astuces"
+    volume: 2100
+    kd: 32
+    scheduled_date: "2027-02-05"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler du pain"
+    category: "Conseils et astuces"
+    volume: 1900
+    kd: 27
+    scheduled_date: "2027-02-09"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment décongeler de la viande"
+    category: "Conseils et astuces"
+    volume: 1400
+    kd: 26
+    scheduled_date: "2027-02-12"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment décongeler de la viande rapidement"
+    category: "Conseils et astuces"
+    volume: 1200
+    kd: 26
+    scheduled_date: "2027-02-16"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment décongeler des saint-jacques"
+    category: "Conseils et astuces"
+    volume: 1300
+    kd: 28
+    scheduled_date: "2027-02-19"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "décongélation au micro-ondes"
+    category: "Conseils et astuces"
+    volume: 1182
+    kd: 31
+    scheduled_date: "2027-02-23"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler du jambon"
+    category: "Conseils et astuces"
+    volume: 880
+    kd: 22
+    scheduled_date: "2027-02-26"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment congeler de la soupe"
+    category: "Conseils et astuces"
+    volume: 880
+    kd: 36
+    scheduled_date: "2027-03-02"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "test pour savoir si un oeuf est frais"
+    category: "Conseils et astuces"
+    volume: 3273
+    kd: 42
+    scheduled_date: "2027-03-05"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "oeuf frais test"
+    category: "Conseils et astuces"
+    volume: 3000
+    kd: 43
+    scheduled_date: "2027-03-09"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment conserver un oignon coupé"
+    category: "Conseils et astuces"
+    volume: 1000
+    kd: 41
+    scheduled_date: "2027-03-12"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "que faire avec du pain rassis"
+    category: "Conseils et astuces"
+    volume: 700
+    kd: 8
+    scheduled_date: "2027-03-16"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "conservation du poisson frais"
+    category: "Conseils et astuces"
+    volume: 880
+    kd: 24
+    scheduled_date: "2027-03-19"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "conservation du lait"
+    category: "Conseils et astuces"
+    volume: 880
+    kd: 25
+    scheduled_date: "2027-03-23"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment couper une mangue"
+    category: "Conseils et astuces"
+    volume: 3700
+    kd: 31
+    scheduled_date: "2027-03-26"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment éplucher un butternut"
+    category: "Conseils et astuces"
+    volume: 1300
+    kd: 43
+    scheduled_date: "2027-03-30"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson artichaut à la cocotte-minute"
+    category: "Conseils et astuces"
+    volume: 3857
+    kd: 37
+    scheduled_date: "2027-04-02"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "comment décongeler des crevettes"
+    category: "Conseils et astuces"
+    volume: 320
+    kd: 17
+    scheduled_date: "2027-04-06"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "cuisson brocolis"
+    category: "Conseils et astuces"
+    volume: 1807
+    kd: 42
+    scheduled_date: "2027-04-09"  # vendredi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
+    error: null
+
+  - kw: "temps de cuisson oeuf"
+    category: "Conseils et astuces"
+    volume: 4909
+    kd: 42
+    scheduled_date: "2027-04-13"  # mardi
+    status: todo
+    brief_id: null
+    datafer_score: null
+    published_date: null
+    published_url: null
     error: null
