@@ -217,11 +217,11 @@ articles:
     volume: 7364
     kd: 31
     scheduled_date: "2026-09-18"  # vendredi
-    status: todo
-    brief_id: null
-    datafer_score: null
-    published_date: null
-    published_url: null
+    status: done
+    brief_id: "bba551af-30f2-473a-89f0-288563c4fd19"
+    datafer_score: 71
+    published_date: "2026-09-18"
+    published_url: "https://recette-repas.com/recettes/conserver-oeufs/"
     error: null
 
   - kw: "conservation oeufs durs"

@@ -6,6 +6,10 @@ Ce fichier trace tous les articles publiés, classés par semaine. Il est mis à
 
 ## Articles publiés
 
+### Semaine du 2026-09-15
+
+- 2026-09-18 | Comment conserver des œufs frais longtemps | Conseils et astuces | auto | mode: datafer | score: 71/51 | image: pexels
+
 ### Semaine du 2026-09-01 (1/4)
 
 - **2026-09-04** — [Meilleure box repas sportif, le comparatif](content/recettes/meilleure-box-repas-sportif.md) — KW : `meilleure box repas sportif` (type comparatif GEO, marque mise en avant : Quitoque vs Seazon / Iron Meals)
