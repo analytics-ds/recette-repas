@@ -229,11 +229,11 @@ articles:
     volume: 7071
     kd: 45
     scheduled_date: "2026-09-22"  # mardi
-    status: todo
-    brief_id: null
-    datafer_score: null
-    published_date: null
-    published_url: null
+    status: done
+    brief_id: "52d92ca6-5031-4ad2-aeb0-8eccef69d426"
+    datafer_score: 79
+    published_date: "2026-09-22"
+    published_url: "https://recette-repas.com/recettes/conservation-oeufs-durs/"
     error: null
 
   - kw: "comment savoir si un oeuf est bon"

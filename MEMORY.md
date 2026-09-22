@@ -6,6 +6,10 @@ Ce fichier trace tous les articles publiés, classés par semaine. Il est mis à
 
 ## Articles publiés
 
+### Semaine du 2026-09-22
+
+- 2026-09-22 | Conservation des œufs durs : durée et méthode | Conseils et astuces | auto | mode: datafer | score: 79/49 | image: pexels
+
 ### Semaine du 2026-09-15
 
 - 2026-09-18 | Comment conserver des œufs frais longtemps | Conseils et astuces | auto | mode: datafer | score: 71/51 | image: pexels
