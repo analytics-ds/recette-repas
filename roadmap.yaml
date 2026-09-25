@@ -241,11 +241,11 @@ articles:
     volume: 7364
     kd: 42
     scheduled_date: "2026-09-25"  # vendredi
-    status: todo
-    brief_id: null
-    datafer_score: null
-    published_date: null
-    published_url: null
+    status: done
+    brief_id: "02b1af2a-1179-4169-b84c-915fe13b1741"
+    datafer_score: 71
+    published_date: "2026-09-25"
+    published_url: "https://analytics-ds.github.io/recette-repas/recettes/savoir-oeuf-bon/"
     error: null
 
   - kw: "comment congeler une courgette"

@@ -8,6 +8,7 @@ Ce fichier trace tous les articles publiés, classés par semaine. Il est mis à
 
 ### Semaine du 2026-09-22
 
+- 2026-09-25 | Comment savoir si un œuf est bon | Conseils et astuces | auto | mode: datafer | score: 71/52 | image: pexels
 - 2026-09-22 | Conservation des œufs durs : durée et méthode | Conseils et astuces | auto | mode: datafer | score: 79/49 | image: pexels
 
 ### Semaine du 2026-09-15
